@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery 적용 Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Coupang AD 적용 -->
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="./fontello-ade37eae/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-ade37eae/css/animation.css">
+    <!-- 공유버튼 적용 Script / Go to www.addthis.com/dashboard to customize your tools -->
+    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6004fcf55dee0441"></script> -->
+    <title>The Edit</title>
+</head>
+<style>
+    @import url(./The_Edit.css);
+</style>
+
+<body>
+    <script>
+        // Full Bt img
+        var Full = "./image/Full_Heart.png";
+
+        // Empty Bt img
+        var Empty = "./image/Empty_Heart.png";
+
+        // Audio fifle var
+        var audio = new Audio("./sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");
+
+        // Audio2 fifle var
+        var audio2 = new Audio("./sound/menu-sfx--select---8-sound-effect-69717408.mp3");
+    </script>
+
+    <div class="First_Page">
+        <img class="First_Page_IMG" src="./image/the-edit_logo_new.png" alt="The_Edit_Logo">
+        <img class="QR" src="./image/QRCodeImg.jpg">
+    </div>
+
+    <div class="Second_Page">
+        <div>
+            <img class="Second_Page_IMG" src="./image/26038_1591242583.png" alt="Catalog">
+        </div>
+        <div class="Second_Page_P_div">
+            <p class="Second_Page_P">사는 재미가 없으면, 사는 재미라도</p>
+            <article class="Second_Page_Article">&nbsp;당신은 당신을 잘 알고 있나요?
+                <p class="Second_Page_P_2">&nbsp;간단한 소비성향 테스트를 통해 나를 조금 더 알아보고 나와 찰떡궁합인 The Edit의 Editor와 까탈로그 기사를
+                    살펴보세요.</p>
+                <p class="Second_Page_P_3">&nbsp;분명 당신의 사는 재미를 조금 더 깊게 만들어 줄 겁니다.</p>
+                <p class="Second_Page_P_4">· 가급적 문구를 보고 너무 오랫동안 고민하진 말아주세요.</p>
+            </article>
+        </div>
+        <div class="Second_Page_Bt_div">
+            <p class="Second_Page_Bt_P">테스트 시작하기</p>
+            <button id="Start_Bt" class="Start_Bt">&#xF204</button>
+        </div>
+        <div class="Second_Page_Notice_div">
+            <p class="Second_Page_Notice_P">
+                · &#xE808 : <a class="Second_Page_Notice_a"
+                    href="mailto:blue_notion@naver.com">blue_notion@naver.com</a><br>
+                · &#xE809 : Angelo
+                <br>
+                · &#xF1F9 : CopyRight <a class="Second_Page_Notice_a_2" href="http://the-edit.co.kr/"
+                    target="_blank">The Edit</a> All Rights Reserved.<br>
+            </p>
+            <p class="Second_Page_Foot">· 해당 심리검사는 의학적, 심리학적 전문성이 없는 단순 유희성 테스트임을 알려드립니다.</p>
+            <p class="Second_Page_Foot">· 해당 심리검사는 The Edit와 무관하며, 사용된 이미지 자료의 권리는 모두 The Edit에게 있습니다.</p>
+            <p class="Second_Page_Foot">· 해당 심리검사는 어떠한 유료광고도 포함하고 있지 않습니다.&nbsp;(CoupangAd 제외)</p>
+            <p class="Second_Page_Notice_P_2">THE DEIT</p>
+        </div>
+    </div>
+
+    <div class="Third_Page">
+        <div>
+            <p class="Padding"></p>
+            <p class="Question" id="Question1">Question</p>
+            <div>
+                <button class="Question_Bt" id="BtBt1_1" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt2_1" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt3_1" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt4_1" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt5_1" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+            </div>
+            <p class="Question" id="Question2">Question</p>
+            <div>
+                <button class="Question_Bt" id="BtBt1_2" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt2_2" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt3_2" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt4_2" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt5_2" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+            </div>
+            <p class="Question" id="Question3">Question</p>
+            <div>
+                <button class="Question_Bt" id="BtBt1_3" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt2_3" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt3_3" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt4_3" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt5_3" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+            </div>
+            <p class="Question" id="Question4">Question</p>
+            <div>
+                <button class="Question_Bt" id="BtBt1_4" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt2_4" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt3_4" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt4_4" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt5_4" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+            </div>
+            <p class="Question" id="Question5">Question</p>
+            <div>
+                <button class="Question_Bt" id="BtBt1_5" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt2_5" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt3_5" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt4_5" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+                <button class="Question_Bt" id="BtBt5_5" value=""><img class="Question_Bt_IMG"
+                        src="./image/Empty_Heart.png"></button>
+            </div>
+            <!-- Question Value -->
+            <div>
+                <div>
+                    <div>
+                        <input class="1_1_1" type="hidden" value="0">
+                        <input class="1_1_2" type="hidden" value="0">
+                        <input class="1_1_3" type="hidden" value="0">
+                        <input class="1_1_4" type="hidden" value="0">
+                        <input class="1_1_5" type="hidden" value="0">
+                        <input class="1_1_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_2_1" type="hidden" value="0">
+                        <input class="1_2_2" type="hidden" value="0">
+                        <input class="1_2_3" type="hidden" value="0">
+                        <input class="1_2_4" type="hidden" value="0">
+                        <input class="1_2_5" type="hidden" value="0">
+                        <input class="1_2_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_3_1" type="hidden" value="0">
+                        <input class="1_3_2" type="hidden" value="0">
+                        <input class="1_3_3" type="hidden" value="0">
+                        <input class="1_3_4" type="hidden" value="0">
+                        <input class="1_3_5" type="hidden" value="0">
+                        <input class="1_3_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_4_1" type="hidden" value="0">
+                        <input class="1_4_2" type="hidden" value="0">
+                        <input class="1_4_3" type="hidden" value="0">
+                        <input class="1_4_4" type="hidden" value="0">
+                        <input class="1_4_5" type="hidden" value="0">
+                        <input class="1_4_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_5_1" type="hidden" value="0">
+                        <input class="1_5_2" type="hidden" value="0">
+                        <input class="1_5_3" type="hidden" value="0">
+                        <input class="1_5_4" type="hidden" value="0">
+                        <input class="1_5_5" type="hidden" value="0">
+                        <input class="1_5_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_6_1" type="hidden" value="0">
+                        <input class="1_6_2" type="hidden" value="0">
+                        <input class="1_6_3" type="hidden" value="0">
+                        <input class="1_6_4" type="hidden" value="0">
+                        <input class="1_6_5" type="hidden" value="0">
+                        <input class="1_6_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_7_1" type="hidden" value="0">
+                        <input class="1_7_2" type="hidden" value="0">
+                        <input class="1_7_3" type="hidden" value="0">
+                        <input class="1_7_4" type="hidden" value="0">
+                        <input class="1_7_5" type="hidden" value="0">
+                        <input class="1_7_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_8_1" type="hidden" value="0">
+                        <input class="1_8_2" type="hidden" value="0">
+                        <input class="1_8_3" type="hidden" value="0">
+                        <input class="1_8_4" type="hidden" value="0">
+                        <input class="1_8_5" type="hidden" value="0">
+                        <input class="1_8_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_9_1" type="hidden" value="0">
+                        <input class="1_9_2" type="hidden" value="0">
+                        <input class="1_9_3" type="hidden" value="0">
+                        <input class="1_9_4" type="hidden" value="0">
+                        <input class="1_9_5" type="hidden" value="0">
+                        <input class="1_9_6" type="hidden" value="0">
+                    </div>
+                    <div>
+                        <input class="1_10_1" type="hidden" value="0">
+                        <input class="1_10_2" type="hidden" value="0">
+                        <input class="1_10_3" type="hidden" value="0">
+                        <input class="1_10_4" type="hidden" value="0">
+                        <input class="1_10_5" type="hidden" value="0">
+                        <input class="1_10_6" type="hidden" value="0">
+                    </div>
+                </div>
+                <div>
+                    <p class="Padding"></p>
+                    <button class="NextStep_Bt" onclick="NextStep()"><span id="span">&#xE839</span></button>
+                    <div class="CurrentPage_TotalPage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Fourth_Page">
+        <!-- <div>
+            <img class="Fourth_Page_IMG" src="./image/cattalog_notioncover_1500.png">
+        </div> -->
+        <div class="Fourth_Page_P_div">
+            <p class="Fourth_Page_P">사는 재미가 없으면, 사는 재미라도</p>
+            <p class="Fourth_Page_P_2">까탈스럽게 고른 나만의 취향 뉴스레터</p>
+        </div>
+        <div class="Fourth_Page_P_div_2">
+            <article>
+                <p class="Fourth_Page_P_3">&nbsp;기나긴 테스트에 성실히 임해주셔서 감사합니다.</p>
+                <p class="Fourth_Page_P_4">&nbsp;아래 버튼을 클릭해 당신의 소비성향을 확인해보세요. 그리고 당신과 찰떡궁합인 The Edit의 Editor와 영상, 뉴스레터를
+                    알아보세요.</p>
+            </article>
+            <div class="Fourth_Page_Bt_div">
+                <p id="Fourth_Page_Bt">&#xe839</p>
+            </div>
+            <div>
+                <article>
+                    <p class="Fourth_Page_Notice_P">· 해당 웹사이트는 어떠한 개인정보도 저장하거나 묻지 않습니다.</p>
+                    <p class="Fourth_Page_Notice_P_2">· 해당 심리검사는 의학적, 심리학적 전문성이 없는 단순 유희성 검사임을 알려드립니다.</p>
+                </article>
+            </div>
+            <div>
+                <img class="Fourth_Page_IMG" src="./image/ccatalog_bottom.png">
+            </div>
+            <div>
+                <a target="_blank" href="http://the-edit.co.kr/newsletter"><img class="Fourth_Page_IMG"
+                        src="./image/newsletter_banner.jpg"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Fifth_Page">
+        <div>
+            <img class="Fifth_Page_IMG" src="./image/ccatalog_faq_title_cut+.png">
+        </div>
+        <div class="Fifth_Page_First_div">
+        </div>
+
+        <div class="Fifth_Page_Detail_div">
+            <div id="Result_1">
+                <p class="Detail_F_1">&#xF0F4</p>
+                <div id="Re_1_1" class="Detail_Box"></div>
+                <div id="Re_1_2" class="Detail_Box"></div>
+                <div id="Re_1_3" class="Detail_Box"></div>
+                <div id="Re_1_4" class="Detail_Box"></div>
+                <div id="Re_1_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_2">
+                <p class="Detail_F_2">&#xF1B8</p>
+                <div id="Re_2_1" class="Detail_Box"></div>
+                <div id="Re_2_2" class="Detail_Box"></div>
+                <div id="Re_2_3" class="Detail_Box"></div>
+                <div id="Re_2_4" class="Detail_Box"></div>
+                <div id="Re_2_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_3">
+                <p class="Detail_F_3">&#xE801</p>
+                <div id="Re_3_1" class="Detail_Box"></div>
+                <div id="Re_3_2" class="Detail_Box"></div>
+                <div id="Re_3_3" class="Detail_Box"></div>
+                <div id="Re_3_4" class="Detail_Box"></div>
+                <div id="Re_3_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_4">
+                <p class="Detail_F_4">&#xE802</p>
+                <div id="Re_4_1" class="Detail_Box"></div>
+                <div id="Re_4_2" class="Detail_Box"></div>
+                <div id="Re_4_3" class="Detail_Box"></div>
+                <div id="Re_4_4" class="Detail_Box"></div>
+                <div id="Re_4_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_5">
+                <p class="Detail_F_5">&#xE803</p>
+                <div id="Re_5_1" class="Detail_Box"></div>
+                <div id="Re_5_2" class="Detail_Box"></div>
+                <div id="Re_5_3" class="Detail_Box"></div>
+                <div id="Re_5_4" class="Detail_Box"></div>
+                <div id="Re_5_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_6">
+                <p class="Detail_F_6">&#xE804</p>
+                <div id="Re_6_1" class="Detail_Box"></div>
+                <div id="Re_6_2" class="Detail_Box"></div>
+                <div id="Re_6_3" class="Detail_Box"></div>
+                <div id="Re_6_4" class="Detail_Box"></div>
+                <div id="Re_6_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_7">
+                <p class="Detail_F_7">&#xE805</p>
+                <div id="Re_7_1" class="Detail_Box"></div>
+                <div id="Re_7_2" class="Detail_Box"></div>
+                <div id="Re_7_3" class="Detail_Box"></div>
+                <div id="Re_7_4" class="Detail_Box"></div>
+                <div id="Re_7_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_8">
+                <p class="Detail_F_8">&#xF200</p>
+                <div id="Re_8_1" class="Detail_Box"></div>
+                <div id="Re_8_2" class="Detail_Box"></div>
+                <div id="Re_8_3" class="Detail_Box"></div>
+                <div id="Re_8_4" class="Detail_Box"></div>
+                <div id="Re_8_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_9">
+                <p class="Detail_F_9">&#xE806</p>
+                <div id="Re_9_1" class="Detail_Box"></div>
+                <div id="Re_9_2" class="Detail_Box"></div>
+                <div id="Re_9_3" class="Detail_Box"></div>
+                <div id="Re_9_4" class="Detail_Box"></div>
+                <div id="Re_9_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+            <div id="Result_10">
+                <p class="Detail_F_10">&#xf1e9</p>
+                <div id="Re_10_1" class="Detail_Box"></div>
+                <div id="Re_10_2" class="Detail_Box"></div>
+                <div id="Re_10_3" class="Detail_Box"></div>
+                <div id="Re_10_4" class="Detail_Box"></div>
+                <div id="Re_10_5" class="Detail_Box"></div>
+                <span class="Ditail_span"></span>
+            </div>
+        </div>
+
+        <div class="Fifth_Page_Reco_div">
+            <div>
+                <div id="Editor">
+                    <img class="Fifth_Page_Reco_IMG" src="">
+                </div>
+                <p class="Fifth_Page_Reco_P">당신의 단짝 EDITOR</p>
+            </div>
+            <div class="Fifth_Page_Reco_div_2">
+                <p class="Fifth_Page_Reco_div_2_P">· 당신의 사는 재미를 책임지는 Editor의 추천영상</p>
+                <div id="Reco_Youtube">
+                    <a target="_blank" href="">
+                        <p class="Fifth_Page_Reco_div_2_A">&#xf16a</p>
+                    </a>
+                </div>
+                <p class="Fifth_Page_Reco_div_2_P">· 당신의 사는 재미를 책임지는 Editor의 추천 뉴스레터</p>
+                <div id="Reco_News">
+                    <a target="_blank" href="">
+                        <p class="Fifth_Page_Reco_div_2_A_2">&#xe80c</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <script>
+                new PartnersCoupang.G({ "id": 480820, "template": "carousel", "trackingCode": "AF8995958", "width": "360", "height": "100" });
+            </script>
+        </div>
+        <br>
+        <div>
+            <div>
+                <button class="Fifth_Page_URL" onclick="CopyUrlToClipboard()">&#xe80b</button>
+                <button class="Fifth_Page_RE" onclick="MovePageToMain()"><span id="Restart">&#xe832</span></button>
+                <button class="Fifth_Page_Dic" onclick="MovePageToOtherCharacters()">&#xe80a</button>
+            </div>
+            <div>
+                <button class="Fifth_Page_URL_P">주소복사</button>
+                <button class="Fifth_Page_RE_P">다시하기</button>
+                <button class="Fifth_Page_Dic_P">도감보기</button>
+            </div>
+        </div>
+        <div>
+            <br>
+            <!-- 공유버튼 Script -->
+            <div class="addthis_inline_share_toolbox_yhq1"></div>
+            <br>
+        </div>
+        <div>
+            <div class="Fifth_Page_Foot_div">
+                <a class="Fifth_Page_Foot_Bt_A" target="_blank" href="http://the-edit.co.kr/">
+                    <p class="Fifth_Page_HomePage">&#xe800</p>
+                </a>
+                <a class="Fifth_Page_Foot_Bt_A" target="_blank"
+                    href="https://www.youtube.com/channel/UCJKZoVf3RIMfFffjdseqdEg/featured">
+                    <p class="Fifth_Page_Youtube">&#xf16a</p>
+                </a>
+                <a class="Fifth_Page_Foot_Bt_A" target="_blank" href="http://the-edit.co.kr/newsletter">
+                    <p class="Fifth_Page_News">&#xe80c</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./The_Edit.js"></script>
+
+</body>
+
+</html>
