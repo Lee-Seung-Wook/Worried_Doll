@@ -1,0 +1,119 @@
+
+1. 걱정인형_취업
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504154,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+2. 걱정인형_진로
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504155,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+3. 걱정인형_사회문제 (고객정보기반)
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":498408,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+4. 걱정인형_대인관계
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504157,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+5. 걱정인형_짝사랑
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504158,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+6. 걱정인형_권태기
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504159,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+7. 걱정인형_미련
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504160,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+8. 걱정인형_부모님 관계
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504161,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+9. 걱정인형_형제자매
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504162,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+10. 걱정인형_건강
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504163,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+11. 걱정인형_신체
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504164,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+12. 걱정인형_외모
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504165,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+13. 걱정인형_생활비 (고객정보기반)
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":498408,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+14. 걱정인형_무기력증
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504167,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
+
+
+15. 걱정인형_번아웃
+
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":504168,"template":"carousel","trackingCode":"AF8995958","width":"360","height":"100"});
+</script>
