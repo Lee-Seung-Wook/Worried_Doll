@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://angelo-s-library.netlify.app/worried_doll/my_worried_doll/sitemap.xml
