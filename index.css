@@ -1,0 +1,159 @@
+    /* 카페24 써라운드 */
+    @font-face {
+        font-family: 'Cafe24Ssurround';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* HS유지체 */
+    @font-face {
+        font-family: 'HSYuji-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .head_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+    }
+
+    .head_div {
+        grid-template-rows: 2;
+        justify-content: center;
+        width: 50rem;
+        height: 20rem;
+        border-radius: 80px;
+        background-color: #efaaaa;
+    }
+
+    .head_p {
+        text-align: center;
+        font-family: fontello;
+        color: white;
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+    }
+
+    .head_p2 {
+        text-align: center;
+        font-family: Cafe24Ssurround;
+        color: white;
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+
+    .button_section {
+        margin-top: 1rem;
+    }
+
+    #myBtnContainer {
+        text-align: right;
+    }
+
+    .container_section {
+        margin-top: 1rem;
+        display: flex;
+    }
+
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn {
+        border: none;
+        background-color: white;
+        font-family: HSYuji-Regular;
+        font-size: 1rem;
+
+    }
+
+    .btn:hover {
+        color: rgb(230, 115, 230);
+
+    }
+
+    .btn.active {
+        color: rgb(230, 115, 230);
+
+    }
+
+    .filterDiv {
+        background-color: #fff7ee;
+        color: #ffffff;
+        width: 10rem;
+        height: 10rem;
+        text-align: center;
+        margin: 2px;
+        display: none;
+    }
+
+    .filterDiv:hover {
+        background-color: #dcbff8;
+    }
+
+    .filterDiv_img {
+        width: 150px;
+        height: 150px;
+        object-fit: scale-down;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .filterDiv_p {
+        color: #5684b3;
+        font-family: HSYuji-Regular;
+    }
+
+    .filterDiv_p2 {
+        font-size: 0.8rem;
+        color: #455463;
+        font-family: HSYuji-Regular;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .footer_div {
+        margin-top: 1rem;
+        border: 1px solid rgb(185, 185, 185);
+    }
+
+    .footer_div2 {
+        text-align: right;
+        margin-top: 1rem;
+    }
+
+    .footer_div3 {
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    .footer_span_fontello {
+        font-family: fontello;
+    }
+
+    .footer_span_text {
+        font-family: HSYuji-Regular;
+        font-size: 0.5rem;
+    }
+
+    .footer_span_a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer_span_a:hover {
+        color: rgb(160, 145, 95);
+    }

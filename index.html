@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery 적용 Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="./fontello-73accc29/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-73accc29/css/animation.css">
+    <script data-ad-client="ca-pub-2137718561795055" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>Angelo's Library</title>
+</head>
+<style>
+    @import url(./index.css);
+</style>
+
+<body>
+    <!-- Head Section -->
+    <section class="head_section">
+        <div class="head_div">
+            <p class="head_p">&#xe846</p>
+            <p class="head_p2">소소한 프로젝트</p>
+        </div>
+    </section>
+    <!-- Button Section -->
+    <section class="button_section">
+        <div id="myBtnContainer">
+            <button class="btn" onclick="filterSelection('project')">소소한프로젝트</button>
+            <button class="btn" onclick="filterSelection('Column')">지나간 칼럼</button>
+            <button class="btn active" onclick="filterSelection('all')">모두보기</button>
+        </div>
+    </section>
+    <!-- Container Section -->
+    <section class="container_section">
+        <div class="container">
+            <div class="filterDiv project"><a href="./Worried_Doll/My_worried_doll.html"><img class="filterDiv_img"
+                        src="../Angelo's Library/Image/9.png"></img></a></div>
+            <div class="filterDiv project"><img class="filterDiv_img" src="./Image/the-edit_logo_new.png"></img></div>
+            <div class="filterDiv project"><img class="filterDiv_img"
+                    src="./Image/clipart-audrey-hepburn-256x256-8cc6.png"></img></div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 성숙해진 손흥민 그리고 탐욕스러워진 델레 알리 [Player Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 누가 리그 우승컵을 들어 올릴 것인가? [League Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 기성용의 휴식과 승점을 맞바꾼 프란체스코 귀돌린감독 [League game Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 동족방뇨에만 관심이 있는 맨체스터 유나이티드 [Manchester United Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 누군가의 꿈으로서 그라운드를 누비는 선수들 [System Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 루이스 판 할감독과 위르겐 클롭감독의 레즈더비 [League game Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 변명거리를 찾고 있는 프리미어리그 [System Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 타인의 바람에 의해 흔들리는 왕년의 악동 [Player Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 푸른 독수리의 힘찬 날갯짓 그리고 이청용 [Crystal palace Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 시한폭탄을 안고 있는 포체티노의 토트넘 [Tottenham Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 루이스 반 할의 맨체스터 유나이티드 [Manchester United Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 자충수를 두고 있는 디에고 코스타 [Player Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 독기를 품은 여우들의 반란 [Leicester Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 백조의 평온을 뒤덮은 그림자 [Swansea Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <p class="filterDiv_p2">(축구칼럼) 여왕벌을 품에 안은 리버 버드 [Liverpool Ver.]</p>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <a href="https://blog.naver.com/blue_notion/220531142177">
+                    <p class="filterDiv_p2">(축구칼럼) 승리의 파랑새를 잃어버린 첼시, 그리고 조세 무리뉴 [Chelsea Ver.]</p>
+                </a>
+            </div>
+            <div class="filterDiv Column">
+                <p class="filterDiv_p">Angelo's Column</p>
+                <a href="https://blog.naver.com/blue_notion/220531081940">
+                    <p class="filterDiv_p2">(축구칼럼)
+                        Arsene Wenger, Please don't forget Patrick Vieira and Gilberto Silva. [Arsenal Ver.]</p>
+                </a>>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer_div"></div>
+        <div class="footer_div2">
+            <sapn class="footer_span_fontello"><a class="footer_span_a" href="mailto:blue_notion@naver.com">&#xe8c8</a>
+            </sapn>
+            <sapn class="footer_span_text"><a class="footer_span_a"
+                    href="mailto:blue_notion@naver.com">blue_notion@naver.com</a></sapn>
+        </div>
+        <div class="footer_div3">
+            <sapn class="footer_span_fontello">&#xf1f9</sapn>
+            <sapn class="footer_span_text">소소한 프로젝트</sapn>
+        </div>
+        <div class="footer_div"></div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
