@@ -142,11 +142,13 @@
 
     .footer_span_fontello {
         font-family: fontello;
+        padding-right: 1.0rem;
     }
 
     .footer_span_text {
         font-family: HSYuji-Regular;
         font-size: 0.5rem;
+        padding-right: 1.0rem;
     }
 
     .footer_span_a {
