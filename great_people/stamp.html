@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery 적용 Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Stamp Sample</title>
+</head>
+
+<style>
+    body>div>.img {
+        display: none;
+    }
+
+    body>div>.img2 {
+        display: block;
+        position: fixed;
+        top: 9.5%;
+        width: 2rem;
+        animation-name: stampani;
+        animation-duration: 1.0s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }
+
+    @keyframes stampani {
+        0% {
+            transform: scale(1);
+            opacity: 0;
+        }
+
+        95% {
+            transform: scale(5);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+
+    <div>
+        <img id="stamp" class="img" src="../Image/KakaoTalk_20200810_135947553.png">
+        <h1>이 승 욱</h1><span>(인)</span>
+        <br>
+        <br>
+        <img id="print" style="width: 50%;" src="../Image/print.jpg">
+        <button id="cancel">Cancel</button>
+    </div>
+
+    <script>
+        $('#print').on('click', function () {
+            $('#stamp').removeClass();
+            $('#stamp').addClass('img2');
+        })
+
+        $('#cancel').on('click', function () {
+            $('#stamp').removeClass();
+            $('#stamp').addClass('img');
+        })
+    </script>
+
+</body>
+
+</html>
