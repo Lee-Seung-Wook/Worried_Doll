@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    .poster_frame {
+        display: inline-block;
+    }
+
+    .poster {
+        display: inline-block;
+        border: 1px solid black;
+        width: 50rem;
+        height: 71rem;
+        background-image: url('../Image/97584824_2876016175959428_7538726086285197312_n.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .notice_frame {
+        float: left;
+        margin-left: 1rem;
+        text-align: initial;
+    }
+
+    @media screen and (max-width: 450px) {
+        .poster {
+            display: inline-block;
+            border: 1px solid black;
+            width: 15rem;
+            height: 22rem;
+            background-image: url('../Image/97584824_2876016175959428_7538726086285197312_n.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .notice_frame {
+            float: left;
+            text-align: initial;
+        }
+    }
+</style>
+
+<body>
+    <div>
+        <div class="poster_frame">
+            <div class="poster"></div>
+        </div>
+        <div class="notice_frame">
+            <h1>2020 예컨대 프로젝트</h1>
+            <article>
+                2020 예컨대 프로젝트 사전공고
+                <br>
+                <br>
+                □ 접수일정: 2020년 05월 20일 ~ 05월 31일
+                <br>
+                □ 접수방법: 전자메일 접수
+
+            </article>
+            <br>
+            <button>신청하기</button>
+        </div>
+    </div>
+</body>
+
+</html>
