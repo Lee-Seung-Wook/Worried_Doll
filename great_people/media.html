@@ -5,12 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미디어 쿼리</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>2021 영상 콘텐츠 제작지원 사업</title>
 </head>
 
 <style>
+    @font-face {
+        font-family: 'GowunDodum-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     body {
         text-align: center;
+        font-family: 'GowunDodum-Regular';
+        font-size: 0.8rem;
     }
 
     .poster_frame {
@@ -46,8 +57,44 @@
 
         .notice_frame {
             float: left;
+
             text-align: initial;
         }
+    }
+
+    .class_button {
+        border: 0px;
+        border-radius: 10px;
+    }
+
+    .class_a {
+        color: #6facd7;
+        text-decoration: none;
+        font-size: 0.7rem;
+    }
+
+    .class_span1 {
+        color: blueviolet;
+        font-weight: bold;
+
+    }
+
+    .class_span2 {
+        color: #e22b2b;
+        font-weight: bold;
+
+    }
+
+    .class_span3 {
+        color: #2b6ce2;
+        font-weight: bold;
+
+    }
+
+    .class_span4 {
+        color: #e22b6f;
+        font-weight: bold;
+
     }
 </style>
 
@@ -57,19 +104,55 @@
             <div class="poster"></div>
         </div>
         <div class="notice_frame">
-            <h1>2020 예컨대 프로젝트</h1>
+            <h3>2021 영상 콘텐츠 제작지원 사업</h3>
+            <h5>영상 콘텐츠 창작활성화 및 시장진출 지원</h5>
             <article>
-                2020 예컨대 프로젝트 사전공고
+                <div>
+                    <article>
+                        <p>□ 영상 콘텐츠 제작지원 사업이란?</p>
+                        <p>&nbsp;우리학교 재학생(졸업생 포함)을 대상으로 다양한 영상 콘텐츠 제작·유통을 지원하여 우수한 인재 및 콘텐츠를 발굴하고 시장진출 기회 또한 지원하는 프로그램
+                        </p>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <p>□ 지원자격: 한국예술종합학교 재학생 및 졸업생(2016년 8월 졸업 이내)</p>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <p>□ 일정
+                            <br>
+                            <span style="color: crimson; font-weight: bold;">&nbsp;○ 신청기간:
+                                2021.11.15.~2021.11.30.</span>
+                            <br>
+                            &nbsp;○ 지원기간: 2021.12.~2022.7.(약 8개월)
+                        </p>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <p>□ 참여특전
+                            <br>
+                            &nbsp;<span class="class_span1">첫 번째. </span>영상 콘텐츠 제작지원비 220만원 지급(세금포함)
+                            <br>
+                            &nbsp;<span class="class_span2">두 번째. </span>OTT 플랫폼 'STABY GO' 활용지원
+                            <br>
+                            &nbsp;<span class="class_span3">세 번째. </span>예술인 구인 및 커뮤니티 플랫폼 'STABY CONNECT' 활용지원
+                            <br>
+                            &nbsp;<span class="class_span4">네 번째. </span>'STABY GO'를 통한 지속적 수익창출 지원
+                        </p>
+                    </article>
+                </div>
                 <br>
-                <br>
-                □ 접수일정: 2020년 05월 20일 ~ 05월 31일
-                <br>
-                □ 접수방법: 전자메일 접수
-
-            </article>
-            <br>
-            <a href="https://forms.gle/dnrvhgFYTxQSmnt4A"><button>신청하기</button></a>
+                <button class="class_button"><a class="class_a" href="http://research.karts.ac.kr/">공고보기</a></button>
+                <button class="class_button"><a class="class_a"
+                        href="https://forms.gle/dnrvhgFYTxQSmnt4A">신청하기</a></button>
+                <p>※ 상세내용과 관련양식은 '신청 페이지' 또는 '공고보기'를 통해 내려받을 수 있습니다.</p>
+                <p>※ 와이파이 환경에서는 '신청하기'버튼이 활성화 되지 않을 수 있습니다.</p>
         </div>
+        </article>
+    </div>
     </div>
 </body>
 
