@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery 적용 Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: '국립박물관문화재단클래식B';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: '국립박물관문화재단클래식B';
+        }
+    </style>
+</head>
+
+<body style="background: rgb(200, 158, 108); text-align: center;">
+
+    <div class="first"
+        style="display: inline-block; background: rgb(200, 158, 108); background-image: url(../image/main.jpg); background-size: contain; background-repeat: no-repeat; width: 22rem; height: 14rem; ">
+    </div>
+
+    <div class="second" style="display: none;">
+        <h1 style="margin-top: 3rem;">Title</h1>
+        <h3>Subtitle</h3>
+        <article style="text-align: left; margin-left: 0.5rem; margin-right: 0.5rem;">&nbsp Description complete,
+            comprehensive, detailed, full | accurate, apt, clear, exact, excellent, fair, fitting, good, perfect | rich,
+            &nbsp vivid | graphic, lurid | lengthy, long | brief, short | basic, simple | general, vague | objective |
+            formal
+            | verbal, written | physical | job</article>
+        <div>
+            <button id="Start"
+                style="font-size: 2rem; margin-top: 2rem; height: 3rem; width: 10rem; border-radius: 10px; border: 0px; background-color: burlywood;">Start</button>
+        </div>
+        <div>
+            <article style="margin-top: 2rem;">Notice</article>
+        </div>
+    </div>
+
+    <div style="display: none;" class="third">
+        <div style="display: flex; justify-content: center;">
+            <div
+                style="margin-top: 3rem; background-color: black; width: 1rem; height: 1rem; border: 1px solid black; float: left; margin-right: 0.2rem;">
+            </div>
+            <div id="percent"
+                style="margin-top: 3rem; width: 1rem; height: 1rem; border: 1px solid black; float: left; margin-right: 0.2rem;">
+            </div>
+            <div style="margin-top: 3rem; width: 1rem; height: 1rem; border: 1px solid black; float: left;"></div>
+        </div>
+        <h1 id="Question">Question</h1>
+        <article id="Question_Desc">Question Description1</article>
+        <img id="image" style="margin-top: 1rem; width: 100%;" src="../image/yim.jpg">
+        <button id="button" style="border: none; background-color: burlywood; margin-top: 0.5rem;">Disagree</button>
+        <button id="button2" style="border: none; background-color: burlywood; margin-top: 0.5rem;">Neutrality</button>
+        <button id="button3" style="border: none; background-color: burlywood; margin-top: 0.5rem;">Agree</button>
+    </div>
+
+    <script>
+        $('#button').click(function () {
+            $('#percent').css('background-color', 'black');
+            $('#Question').html('Question2');
+            $('#Question_Desc').html('Question Description2');
+            $('#image').attr('src', '../image/ul.jpg')
+        })
+
+        $('#button2').click(function () {
+            $('#percent').css('background-color', 'black');
+            $('#Question').html('Question2');
+            $('#Question_Desc').html('Question Description2');
+            $('#image').attr('src', '../image/ul.jpg')
+        })
+
+        $('#button3').click(function () {
+            $('#percent').css('background-color', 'black');
+            $('#Question').html('Question2');
+            $('#Question_Desc').html('Question Description2');
+            $('#image').attr('src', '../image/ul.jpg')
+        })
+
+        window.onload = function () {
+            $('.first').fadeOut(1000);
+            $('.second').fadeIn(1000);
+        }
+
+        $('#Start').click(function () {
+            $('.second').fadeOut(1000);
+            $('.third').fadeIn(1000);
+        })
+
+
+    </script>
+
+</body>
+
+</html>
