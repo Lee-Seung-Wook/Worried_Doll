@@ -32,7 +32,7 @@
         style="display: inline-block; background: rgb(200, 158, 108); background-image: url(../image/main.jpg); background-size: contain; background-repeat: no-repeat; width: 22rem; height: 14rem; ">
     </div>
 
-    <div class="second" style="display: none;">
+    <div class="second" style="display: none; z-index: -1;">
         <h1 style="margin-top: 3rem;">Title</h1>
         <h3>Subtitle</h3>
         <article style="text-align: left; margin-left: 0.5rem; margin-right: 0.5rem;">&nbsp Description complete,
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div style="display: none;" class="third">
+    <div style="display: none; z-index: -2;" class="third">
         <div style="display: flex; justify-content: center;">
             <div
                 style="margin-top: 3rem; background-color: black; width: 1rem; height: 1rem; border: 1px solid black; float: left; margin-right: 0.2rem;">
@@ -95,7 +95,7 @@
         }
 
         $('#Start').click(function () {
-            $('.second').fadeOut(1000);
+            $('.second').fadeOut(0);
             $('.third').fadeIn(1000);
         })
 
