@@ -22,6 +22,10 @@
     </style>
 </head>
 
+<script>
+    var ul = "../image/ul.jpg"
+</script>
+
 <body style="background: rgb(200, 158, 108); text-align: center;">
 
     <div class="first"
@@ -82,12 +86,12 @@
             $('#percent').css('background-color', 'black');
             $('#Question').html('Question2');
             $('#Question_Desc').html('Question Description2');
-            $('#image').attr('src', '../image/ul.jpg')
+            $('#image').attr('src', ul)
         })
 
         window.onload = function () {
-            $('.first').fadeOut(1000);
-            $('.second').fadeIn(1000);
+            $('.first').fadeOut(2000);
+            $('.second').fadeIn(1500);
         }
 
         $('#Start').click(function () {
