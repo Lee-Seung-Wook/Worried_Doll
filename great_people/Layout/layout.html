@@ -22,10 +22,6 @@
     </style>
 </head>
 
-<script>
-    var ul = "../image/ul.jpg"
-</script>
-
 <body style="background: rgb(200, 158, 108); text-align: center;">
 
     <div class="first"
@@ -65,29 +61,24 @@
         <button id="button" style="border: none; background-color: burlywood; margin-top: 0.5rem;">Disagree</button>
         <button id="button2" style="border: none; background-color: burlywood; margin-top: 0.5rem;">Neutrality</button>
         <button id="button3" style="border: none; background-color: burlywood; margin-top: 0.5rem;">Agree</button>
+        <br>
+        <br>
+        <div>
+            <button id="result"
+                style="display: none; border: none; background-color: burlywood; margin-top: 0.5rem;">Result</button>
+        </div>
+    </div>
+
+
+    <div>
+        <input id="input1" type="hidden" value="0">
+        <input id="input2" type="hidden" value="0">
+        <input id="input3" type="hidden" value="0">
     </div>
 
     <script>
-        $('#button').click(function () {
-            $('#percent').css('background-color', 'black');
-            $('#Question').html('Question2');
-            $('#Question_Desc').html('Question Description2');
-            $('#image').attr('src', '../image/ul.jpg')
-        })
 
-        $('#button2').click(function () {
-            $('#percent').css('background-color', 'black');
-            $('#Question').html('Question2');
-            $('#Question_Desc').html('Question Description2');
-            $('#image').attr('src', '../image/ul.jpg')
-        })
-
-        $('#button3').click(function () {
-            $('#percent').css('background-color', 'black');
-            $('#Question').html('Question2');
-            $('#Question_Desc').html('Question Description2');
-            $('#image').attr('src', ul)
-        })
+        var ul = "../image/ul.jpg"
 
         window.onload = function () {
             $('.first').fadeOut(2000);
@@ -99,6 +90,66 @@
             $('.third').fadeIn(1000);
         })
 
+        $('#button').click(function () {
+            $('#percent').css('background-color', 'black');
+            $('#Question').html('Question2');
+            $('#Question_Desc').html('Question Description2');
+            $('#image').attr('src', '../image/ul.jpg')
+            var input1 = $('#input1').val();
+            var input2 = $('#input2').val();
+            var input3 = $('#input3').val();
+            var mod_input1 = input1 * 1 + 1;
+            var mod_input2 = input2 * 1;
+            var mod_input3 = input3 * 1;
+            var sum = mod_input1 + mod_input2 + mod_input3;
+            $('#input1').attr('value', mod_input1);
+            if (sum >= 2) {
+                $('#result').fadeIn(1000);
+            }
+        })
+
+        $('#button2').click(function () {
+            $('#percent').css('background-color', 'black');
+            $('#Question').html('Question2');
+            $('#Question_Desc').html('Question Description2');
+            $('#image').attr('src', '../image/ul.jpg')
+            var input1 = $('#input1').val();
+            var input2 = $('#input2').val();
+            var input3 = $('#input3').val();
+            var mod_input1 = input1 * 1;
+            var mod_input2 = input2 * 1 + 1;
+            var mod_input3 = input3 * 1;
+            var sum = mod_input1 + mod_input2 + mod_input3;
+            $('#input2').attr('value', mod_input2);
+            if (sum >= 2) {
+                $('#result').fadeIn(1000);
+            }
+        })
+
+        $('#button3').click(function () {
+            $('#percent').css('background-color', 'black');
+            $('#Question').html('Question2');
+            $('#Question_Desc').html('Question Description2');
+            $('#image').attr('src', ul)
+            var input1 = $('#input1').val();
+            var input2 = $('#input2').val();
+            var input3 = $('#input3').val();
+            var mod_input1 = input1 * 1;
+            var mod_input2 = input2 * 1;
+            var mod_input3 = input3 * 1 + 1;
+            var sum = mod_input1 + mod_input2 + mod_input3;
+            $('#input3').attr('value', mod_input3);
+            if (sum >= 2) {
+                $('#result').fadeIn(1000);
+            }
+        })
+
+        $('#result').click(function () {
+            var input1 = $('#input1').val();
+            var input2 = $('#input2').val();
+            var input3 = $('#input3').val();
+            alert("Disagree : " + input1 + " " + "Neutrality : " + input2 + " " + "Agree : " + input3);
+        })
 
     </script>
 
