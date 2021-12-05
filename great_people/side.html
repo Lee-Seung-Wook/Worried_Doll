@@ -34,6 +34,13 @@
     .typing ul li {
         display: block;
     }
+
+    @font-face {
+        font-family: 'JSongMyung-Regular-KO';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JSongMyung-Regular-KO.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
 </style>
 
 <body>
@@ -51,20 +58,33 @@
         <p>FIRST PAGE / Click Me.</p>
     </div>
 
-    <div style="height: 100%; width: 100%; background-color: darkkhaki;">
+    <div id="div2" style="text-align: center; display: none; height: 100%; width: 100%; background-color: #eaebcb;">
         <div class="typing">
-            <h5 style="margin: 0;">당신은 왕권을 둔 권력싸움을 앞두고 있습니다. 당신은 계파를 이끄는 수장이며 당신의 계파는 당신의 정적보다 세력이 큽니다. 왕권을 얻는데에 별 문제가
-                없어보이는군요. 그런데 방금,
-                당신의
-                정적이 제안을 해왔습니다. 당신과의 대립관계를 멈추고 당신의 계파를 도와 왕권을 얻는데 협조하겠다는군요. 대신 문제를 일으키지 않고 있겠다고 약속했습니다. 어떤 선택을
+            <img style="width: 20rem; border: 1px solid black; margin-top: 10px;" src="./image/ul.jpg">
+            <h5
+                style="text-align: left; margin: 0; font-family: JSongMyung-Regular-KO; font-size: 1.1rem; padding-top: 30px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+                &nbsp당신은 왕권을 둔 권력싸움을 앞두고 있습니다. 당신은 계파를 이끄는 수장이며 당신의 계파는 당신의 정적보다 세력이 큽니다. 왕권을 얻는데에 별
+                문제가
+                없어보이는군요.
+                <br>
+                <br>
+                &nbsp그런데 방금, 당신의 정적이 제안을 해왔습니다. 당신과의 대립관계를 멈추고 당신의 계파를 도와 왕권을 얻는데 협조하겠다는군요. 대신 문제를 일으키지 않고 있겠다고 약속했습니다.
+                어떤
+                선택을
                 내리시겠습니까?
             </h5>
             <ul>
-                <li id="1"></li>
+                <li id="1"
+                    style="text-align: left; font-family: JSongMyung-Regular-KO; padding: 10px; font-size: 1.1rem; margin-left: 1px; margin-right: 1px;">
+                </li>
                 <br>
-                <li id="2"></li>
+                <li id="2"
+                    style="text-align: left; font-family: JSongMyung-Regular-KO; padding: 10px; font-size: 1.1rem; margin-left: 1px; margin-right: 1px;">
+                </li>
                 <br>
-                <li id="3"></li>
+                <li id="3"
+                    style="text-align: left; font-family: JSongMyung-Regular-KO; padding: 10px; font-size: 1.1rem; margin-left: 1px; margin-right: 1px;">
+                </li>
             </ul>
         </div>
     </div>
@@ -75,6 +95,7 @@
             $('#div1').animate({
                 height: 0, opacity: 'hide'
             });
+            $('#div2').css('display', 'block')
             setTimeout(() => {
                 $(this).remove();
             }, 500);
