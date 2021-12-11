@@ -500,6 +500,7 @@
             if ($("body").hasClass("fire-off")) {
                 $("body").removeClass("fire-off");
                 $("#switch").removeClass("switched");
+                window.scrollTo(0, 0);
             } else {
                 $("body").addClass("fire-off");
                 $("#switch").addClass("switched");
@@ -520,12 +521,14 @@
                 }, 3000);
                 e.preventDefault();
                 StartNumber++
+                window.scrollTo(0, 0);
             }
             else if (StartNumber != 0) {
                 var self = $(this);
                 function GoToNext() {
                     var slideIndex = $(self).closest('.slick_item').index();
                     $('.slick').slick('slickGoTo', slideIndex + 1);
+                    window.scrollTo(0, 0);
                 };
                 setTimeout(function () {
                     GoToNext();
