@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- A Script to activate Jquery Slick   -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script> var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");</script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <style>
         html,
@@ -332,6 +333,9 @@
             border: 1px solid black;
             margin-left: 1rem;
             margin-right: 1rem;
+            width: 21rem;
+            height: 1rem;
+
         }
     </style>
 </head>
@@ -379,7 +383,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slick_item" style="background-color: #a9bfa9;">
+            <div id="div1" class="slick_item" style="background-color: #a9bfa9;">
                 <div>
                     <input id="range" style="margin-top: 1rem;" type="range" min="0" max="3" value="1">
                 </div>
@@ -391,12 +395,12 @@
                     amet consectetur adipisicing elit. Dolor sunt provident, architecto assumenda nesciunt libero
                     quod alias ex. Doloribus dicta nesciunt rem rerum earum ullam praesentium corrupti nam atque
                     placeat?</h6>
-                <h5 id="btn1_1" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
-                <h5 id="btn1_2" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
-                <h5 id="btn1_3" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
+                <button id="typing_btn" style="background-color: floralwhite; border: 0px;">나는 어떻게 행동할까?</button>
+                <div class="div_first">
+                    <h5 id="btn1_1" class="answer"></h5>
+                    <h5 id="btn1_2" class="answer"></h5>
+                    <h5 id="btn1_3" class="answer"></h5>
+                </div>
                 <button class="btn">다음</button>
             </div>
             <div class="slick_item" style="background-color: #7b9c7b;">
@@ -444,13 +448,57 @@
 
     <script>
 
-        var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");
+        let array = ['Lorem ipsum dolor sit amet consectetur elit.', 'Lorem ipsum dolor sit amet consectetur elit.', 'Lorem ipsum dolor sit amet consectetur elit.']
+        var typingBool = false;
+        var typingIdx = 0;
+        var liIndex = 0;
+
+        var array1 = array[Object.keys(array)[liIndex]]
+        var array2 = array1.split('');
+        var liLength = array.length;
+
+        $('#typing_btn').click(function () {
+            if (typingBool == false) {
+                typingBool = true;
+                var tyInt = setInterval(typing, 50);
+            }
+            function typing() {
+                if (typingIdx < array2.length) {
+                    $('#typing_btn').fadeOut();
+                    $(".div_first h5").eq(liIndex).append(array2[typingIdx]);
+                    typingIdx++;
+                } else {
+                    if (liIndex < liLength - 1) {
+                        liIndex++;
+                        typingIdx = 0;
+                        typingBool = false;
+                        array1 = array[Object.keys(array)[liIndex]]
+                        array2 = array1.split('');
+                        clearInterval(tyInt);
+                        setTimeout(function () {
+                            tyInt = setInterval(typing, 50);
+                        }, 250);
+
+                    } else if (liIndex == liLength - 1) {
+                        clearInterval(tyInt);
+                        array.splice(0, 3);
+                        array.splice(0, 0, '생귤탱귤 달콤한 귤', '고소한 땅콩버터', '음.. 달다 음.. 달아', '퍽퍽한 닭가슴살');
+                        typingBool = false;
+                        typingIdx = 0;
+                        liIndex = 0;
+                        console.log(array)
+                    };
+                };
+            };
+        });
 
         var answer1 = 0;
         var answer2 = 0;
         var answer3 = 0;
 
         var Start = 0;
+
+        var StartNumber = 0;
 
         $(document).ready(function () {
             if (Start == 0) {
@@ -502,14 +550,11 @@
             if ($("body").hasClass("fire-off")) {
                 $("body").removeClass("fire-off");
                 $("#switch").removeClass("switched");
-                window.scrollTo(0, 0);
             } else {
                 $("body").addClass("fire-off");
                 $("#switch").addClass("switched");
             };
         });
-
-        var StartNumber = 0;
 
         $('.btn, #switch').on("click", function (e) {
             if (StartNumber === 0) {
@@ -526,14 +571,12 @@
                 }, 3000);
                 e.preventDefault();
                 StartNumber++
-                window.scrollTo(0, 0);
             }
             else if (StartNumber != 0) {
                 var self = $(this);
                 function GoToNext() {
                     var slideIndex = $(self).closest('.slick_item').index();
                     $('.slick').slick('slickGoTo', slideIndex + 1);
-                    window.scrollTo(0, 0);
                 };
                 setTimeout(function () {
                     GoToNext();
@@ -590,7 +633,7 @@
             $('#btn3_2').css('background-color', 'antiquewhite');
             $('#btn3_1').css('background-color', 'transparent');
             $('#btn3_3').css('background-color', 'transparent');
-            answer3 = 2;
+            answer2 = 2;
         });
         $('#btn3_3').click(function () {
             $('#btn3_3').css('background-color', 'antiquewhite');
