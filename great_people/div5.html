@@ -415,12 +415,11 @@
                     amet consectetur adipisicing elit. Dolor sunt provident, architecto assumenda nesciunt libero
                     quod alias ex. Doloribus dicta nesciunt rem rerum earum ullam praesentium corrupti nam atque
                     placeat?</h6>
-                <h5 id="btn2_1" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
-                <h5 id="btn2_2" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
-                <h5 id="btn2_3" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
+                <div class="div_second">
+                    <h5 id="btn2_1" class="answer"></h5>
+                    <h5 id="btn2_2" class="answer"></h5>
+                    <h5 id="btn2_3" class="answer"></h5>
+                </div>
                 <button class="btn">다음</button>
             </div>
             <div class="slick_item" style="background-color: #385238;">
@@ -491,6 +490,46 @@
                 };
             };
         });
+
+        function typing1() {
+            var array1 = array[Object.keys(array)[liIndex]]
+            var array2 = array1.split('');
+            var liLength = array.length;
+            setTimeout(() => {
+                if (typingBool == false) {
+                    typingBool = true;
+                    var tyInt = setInterval(typing, 50);
+                };
+                function typing() {
+                    if (typingIdx < array2.length) {
+                        $('#typing_btn').fadeOut();
+                        $(".div_second h5").eq(liIndex).append(array2[typingIdx]);
+                        typingIdx++;
+                    } else {
+                        if (liIndex < liLength - 1) {
+                            liIndex++;
+                            typingIdx = 0;
+                            typingBool = false;
+                            array1 = array[Object.keys(array)[liIndex]]
+                            array2 = array1.split('');
+                            clearInterval(tyInt);
+                            setTimeout(function () {
+                                tyInt = setInterval(typing, 50);
+                            }, 250);
+
+                        } else if (liIndex == liLength - 1) {
+                            clearInterval(tyInt);
+                            array.splice(0, 3);
+                            array.splice(0, 0, '생귤탱귤 달콤한 귤', '고소한 땅콩버터', '음.. 달다 음.. 달아', '퍽퍽한 닭가슴살');
+                            typingBool = false;
+                            typingIdx = 0;
+                            liIndex = 0;
+                            console.log(array)
+                        };
+                    };
+                };
+            }, 1500);
+        };
 
         var answer1 = 0;
         var answer2 = 0;
@@ -582,6 +621,9 @@
                     GoToNext();
                 }, 300);
                 e.preventDefault();
+                if (StartNumber === 1) {
+                    typing1();
+                }
             };
         });
 
@@ -633,7 +675,7 @@
             $('#btn3_2').css('background-color', 'antiquewhite');
             $('#btn3_1').css('background-color', 'transparent');
             $('#btn3_3').css('background-color', 'transparent');
-            answer2 = 2;
+            answer3 = 2;
         });
         $('#btn3_3').click(function () {
             $('#btn3_3').css('background-color', 'antiquewhite');
