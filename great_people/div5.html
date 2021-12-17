@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- A Script to activate Jquery Slick   -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script> var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");</script>
+    <!-- <script> var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");</script> -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <style>
         html,
@@ -434,12 +434,11 @@
                     amet consectetur adipisicing elit. Dolor sunt provident, architecto assumenda nesciunt libero
                     quod alias ex. Doloribus dicta nesciunt rem rerum earum ullam praesentium corrupti nam atque
                     placeat?</h6>
-                <h5 id="btn3_1" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
-                <h5 id="btn3_2" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
-                <h5 id="btn3_3" class="answer">Lorem ipsum dolor sit
-                    amet consectetur elit.</h5>
+                <div class="div_third">
+                    <h5 id="btn3_1" class="answer"></h5>
+                    <h5 id="btn3_2" class="answer"></h5>
+                    <h5 id="btn3_3" class="answer"></h5>
+                </div>
                 <button class="result">결과</button>
             </div>
         </div>
@@ -452,11 +451,10 @@
         var typingIdx = 0;
         var liIndex = 0;
 
-        var array1 = array[Object.keys(array)[liIndex]]
-        var array2 = array1.split('');
-        var liLength = array.length;
-
         $('#typing_btn').click(function () {
+            var array1 = array[Object.keys(array)[liIndex]]
+            var array2 = array1.split('');
+            var liLength = array.length;
             if (typingBool == false) {
                 typingBool = true;
                 var tyInt = setInterval(typing, 50);
@@ -481,7 +479,7 @@
                     } else if (liIndex == liLength - 1) {
                         clearInterval(tyInt);
                         array.splice(0, 3);
-                        array.splice(0, 0, '생귤탱귤 달콤한 귤', '고소한 땅콩버터', '음.. 달다 음.. 달아', '퍽퍽한 닭가슴살');
+                        array.splice(0, 0, '사랑합니다.', '감사합니다.', '행복합니다.');
                         typingBool = false;
                         typingIdx = 0;
                         liIndex = 0;
@@ -491,44 +489,84 @@
             };
         });
 
-        function typing1() {
-            var array1 = array[Object.keys(array)[liIndex]]
-            var array2 = array1.split('');
-            var liLength = array.length;
-            setTimeout(() => {
-                if (typingBool == false) {
-                    typingBool = true;
-                    var tyInt = setInterval(typing, 50);
-                };
-                function typing() {
-                    if (typingIdx < array2.length) {
-                        $('#typing_btn').fadeOut();
-                        $(".div_second h5").eq(liIndex).append(array2[typingIdx]);
-                        typingIdx++;
-                    } else {
-                        if (liIndex < liLength - 1) {
-                            liIndex++;
-                            typingIdx = 0;
-                            typingBool = false;
-                            array1 = array[Object.keys(array)[liIndex]]
-                            array2 = array1.split('');
-                            clearInterval(tyInt);
-                            setTimeout(function () {
-                                tyInt = setInterval(typing, 50);
-                            }, 250);
+        function typing_plus() {
+            if (StartNumber == 2) {
+                var array1 = array[Object.keys(array)[liIndex]]
+                var array2 = array1.split('');
+                var liLength = array.length;
+                setTimeout(() => {
+                    if (typingBool == false) {
+                        typingBool = true;
+                        var tyInt = setInterval(typing, 50);
+                    };
+                    function typing() {
+                        if (typingIdx < array2.length) {
+                            $('#typing_btn').fadeOut();
+                            $(".div_second h5").eq(liIndex).append(array2[typingIdx]);
+                            typingIdx++;
+                        } else {
+                            if (liIndex < liLength - 1) {
+                                liIndex++;
+                                typingIdx = 0;
+                                typingBool = false;
+                                array1 = array[Object.keys(array)[liIndex]]
+                                array2 = array1.split('');
+                                clearInterval(tyInt);
+                                setTimeout(function () {
+                                    tyInt = setInterval(typing, 50);
+                                }, 250);
 
-                        } else if (liIndex == liLength - 1) {
-                            clearInterval(tyInt);
-                            array.splice(0, 3);
-                            array.splice(0, 0, '생귤탱귤 달콤한 귤', '고소한 땅콩버터', '음.. 달다 음.. 달아', '퍽퍽한 닭가슴살');
-                            typingBool = false;
-                            typingIdx = 0;
-                            liIndex = 0;
-                            console.log(array)
+                            } else if (liIndex == liLength - 1) {
+                                clearInterval(tyInt);
+                                array.splice(0, 3);
+                                array.splice(0, 0, '이상해씨', '파이리', '꼬부기');
+                                typingBool = false;
+                                typingIdx = 0;
+                                liIndex = 0;
+                                console.log(array)
+                            };
                         };
                     };
-                };
-            }, 1500);
+                }, 1500);
+            } if (StartNumber == 3) {
+                var array1 = array[Object.keys(array)[liIndex]]
+                var array2 = array1.split('');
+                var liLength = array.length;
+                setTimeout(() => {
+                    if (typingBool == false) {
+                        typingBool = true;
+                        var tyInt = setInterval(typing, 50);
+                    };
+                    function typing() {
+                        if (typingIdx < array2.length) {
+                            $('#typing_btn').fadeOut();
+                            $(".div_third h5").eq(liIndex).append(array2[typingIdx]);
+                            typingIdx++;
+                        } else {
+                            if (liIndex < liLength - 1) {
+                                liIndex++;
+                                typingIdx = 0;
+                                typingBool = false;
+                                array1 = array[Object.keys(array)[liIndex]]
+                                array2 = array1.split('');
+                                clearInterval(tyInt);
+                                setTimeout(function () {
+                                    tyInt = setInterval(typing, 50);
+                                }, 250);
+
+                            } else if (liIndex == liLength - 1) {
+                                clearInterval(tyInt);
+                                array.splice(0, 3);
+                                array.splice(0, 0, '피카츄', '뚜꾸리', '쥬리비안');
+                                typingBool = false;
+                                typingIdx = 0;
+                                liIndex = 0;
+                                console.log(array)
+                            };
+                        };
+                    };
+                }, 1500);
+            };
         };
 
         var answer1 = 0;
@@ -536,7 +574,6 @@
         var answer3 = 0;
 
         var Start = 0;
-
         var StartNumber = 0;
 
         $(document).ready(function () {
@@ -558,7 +595,6 @@
                             $('.second_page').fadeIn('fast');
                         }, 100);
                         setTimeout(() => {
-                            window.scrollTo(0, 0);
                             $('.slick').slick({
                                 autoplay: false,
                                 speed: 500,
@@ -580,26 +616,28 @@
                         alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
                     };
                     Start++;
-                    window.scrollTo(0, 0);
                 };
             };
         });
 
         $("#switch").on('click', function () {
+            window.scrollTo(0, 0);
             if ($("body").hasClass("fire-off")) {
                 $("body").removeClass("fire-off");
                 $("#switch").removeClass("switched");
             } else {
+                window.scrollTo(0, 0);
                 $("body").addClass("fire-off");
                 $("#switch").addClass("switched");
             };
         });
 
         $('.btn, #switch').on("click", function (e) {
-            if (StartNumber === 0) {
-                audio.loop = false;
-                audio.volume = 1;
-                audio.play();
+            if (StartNumber == 0) {
+                window.scrollTo(0, 0);
+                // audio.loop = false;
+                // audio.volume = 1;
+                // audio.play();
                 var self = $(this);
                 function GoToNext() {
                     var slideIndex = $(self).closest('.slick_item').index();
@@ -610,8 +648,10 @@
                 }, 3000);
                 e.preventDefault();
                 StartNumber++
+                console.log(StartNumber)
             }
             else if (StartNumber != 0) {
+                window.scrollTo(0, 0);
                 var self = $(this);
                 function GoToNext() {
                     var slideIndex = $(self).closest('.slick_item').index();
@@ -621,9 +661,8 @@
                     GoToNext();
                 }, 300);
                 e.preventDefault();
-                if (StartNumber === 1) {
-                    typing1();
-                }
+                StartNumber++
+                typing_plus();
             };
         });
 
