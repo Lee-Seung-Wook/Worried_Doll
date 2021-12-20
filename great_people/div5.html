@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- A Script to activate Jquery Slick   -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script> var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");</script>
+    <!-- <script> var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");</script> -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <style>
         html,
@@ -100,7 +100,8 @@
             width: 100px;
             margin-left: -50px;
             height: 36px;
-            background-image: url('https://ivang-design.com//svg-load/air/wood.png');
+            background-image: url('./wood.png');
+            /* background-image: url('https://ivang-design.com//svg-load/air/wood.png'); */
             background-size: 100px 36px;
         }
 
@@ -318,7 +319,7 @@
         }
 
         body.fire-off .fire span {
-            bottom: -30px;
+            bottom: -33px;
             left: -6px;
             transform: scale(0.15, 0.15) rotate(45deg);
         }
@@ -447,9 +448,9 @@
     <script>
 
         let array = ['Lorem ipsum dolor sit amet consectetur elit.', 'Lorem ipsum dolor sit amet consectetur elit.', 'Lorem ipsum dolor sit amet consectetur elit.']
-        var typingBool = false;
-        var typingIdx = 0;
-        var liIndex = 0;
+        let typingBool = false;
+        let typingIdx = 0;
+        let liIndex = 0;
 
         $('#typing_btn').click(function () {
             var array1 = array[Object.keys(array)[liIndex]]
@@ -569,12 +570,12 @@
             };
         };
 
-        var answer1 = 0;
-        var answer2 = 0;
-        var answer3 = 0;
+        let answer1 = 0;
+        let answer2 = 0;
+        let answer3 = 0;
 
-        var Start = 0;
-        var StartNumber = 0;
+        let Start = 0;
+        let StartNumber = 0;
 
         $(document).ready(function () {
             if (Start == 0) {
@@ -635,9 +636,9 @@
         $('.btn, #switch').on("click", function (e) {
             if (StartNumber == 0) {
                 window.scrollTo(0, 0);
-                audio.loop = false;
-                audio.volume = 1;
-                audio.play();
+                // audio.loop = false;
+                // audio.volume = 1;
+                // audio.play();
                 var self = $(this);
                 function GoToNext() {
                     var slideIndex = $(self).closest('.slick_item').index();
