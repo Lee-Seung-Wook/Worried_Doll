@@ -11,6 +11,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script> var audio = new Audio("../The_Edit/sound/Mouse-Click-00-c-FesliyanStudios.com.mp3");</script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="./fontello-ccf3a63c/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-ccf3a63c/css/animation.css">
     <style>
         html,
         body {
@@ -440,7 +443,7 @@
                     <h5 id="btn3_2" class="answer"></h5>
                     <h5 id="btn3_3" class="answer"></h5>
                 </div>
-                <button class="result">결과</button>
+                <button class="result"><span id="span1" style="font-family: fontello;">결과</span></button>
             </div>
         </div>
     </div>
@@ -725,7 +728,16 @@
         });
 
         $('.result').click(function () {
-            alert('첫 번째: ' + answer1 + ', ' + '두 번째: ' + answer2 + ', ' + '세 번째: ' + answer3);
+            $('#span1').html('&#xe839')
+            setTimeout(() => {
+                $('#span1').addClass('icon-spin6-alt animate-spin');
+            }, 1500);
+            setTimeout(() => {
+                alert('첫 번째: ' + answer1 + ', ' + '두 번째: ' + answer2 + ', ' + '세 번째: ' + answer3);
+            }, 2000);
+            setTimeout(() => {
+                $('#span1').removeClass();
+            }, 3500);
         });
 
     </script>
