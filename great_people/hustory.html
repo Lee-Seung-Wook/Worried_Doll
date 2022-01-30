@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A Script to activate Jquery and JqueryUi -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"
+        integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
+    <!-- A Script to activate Jquery Slick   -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>hustory</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center
+    }
+
+    .main_image {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* iphone SE */
+    @media (width: 375px) {
+        .main_button {
+            position: absolute;
+            top: 33%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* iphone XR */
+    @media (width: 414px) {
+        .main_button {
+            position: absolute;
+            top: 27%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* iphone Pro */
+    @media (width: 390px) {
+        .main_button {
+            position: absolute;
+            top: 27%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Pixel */
+    @media (width: 393px) {
+        .main_button {
+            position: absolute;
+            top: 27%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Samsung S */
+    @media (width: 360px) {
+        .main_button {
+            position: absolute;
+            top: 27%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Samsung Ultra */
+    @media (width: 412px) {
+        .main_button {
+            position: absolute;
+            top: 27%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* ipad Air */
+    @media (width: 820px) {
+        .main_button {
+            position: absolute;
+            top: 41%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* ipad mini */
+    @media (width: 768px) {
+        .main_button {
+            position: absolute;
+            top: 44%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Surface */
+    @media (width: 912px) {
+        .main_button {
+            position: absolute;
+            top: 39%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Duo */
+    @media (width: 540px) {
+        .main_button {
+            position: absolute;
+            top: 45%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Samsung Fold */
+    @media (width: 280px) {
+        .main_button {
+            position: absolute;
+            top: 24%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    /* Samsung A Series */
+    @media (width: 412px) {
+        .main_button {
+            position: absolute;
+            top: 24%;
+            left: 26%;
+            width: 45%;
+            height: 7%;
+            opacity: 0;
+        }
+    }
+
+    .first_page {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="main_page">
+        <img class="main_image" src="./lib/인물홈화면스케치_페이지_01.jpg">
+        <button class="main_button" onclick="typing_set()"></button>
+        <p>notice</p>
+        <p style="color: red; font-weight: bold;">Be careful of the loud noise.</p>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, perspiciatis! Tempora, voluptatum
+            velit placeat amet, praesentium consequuntur ex officiis sunt dolorem, cumque necessitatibus. Est hic
+            molestias saepe aliquam, natus vitae?</article>
+    </div>
+    <div class="first_page">
+        <div>
+            <input id="input1" type="hidden">
+            <input id="input2" type="hidden">
+        </div>
+        <div class="slick">
+            <div>
+                <br>
+                <div>title</div>
+                <img src="./lib/인물홈화면스케치_페이지_04.jpg" style="object-fit: cover; width: 50%; margin: auto;">
+                <br>
+                <div class="div">
+                    <button
+                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
+                        onclick="seleted(this, 1)" value="1"></button>
+                    <br>
+                    <br>
+                    <button
+                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
+                        onclick="seleted(this, 2)" value="1"></button>
+                    <br>
+                    <br>
+                    <button
+                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
+                        onclick="seleted(this, 3)" value="1"></button>
+                </div>
+                <br>
+                <div class=".main_button" style="border: 1px solid black; width: 30%; margin: auto;"
+                    onclick="GoToNext()">next</div>
+                <br>
+                <div>1/2</div>
+                <div>The place where the steps are to be marked.</div>
+            </div>
+            <div>
+                <br>
+                <div>title</div>
+                <img src="./lib/인물홈화면스케치_페이지_05.jpg" style="object-fit: cover; width: 50%; margin: auto;">
+                <br>
+                <div class="div">
+                    <button
+                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
+                        onclick="seleted(this, 1)" value="2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.</button>
+                    <br>
+                    <br>
+                    <button
+                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
+                        onclick="seleted(this, 2)" value="2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.</button>
+                    <br>
+                    <br>
+                    <button
+                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
+                        onclick="seleted(this, 3)" value="2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.</button>
+                </div>
+                <br>
+                <div style="border: 1px solid black; width: 30%; margin: auto;" onclick="GoToResult()">next</div>
+                <br>
+                <div>2/2</div>
+                <div>The place where the steps are to be marked.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+    <script>
+        // Ready to click on the mouse.
+        var audio = new Audio("./110AD8314CA0363D92.mp3");
+        // User device check.
+        let start = 0;
+        $(document).ready(function () {
+            if (start == 0) {
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    console.log("It's working.");
+                } else {
+                    alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
+                };
+                start++;
+            };
+        });
+
+        // Left and right movement function.
+        let page = 0;
+        function NextPrev() {
+            if (page === 0) {
+                window.scrollTo(0, 0);
+                setTimeout(() => {
+                    $('.slick').slick('slickGoTo', 1);
+                }, 500);
+                page = 1;
+            } else if (page === 1) {
+                window.scrollTo(0, 0);
+                setTimeout(() => {
+                    $('.slick').slick('slickGoTo', 0);
+                }, 500);
+                page = 0;
+            };
+        };
+
+        // Move to second page.
+        $('.main_button').on('click', function () {
+            window.scrollTo(0, 0);
+            setTimeout(() => {
+                $('.slick').slick({
+                    autoplay: false,
+                    swipe: false,
+                    draggable: false,
+                    infinite: false,
+                    initialSlide: 0,
+                    mobileFirst: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 1000,
+                    prevArrow: false,
+                    nextArrow: false,
+                    lazyLoad: 'ondemand',
+                    easing: 'easeInOut'
+                });
+                audio.loop = false;
+                audio.volume = 0.5;
+                audio.play();
+            }, 1000);
+            setTimeout(() => {
+                $('.main_page').fadeOut(100);
+                $('.first_page').fadeIn(200);
+            }, 1000);
+        });
+
+        // Move to next page.
+        let slideindex = 0;
+        function GoToNext() {
+            window.scrollTo(0, 0);
+            setTimeout(() => {
+                $('.slick').slick('slickGoTo', slideindex + 1);
+            }, 500);
+        };
+
+        let array = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.']
+        let typingBool = false;
+        let typingIdx = 0;
+        let liIndex = 0;
+
+        function typing_set() {
+            var array1 = array[Object.keys(array)[liIndex]]
+            var array2 = array1.split('');
+            var liLength = array.length;
+            if (typingBool == false) {
+                typingBool = true;
+                var tyInt = setInterval(typing, 50);
+            } function typing() {
+                if (typingIdx < array2.length) {
+                    $(".div button").eq(liIndex).append(array2[typingIdx]);
+                    typingIdx++;
+                } else {
+                    if (liIndex < liLength - 1) {
+                        liIndex++;
+                        typingIdx = 0;
+                        typingBool = false;
+                        array1 = array[Object.keys(array)[liIndex]]
+                        array2 = array1.split('');
+                        clearInterval(tyInt);
+                        setTimeout(function () {
+                            tyInt = setInterval(typing, 50);
+                        }, 250);
+                    } else if (liIndex == liLength - 1) {
+                        clearInterval(tyInt);
+                        array.splice(0, 3);
+                        array.splice(0, 0, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.');
+                        typingBool = false;
+                        typingIdx = 0;
+                        liIndex = 0;
+                    };
+                };
+            };
+        };
+
+        // how to change of value and the button css throught the seleted button 
+        function seleted(self, count) {
+            var seleted = self.value
+            $(self).css('color', 'red');
+            $(self).siblings().css('color', 'black');
+            $('#input' + seleted).val(count);
+        };
+
+        // 
+        function GoToResult() {
+            var firstID = $('#input1').val();
+            var secondID = $('#input2').val();
+            alert("당신의 첫 번째 선택은 " + firstID + "\n당신의 두 번째 선택은 " + secondID);
+        };
+
+    </script>
+</body>
+
+</html>
