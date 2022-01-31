@@ -346,7 +346,7 @@
             window.scrollTo(0, 0);
             audio.loop = false;
             audio.volume = 0.5;
-            audio.play();
+            // audio.play();
             setTimeout(() => {
                 $('.slick').slick({
                     fade: true,
@@ -386,6 +386,7 @@
         let typingIdx = 0;
         let liIndex = 0;
         let object = 0;
+        let scrollvalue = 0;
         let objectarray = {
             0: "신윤복(申潤福, 1758년 ~ 1814년경)은 조선 후기의 관료이자 화가로서, 산수화와 풍속화를 잘 그렸다. 또한 양반 관료들의 이중성과 위선을 풍자한 그림, 여성들의 생활상을 그린 그림을 남기기도 했다.",
             1: "콩고기"
@@ -399,12 +400,12 @@
                 if (typingBool == false) {
                     typingBool = true;
                     var tyInt = setInterval(typing, 70);
-                    var location = $('.foot').offset();
                 } function typing() {
+                    window.scrollTo({ top: scrollvalue, left: 0, behavior: 'smooth' })
+                    scrollvalue++
                     if (typingIdx < array2.length) {
                         $(".article" + object).eq(liIndex).append(array2[typingIdx]);
                         typingIdx++;
-                        $('html, body').animate({ scrollTop: location.top }, 2000);
                     } else {
                         if (liIndex < liLength - 1) {
                             liIndex++;
@@ -423,6 +424,7 @@
                             typingBool = false;
                             typingIdx = 0;
                             liIndex = 0;
+                            scrollvalue = 0;
                             object++
                         };
                     };
