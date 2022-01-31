@@ -372,7 +372,9 @@
             setTimeout(() => {
                 $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
-                $('.notic').click();
+                $('.notic').on('touchstart', function(e){
+                    
+                })
             }, 500);
         };
 
