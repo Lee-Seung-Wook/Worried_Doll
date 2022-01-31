@@ -263,7 +263,7 @@
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
                     onclick="GoToNext(); typing_set()">next</div>
                 <br>
-                <div style="margin-bottom: 1.5rem;">1/2</div>
+                <div class="foot" style="margin-bottom: 1.5rem;">1/2</div>
             </div>
             <div>
                 <div
@@ -297,7 +297,7 @@
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
                     onclick="GoToResult();">next</div>
                 <br>
-                <div style="margin-bottom: 1.5rem;">2/2</div>
+                <div class="foot" style="margin-bottom: 1.5rem;">2/2</div>
             </div>
         </div>
     </div>
@@ -311,19 +311,15 @@
         // Ready to click on the mouse.
         var audio = new Audio("./110AD8314CA0363D92.mp3");
         // User device check.
-        let start = 0;
         $(document).ready(function () {
-            if (start == 0) {
-                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    $('.main_notice_div').fadeIn(2000);
-                    setTimeout(() => {
-                        var bottom_location = $('.notice').offset();
-                        $('html, body').animate({ scrollTop: bottom_location.top }, 500);
-                    }, 1000);
-                } else {
-                    alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
-                };
-                start++;
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.main_notice_div').fadeIn(2000);
+                setTimeout(() => {
+                    var bottom_location = $('.notice').offset();
+                    $('html, body').animate({ scrollTop: bottom_location.top }, 1000);
+                }, 1000);
+            } else {
+                alert("모바일 환경에 최적화 되어 있습니다.");
             };
         });
 
@@ -349,7 +345,7 @@
         $('.main_button').on('click', function () {
             window.scrollTo(0, 0);
             audio.loop = false;
-            audio.volume = 0.8;
+            audio.volume = 0.5;
             audio.play();
             setTimeout(() => {
                 $('.slick').slick({
@@ -403,10 +399,13 @@
                 if (typingBool == false) {
                     typingBool = true;
                     var tyInt = setInterval(typing, 70);
+                    var location = $('.foot').offset();
+                    $('html, body').animate({ scrollTop: location.top }, 2000);
                 } function typing() {
                     if (typingIdx < array2.length) {
                         $(".article" + object).eq(liIndex).append(array2[typingIdx]);
                         typingIdx++;
+                        $('html, body').animate({ scrollTop: location.top }, 2000);
                     } else {
                         if (liIndex < liLength - 1) {
                             liIndex++;
@@ -418,14 +417,17 @@
                             setTimeout(function () {
                                 tyInt = setInterval(typing, 70);
                             }, 250);
+                            $('html, body').animate({ scrollTop: location.top }, 2000);
                         } else if (liIndex == liLength - 1) {
                             clearInterval(tyInt);
-                            array.splice(0, 3);
-                            array.splice(0, 0, objectarray[object]);
+                            array.splice(0, 1);
+                            array.splice(0, 1, objectarray[object]);
                             typingBool = false;
                             typingIdx = 0;
                             liIndex = 0;
                             object++;
+                            console.log(array)
+                            $('html, body').animate({ scrollTop: location.top }, 2000);
                         };
                     };
                 };
