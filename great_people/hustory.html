@@ -405,7 +405,6 @@
                     if (typingIdx < array2.length) {
                         $(".article" + object).eq(liIndex).append(array2[typingIdx]);
                         typingIdx++;
-                        $('html, body').animate({ scrollTop: location.top }, 2000);
                     } else {
                         if (liIndex < liLength - 1) {
                             liIndex++;
@@ -417,7 +416,6 @@
                             setTimeout(function () {
                                 tyInt = setInterval(typing, 70);
                             }, 250);
-                            $('html, body').animate({ scrollTop: location.top }, 2000);
                         } else if (liIndex == liLength - 1) {
                             clearInterval(tyInt);
                             array.splice(0, 1);
