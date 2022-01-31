@@ -27,6 +27,13 @@
         text-align: center
     }
 
+    @font-face {
+        font-family: 'GangwonEdu_OTFBoldA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     .main_image {
         object-fit: cover;
         width: 100%;
@@ -179,79 +186,96 @@
     .first_page {
         display: none;
     }
+
+    .next {
+        display: none;
+    }
 </style>
 
 <body>
     <div class="main_page">
         <img class="main_image" src="./lib/인물홈화면스케치_페이지_01.jpg">
         <button class="main_button" onclick="typing_set()"></button>
-        <p>notice</p>
-        <p style="color: red; font-weight: bold;">Be careful of the loud noise.</p>
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, perspiciatis! Tempora, voluptatum
-            velit placeat amet, praesentium consequuntur ex officiis sunt dolorem, cumque necessitatibus. Est hic
-            molestias saepe aliquam, natus vitae?</article>
+        <div class="main_notice_div" style="display: none;">
+            <p>notice</p>
+            <p style="color: red; font-weight: bold;">Be careful of the loud noise.</p>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, perspiciatis! Tempora,
+                voluptatum
+                velit placeat amet, praesentium consequuntur ex officiis sunt dolorem, cumque necessitatibus. Est hic
+                molestias saepe aliquam, natus vitae?</article>
+        </div>
     </div>
     <div class="first_page">
         <div>
+            <input id="input0" type="hidden">
             <input id="input1" type="hidden">
-            <input id="input2" type="hidden">
         </div>
         <div class="slick">
             <div>
-                <br>
-                <div>title</div>
-                <img src="./lib/인물홈화면스케치_페이지_04.jpg" style="object-fit: cover; width: 50%; margin: auto;">
-                <br>
-                <div class="div">
-                    <button
-                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
-                        onclick="seleted(this, 1)" value="1"></button>
-                    <br>
-                    <br>
-                    <button
-                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
-                        onclick="seleted(this, 2)" value="1"></button>
-                    <br>
-                    <br>
-                    <button
-                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
-                        onclick="seleted(this, 3)" value="1"></button>
+                <div
+                    style="font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; border: 1px solid gray; margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
+                    성품 유형지</div>
+                <img src="./cms_back.jpg"
+                    style="object-fit: cover; width: 100%; margin: auto; border-top: 1px solid gray;">
+                <div style="border-bottom: 1px solid gray;">
+                    <article class="article0"
+                        style="font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; padding-bottom: 1rem; margin-left: 1rem; margin-right: 1rem;">
+                    </article>
                 </div>
                 <br>
-                <div class=".main_button" style="border: 1px solid black; width: 30%; margin: auto;"
-                    onclick="GoToNext()">next</div>
+                <div>
+                    <button
+                        style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
+                        onclick="seleted(this, 1)" value="0">신식화기의 도입은 현재 골머리를 앓고 있는 왜구의 약탈을 효과적으로 막아낼 수 있기에 반드시 필요한 개발
+                        분야입니다.</button>
+                    <br>
+                    <br>
+                    <button
+                        style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
+                        onclick="seleted(this, 2)" value="0">신식화기의 도입은 막대한 예산을 필요로 하며, 그 개발기간도 길기 때문에 우선은 민생회복을 위한 치정에
+                        힘써야 합니다.</button>
+                    <br>
+                    <br>
+                    <button
+                        style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
+                        onclick="seleted(this, 3)" value="0">신식화기의 도입은 현재의 군 전술과도 맞지 않으며, 개발의 위험성도 높기 때문에 아직은 논의의 대상에서
+                        제외해야 합니다.</button>
+                </div>
                 <br>
-                <div>1/2</div>
-                <div>The place where the steps are to be marked.</div>
+                <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
+                    onclick="GoToNext(); typing_set()">next</div>
+                <br>
+                <div style="margin-bottom: 1.5rem;">1/2</div>
             </div>
             <div>
-                <br>
-                <div>title</div>
-                <img src="./lib/인물홈화면스케치_페이지_05.jpg" style="object-fit: cover; width: 50%; margin: auto;">
-                <br>
-                <div class="div">
-                    <button
-                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
-                        onclick="seleted(this, 1)" value="2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.</button>
-                    <br>
-                    <br>
-                    <button
-                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
-                        onclick="seleted(this, 2)" value="2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.</button>
-                    <br>
-                    <br>
-                    <button
-                        style="background-color: white; border: 1px solid black; width: 90%; height: 3.5rem; margin: auto;"
-                        onclick="seleted(this, 3)" value="2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.</button>
+                <div
+                    style="font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; border: 1px solid gray; margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
+                    성품 유형지</div>
+                <img src="./syb_back.jpg"
+                    style="object-fit: cover; width: 100%; margin: auto; border-top: 1px solid gray;">
+                <div style="border-bottom: 1px solid gray;">
+                    <article class="article1"
+                        style="padding-top: 1rem; font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; padding-bottom: 1rem; margin-left: 1rem; margin-right: 1rem;">
+                    </article>
                 </div>
                 <br>
-                <div style="border: 1px solid black; width: 30%; margin: auto;" onclick="GoToResult()">next</div>
+                <div style="margin: auto; display: flex; padding-left: 1rem; padding-right: 1rem;">
+                    <button onclick="seleted2(this, 1)" value="1"
+                        style="width: 2rem; height: 5rem; flex: 1; background-color: white;">①</button>
+                    <button onclick="seleted2(this, 2)" value="1"
+                        style="width: 2rem; height: 5rem; flex: 1; background-color: white;">②</button>
+                    <button onclick="seleted2(this, 3)" value="1"
+                        style="width: 2rem; height: 5rem; flex: 1; background-color: white;">③</button>
+                    <button onclick="seleted2(this, 4)" value="1"
+                        style="width: 2rem; height: 5rem; flex: 1; background-color: white;">④</button>
+                    <button onclick="seleted2(this, 5)" value="1"
+                        style="width: 2rem; height: 5rem; flex: 1; background-color: white;">⑤</button>
+                </div>
                 <br>
-                <div>2/2</div>
-                <div>The place where the steps are to be marked.</div>
+                <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
+                    onclick="GoToResult();">next</div>
+                <br>
+                <div style="margin-bottom: 1.5rem;">2/2</div>
             </div>
         </div>
     </div>
@@ -269,7 +293,7 @@
         $(document).ready(function () {
             if (start == 0) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    console.log("It's working.");
+                    $('.main_notice_div').fadeIn('fast')
                 } else {
                     alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
                 };
@@ -297,6 +321,9 @@
 
         // Move to second page.
         $('.main_button').on('click', function () {
+            audio.loop = false;
+            audio.volume = 0.5;
+            audio.play();
             window.scrollTo(0, 0);
             setTimeout(() => {
                 $('.slick').slick({
@@ -314,9 +341,6 @@
                     lazyLoad: 'ondemand',
                     easing: 'easeInOut'
                 });
-                audio.loop = false;
-                audio.volume = 1;
-                audio.play();
             }, 500);
             setTimeout(() => {
                 $('.main_page').fadeOut(100);
@@ -329,14 +353,20 @@
         function GoToNext() {
             window.scrollTo(0, 0);
             setTimeout(() => {
+                $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
             }, 500);
         };
 
-        let array = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.']
+        let array = ['아들 \'최해산\'은 태종 때 화포개발자를 중용할 때 중용되어 화기를 개발하였다. 수레에 화기를 장착한 화차를 개발하여 태종 9년(1409년) 창덕궁 후원의 해온정에서 발사 시범을 보이기도 하였고, 이는 세종 때의 신기전 개발로까지 이어진다.']
         let typingBool = false;
         let typingIdx = 0;
         let liIndex = 0;
+        let object = 0;
+        let objectarray = {
+            0: "신윤복(申潤福, 1758년 ~ 1814년경)은 조선 후기의 관료이자 화가로서, 산수화와 풍속화를 잘 그렸다. 또한 양반 관료들의 이중성과 위선을 풍자한 그림, 여성들의 생활상을 그린 그림을 남기기도 했다.",
+            1: "콩고기"
+        }
 
         function typing_set() {
             var array1 = array[Object.keys(array)[liIndex]]
@@ -344,10 +374,10 @@
             var liLength = array.length;
             if (typingBool == false) {
                 typingBool = true;
-                var tyInt = setInterval(typing, 50);
+                var tyInt = setInterval(typing, 70);
             } function typing() {
                 if (typingIdx < array2.length) {
-                    $(".div button").eq(liIndex).append(array2[typingIdx]);
+                    $(".article" + object).eq(liIndex).append(array2[typingIdx]);
                     typingIdx++;
                 } else {
                     if (liIndex < liLength - 1) {
@@ -358,15 +388,16 @@
                         array2 = array1.split('');
                         clearInterval(tyInt);
                         setTimeout(function () {
-                            tyInt = setInterval(typing, 50);
+                            tyInt = setInterval(typing, 70);
                         }, 250);
                     } else if (liIndex == liLength - 1) {
                         clearInterval(tyInt);
                         array.splice(0, 3);
-                        array.splice(0, 0, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa atque repellat.');
+                        array.splice(0, 0, objectarray[object]);
                         typingBool = false;
                         typingIdx = 0;
                         liIndex = 0;
+                        object++;
                     };
                 };
             };
@@ -378,13 +409,52 @@
             $(self).css('color', 'red');
             $(self).siblings().css('color', 'black');
             $('#input' + seleted).val(count);
+            $('.next').fadeIn();
         };
 
         // 
         function GoToResult() {
-            var firstID = $('#input1').val();
-            var secondID = $('#input2').val();
+            var firstID = $('#input0').val();
+            var secondID = $('#input1').val();
             alert("당신의 첫 번째 선택은 " + firstID + "\n당신의 두 번째 선택은 " + secondID);
+        };
+
+        // how to change of value and the button css throught the seleted button 
+        function seleted2(self, count) {
+            $('.next').fadeIn();
+            var parents = $(self).parent();
+            if ($(self).text() === $(parents.children('button:nth-child(1)')).text()) {
+                $(parents.children('button:nth-child(1)')).css('color', 'red');
+                $(parents.children('button:nth-child(2)')).css('color', 'black');
+                $(parents.children('button:nth-child(3)')).css('color', 'black');
+                $(parents.children('button:nth-child(4)')).css('color', 'black');
+                $(parents.children('button:nth-child(5)')).css('color', 'black');
+            } else if ($(self).text() === $(parents.children('button:nth-child(2)')).text()) {
+                $(parents.children('button:nth-child(1)')).css('color', 'red');
+                $(parents.children('button:nth-child(2)')).css('color', 'orange');
+                $(parents.children('button:nth-child(3)')).css('color', 'black');
+                $(parents.children('button:nth-child(4)')).css('color', 'black');
+                $(parents.children('button:nth-child(5)')).css('color', 'black');
+            } else if ($(self).text() === $(parents.children('button:nth-child(3)')).text()) {
+                $(parents.children('button:nth-child(1)')).css('color', 'red');
+                $(parents.children('button:nth-child(2)')).css('color', 'orange');
+                $(parents.children('button:nth-child(3)')).css('color', 'yellow');
+                $(parents.children('button:nth-child(4)')).css('color', 'black');
+                $(parents.children('button:nth-child(5)')).css('color', 'black');
+            } else if ($(self).text() === $(parents.children('button:nth-child(4)')).text()) {
+                $(parents.children('button:nth-child(1)')).css('color', 'red');
+                $(parents.children('button:nth-child(2)')).css('color', 'orange');
+                $(parents.children('button:nth-child(3)')).css('color', 'yellow');
+                $(parents.children('button:nth-child(4)')).css('color', 'green');
+                $(parents.children('button:nth-child(5)')).css('color', 'black');
+            } else if ($(self).text() === $(parents.children('button:nth-child(5)')).text()) {
+                $(parents.children('button:nth-child(1)')).css('color', 'red');
+                $(parents.children('button:nth-child(2)')).css('color', 'orange');
+                $(parents.children('button:nth-child(3)')).css('color', 'yellow');
+                $(parents.children('button:nth-child(4)')).css('color', 'green');
+                $(parents.children('button:nth-child(5)')).css('color', 'blue');
+            };
+            $('#input' + self.value).val(count);
         };
 
     </script>
