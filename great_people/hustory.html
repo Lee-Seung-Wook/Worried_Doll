@@ -400,11 +400,11 @@
                     typingBool = true;
                     var tyInt = setInterval(typing, 70);
                     var location = $('.foot').offset();
-                    $('html, body').animate({ scrollTop: location.top }, 2000);
                 } function typing() {
                     if (typingIdx < array2.length) {
                         $(".article" + object).eq(liIndex).append(array2[typingIdx]);
                         typingIdx++;
+                        $('html, body').animate({ scrollTop: location.top }, 2000);
                     } else {
                         if (liIndex < liLength - 1) {
                             liIndex++;
