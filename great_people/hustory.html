@@ -315,8 +315,7 @@
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 $('.main_notice_div').fadeIn(2000);
                 setTimeout(() => {
-                    var bottom_location = $('.notice').offset();
-                    $('html, body').animate({ scrollTop: bottom_location.top }, 1000);
+                    $(document).scrollTop($(document).height());
                 }, 1000);
             } else {
                 alert("모바일 환경에 최적화 되어 있습니다.");
