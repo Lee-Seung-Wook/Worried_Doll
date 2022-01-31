@@ -340,7 +340,7 @@
         $('.main_button').on('click', function () {
             window.scrollTo(0, 0);
             audio.loop = false;
-            audio.volume = 0.5;
+            audio.volume = 0.8;
             audio.play();
             setTimeout(() => {
                 $('.slick').slick({
@@ -372,6 +372,7 @@
             setTimeout(() => {
                 $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
+                $('.notic').click();
             }, 500);
         };
 
