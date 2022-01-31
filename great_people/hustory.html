@@ -190,6 +190,14 @@
     .next {
         display: none;
     }
+
+    .slick-slide {
+        height: 0px !important;
+    }
+
+    .slick-slide.slick-active {
+        height: 100% !important;
+    }
 </style>
 
 <body>
@@ -259,6 +267,10 @@
                     </article>
                 </div>
                 <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quis corrupti ut cum illo? Mollitia
+                    commodi laudantium maxime officia recusandae iusto dicta vitae eum, repellat explicabo inventore,
+                    aspernatur quia autem.</p>
+                <br>
                 <div style="margin: auto; display: flex; padding-left: 1rem; padding-right: 1rem;">
                     <button onclick="seleted2(this, 1)" value="1"
                         style="width: 2rem; height: 5rem; flex: 1; background-color: white;">①</button>
@@ -294,6 +306,7 @@
             if (start == 0) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                     $('.main_notice_div').fadeIn(2000);
+                    window.scrollTo(0, 0);
                 } else {
                     alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
                 };
@@ -356,6 +369,7 @@
                 $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
             }, 500);
+            $('html')[0].click();
         };
 
         let array = ['아들 \'최해산\'은 태종 때 화포개발자를 중용할 때 중용되어 화기를 개발하였다. 수레에 화기를 장착한 화차를 개발하여 태종 9년(1409년) 창덕궁 후원의 해온정에서 발사 시범을 보이기도 하였고, 이는 세종 때의 신기전 개발로까지 이어진다.']
