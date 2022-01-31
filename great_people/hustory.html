@@ -315,7 +315,7 @@
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 $('.main_notice_div').fadeIn(2000);
                 setTimeout(() => {
-                    $(document).scrollTop($(document).height());
+                    $(document).scrollTop($(document).height(), 1000);
                 }, 1000);
             } else {
                 alert("모바일 환경에 최적화 되어 있습니다.");
@@ -345,7 +345,7 @@
             window.scrollTo(0, 0);
             audio.loop = false;
             audio.volume = 0.5;
-            // audio.play();
+            audio.play();
             setTimeout(() => {
                 $('.slick').slick({
                     fade: true,
