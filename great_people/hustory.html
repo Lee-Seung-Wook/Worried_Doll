@@ -373,7 +373,6 @@
                 $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
             }, 500);
-            $('.notice').click();
         };
 
         let array = ['아들 \'최해산\'은 태종 때 화포개발자를 중용할 때 중용되어 화기를 개발하였다. 수레에 화기를 장착한 화차를 개발하여 태종 9년(1409년) 창덕궁 후원의 해온정에서 발사 시범을 보이기도 하였고, 이는 세종 때의 신기전 개발로까지 이어진다.']
@@ -387,38 +386,41 @@
         }
 
         function typing_set() {
-            var array1 = array[Object.keys(array)[liIndex]]
-            var array2 = array1.split('');
-            var liLength = array.length;
-            if (typingBool == false) {
-                typingBool = true;
-                var tyInt = setInterval(typing, 70);
-            } function typing() {
-                if (typingIdx < array2.length) {
-                    $(".article" + object).eq(liIndex).append(array2[typingIdx]);
-                    typingIdx++;
-                } else {
-                    if (liIndex < liLength - 1) {
-                        liIndex++;
-                        typingIdx = 0;
-                        typingBool = false;
-                        array1 = array[Object.keys(array)[liIndex]]
-                        array2 = array1.split('');
-                        clearInterval(tyInt);
-                        setTimeout(function () {
-                            tyInt = setInterval(typing, 70);
-                        }, 250);
-                    } else if (liIndex == liLength - 1) {
-                        clearInterval(tyInt);
-                        array.splice(0, 3);
-                        array.splice(0, 0, objectarray[object]);
-                        typingBool = false;
-                        typingIdx = 0;
-                        liIndex = 0;
-                        object++;
+            setTimeout(() => {
+                var array1 = array[Object.keys(array)[liIndex]]
+                var array2 = array1.split('');
+                var liLength = array.length;
+                if (typingBool == false) {
+                    typingBool = true;
+                    var tyInt = setInterval(typing, 70);
+                } function typing() {
+                    if (typingIdx < array2.length) {
+                        $(".article" + object).eq(liIndex).append(array2[typingIdx]);
+                        typingIdx++;
+                    } else {
+                        if (liIndex < liLength - 1) {
+                            liIndex++;
+                            typingIdx = 0;
+                            typingBool = false;
+                            array1 = array[Object.keys(array)[liIndex]]
+                            array2 = array1.split('');
+                            clearInterval(tyInt);
+                            setTimeout(function () {
+                                tyInt = setInterval(typing, 70);
+                            }, 250);
+                        } else if (liIndex == liLength - 1) {
+                            clearInterval(tyInt);
+                            array.splice(0, 3);
+                            array.splice(0, 0, objectarray[object]);
+                            typingBool = false;
+                            typingIdx = 0;
+                            liIndex = 0;
+                            object++;
+                        };
                     };
                 };
-            };
+            }, 2000);
+
         };
 
         // how to change of value and the button css throught the seleted button 
