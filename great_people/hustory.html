@@ -315,11 +315,11 @@
         $(document).ready(function () {
             if (start == 0) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    $('.main_notice_div').fadeIn(3000);
+                    $('.main_notice_div').fadeIn(2000);
                     setTimeout(() => {
                         var bottom_location = $('.notice').offset();
                         $('html, body').animate({ scrollTop: bottom_location.top }, 500);
-                    }, 2000);
+                    }, 1000);
                 } else {
                     alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
                 };
@@ -368,11 +368,11 @@
                     lazyLoad: 'ondemand',
                     easing: 'easeInOut'
                 });
-            }, 1000);
+            }, 500);
             setTimeout(() => {
                 $('.main_page').fadeOut(100);
                 $('.first_page').fadeIn(200);
-            }, 1000);
+            }, 500);
         });
 
         // Move to next page.
@@ -429,7 +429,7 @@
                         };
                     };
                 };
-            }, 1500);
+            }, 1000);
 
         };
 
