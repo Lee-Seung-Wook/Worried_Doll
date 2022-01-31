@@ -207,7 +207,8 @@
         <div class="main_notice_div" style="display: none;">
             <p>notice</p>
             <p style="color: red; font-weight: bold;">Be careful of the loud noise.</p>
-            <article class="notice">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, perspiciatis! Tempora,
+            <article class="notice">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, perspiciatis!
+                Tempora,
                 voluptatum
                 velit placeat amet, praesentium consequuntur ex officiis sunt dolorem, cumque necessitatibus. Est hic
                 molestias saepe aliquam, natus vitae?</article>
@@ -305,12 +306,11 @@
         $(document).ready(function () {
             if (start == 0) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    window.scrollTo(0, 0);
                     $('.main_notice_div').fadeIn(3000);
                     setTimeout(() => {
                         var bottom_location = $('.notice').offset();
-                        window.scrollTo({top:bottom_location, behavior:'smooth'});
-                    }, 1000);
+                        $('html, body').animate({ scrollTop: bottom_location.top }, 500);
+                    }, 3000);
                 } else {
                     alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
                 };
