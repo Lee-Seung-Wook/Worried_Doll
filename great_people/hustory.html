@@ -305,7 +305,7 @@
         $(document).ready(function () {
             if (start == 0) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    $('.main_notice_div').fadeIn(2000);
+                    $('.main_notice_div').fadeIn(3000);
                     window.scrollTo(0, 0);
                 } else {
                     alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
@@ -354,11 +354,11 @@
                     lazyLoad: 'ondemand',
                     easing: 'easeInOut'
                 });
-            }, 1000);
+            }, 2000);
             setTimeout(() => {
                 $('.main_page').fadeOut(100);
                 $('.first_page').fadeIn(200);
-            }, 1000);
+            }, 2000);
         });
 
         // Move to next page.
@@ -369,7 +369,7 @@
                 $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
             }, 500);
-            $('#input0').trigger("click");
+            $('.article0').trigger("click");
         };
 
         let array = ['아들 \'최해산\'은 태종 때 화포개발자를 중용할 때 중용되어 화기를 개발하였다. 수레에 화기를 장착한 화차를 개발하여 태종 9년(1409년) 창덕궁 후원의 해온정에서 발사 시범을 보이기도 하였고, 이는 세종 때의 신기전 개발로까지 이어진다.']
