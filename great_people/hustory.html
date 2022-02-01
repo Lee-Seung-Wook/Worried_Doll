@@ -39,158 +39,49 @@
         width: 100%;
     }
 
-    /* iphone SE */
-    @media (width: 375px) {
-        .main_button {
-            position: absolute;
-            top: 30%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* iphone XR */
-    @media (width: 414px) {
-        .main_button {
-            position: absolute;
-            top: 24%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* iphone Pro */
-    @media (width: 390px) {
-        .main_button {
-            position: absolute;
-            top: 23.5%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Pixel */
-    @media (width: 393px) {
-        .main_button {
-            position: absolute;
-            top: 23.5%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Samsung S */
-    @media (width: 360px) {
-        .main_button {
-            position: absolute;
-            top: 25%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Samsung Ultra */
-    @media (width: 412px) and (height: 915px) {
-        .main_button {
-            position: absolute;
-            top: 23%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* ipad Air */
-    @media (width: 820px) {
-        .main_button {
-            position: absolute;
-            top: 38%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* ipad mini */
-    @media (width: 768px) {
-        .main_button {
-            position: absolute;
-            top: 41%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Surface */
-    @media (width: 912px) {
-        .main_button {
-            position: absolute;
-            top: 37%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Duo */
-    @media (width: 540px) {
-        .main_button {
-            position: absolute;
-            top: 42%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Samsung Fold */
-    @media (width: 280px) {
-        .main_button {
-            position: absolute;
-            top: 21%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
-    /* Samsung A Series */
-    @media (width: 412px) {
-        .main_button {
-            position: absolute;
-            top: 22.5%;
-            left: 26%;
-            width: 45%;
-            height: 12%;
-            opacity: 0;
-        }
-    }
-
     .main_button {
         position: absolute;
         top: 0%;
-        left: 18%;
-        width: 60%;
+        left: 26%;
+        width: 45%;
         height: 100%;
         opacity: 0;
     }
+
+    /* iPhone SE, iPad Air, iPad mini, Surface Pro, Surface Due */
+    @media (width: 375px),
+    (width: 820px),
+    (width: 768px),
+    (width: 912px),
+    (width: 540px) {
+        .main_button {
+            position: absolute;
+            top: 20%;
+            left: 26%;
+            width: 45%;
+            height: 33%;
+            opacity: 0;
+        }
+    }
+
+    /* iPhone XR, iPhone Pro, Pixel, Samsung S+, Sansung Ultra, Samsung Fold, Samsung A Series */
+    @media (width: 414px),
+    (width: 390px),
+    (width: 393px),
+    (width: 360px),
+    (width: 412px),
+    (width: 280px) {
+        .main_button {
+            position: absolute;
+            top: 20%;
+            left: 26%;
+            width: 45%;
+            height: 20%;
+            opacity: 0;
+        }
+    }
+
+
 
     .first_page {
         display: none;
@@ -490,6 +381,8 @@
             };
             $('#input' + self.value).val(count);
         };
+
+
 
     </script>
 </body>
