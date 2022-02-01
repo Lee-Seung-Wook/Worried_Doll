@@ -39,15 +39,6 @@
         width: 100%;
     }
 
-    .main_button {
-        position: absolute;
-        top: 0%;
-        left: 18%;
-        width: 60%;
-        height: 200%;
-        opacity: 0;
-    }
-
     /* iphone SE */
     @media (width: 375px) {
         .main_button {
@@ -109,7 +100,7 @@
     }
 
     /* Samsung Ultra */
-    @media (width: 412px) {
+    @media (width: 412px) and (height: 915px) {
         .main_button {
             position: absolute;
             top: 23%;
@@ -190,6 +181,15 @@
             height: 12%;
             opacity: 0;
         }
+    }
+
+    .main_button {
+        position: absolute;
+        top: 0%;
+        left: 18%;
+        width: 60%;
+        height: 100%;
+        opacity: 0;
     }
 
     .first_page {
@@ -348,7 +348,7 @@
             window.scrollTo(0, 0);
             audio.loop = false;
             audio.volume = 0.5;
-            audio.play();
+            // audio.play();
             setTimeout(() => {
                 $('.slick').slick({
                     fade: true,
