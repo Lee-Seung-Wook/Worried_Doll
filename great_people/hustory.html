@@ -27,13 +27,6 @@
         text-align: center
     }
 
-    @font-face {
-        font-family: 'GangwonEdu_OTFBoldA';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
     .main_image {
         object-fit: cover;
         width: 100%;
@@ -101,17 +94,18 @@
 <body>
     <div class="main_page">
         <img class="main_image" src="./lib/인물홈화면스케치_페이지_01.jpg">
-        <button class="main_button" onclick="typing_set()"></button>
-        <div class="main_notice_div" style="display: none;">
+        <div class="main_button"></div>
+        <footer style="display: none;">
+            <br>
             <p>notice</p>
-            <p style="color: red; font-weight: bold;">Be careful of the loud noise.</p>
-            <article class="notice">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, perspiciatis!
-                Tempora,
-                voluptatum
-                velit placeat amet, praesentium consequuntur ex officiis sunt dolorem, cumque necessitatibus. Est hic
-                molestias saepe aliquam, natus vitae?</article>
-        </div>
+            <article style="padding-left: 0.5rem; padding-right: 0.5rem; padding-bottom: 0.5rem;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iste aspernatur labore doloremque,
+                necessitatibus incidunt at omnis voluptatum non, alias exercitationem ab dolore qui earum ipsum dolor
+                iusto rem a!
+            </article>
+        </footer>
     </div>
+
     <div class="first_page">
         <div>
             <input id="input0" type="hidden">
@@ -119,56 +113,59 @@
         </div>
         <div class="slick">
             <div>
-                <div
-                    style="font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; border: 1px solid gray; margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
-                    성품 유형지</div>
+                <div style="margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
+                    title name</div>
+                <article class="article0" style="margin-left: 1rem; margin-right: 1rem; margin-bottom: 1rem;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sapiente ratione a illum optio
+                    aliquid natus sed, sequi molestias obcaecati non. Quis dolorum hic expedita voluptas quas! Rem, enim
+                    facilis?
+                </article>
                 <img src="./cms_back.jpg"
                     style="object-fit: cover; width: 100%; margin: auto; border-top: 1px solid gray;">
                 <div style="border-bottom: 1px solid gray;">
-                    <article class="article0"
-                        style="font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; padding-bottom: 1rem; margin-left: 1rem; margin-right: 1rem;">
-                    </article>
+
                 </div>
                 <br>
                 <div>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 1)" value="0">신식화기의 도입은 현재 골머리를 앓고 있는 왜구의 약탈을 효과적으로 막아낼 수 있기에 반드시 필요한 개발
-                        분야입니다.</button>
+                        onclick="seleted(this, 1)" value="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Exercitationem sunt deleniti illum omnis, inventore explicabo eum temporibus quis labore dolorum
+                        id ea, libero fuga repellendus placeat eius perferendis sit odio?</button>
                     <br>
                     <br>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 2)" value="0">신식화기의 도입은 막대한 예산을 필요로 하며, 그 개발기간도 길기 때문에 우선은 민생회복을 위한 치정에
-                        힘써야 합니다.</button>
+                        onclick="seleted(this, 2)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Temporibus qui numquam neque nobis voluptatum fugiat culpa nostrum eius, exercitationem dolore
+                        animi maiores eaque minus voluptatem repellendus inventore necessitatibus non sed.</button>
                     <br>
                     <br>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 3)" value="0">신식화기의 도입은 현재의 군 전술과도 맞지 않으며, 개발의 위험성도 높기 때문에 아직은 논의의 대상에서
-                        제외해야 합니다.</button>
+                        onclick="seleted(this, 3)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi facilis, distinctio laudantium, ullam veniam, accusantium molestias odit earum eum
+                        consequatur exercitationem voluptatum dolorum praesentium placeat suscipit molestiae enim et
+                        voluptatibus!</button>
                 </div>
                 <br>
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
-                    onclick="GoToNext(); typing_set()">next</div>
+                    onclick="GoToNext();">next</div>
                 <br>
                 <div class="foot" style="margin-bottom: 1.5rem;">1/2</div>
             </div>
             <div>
-                <div
-                    style="font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; border: 1px solid gray; margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
-                    성품 유형지</div>
+                <div style="margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
+                    title name</div>
+                <article class="article0" style="margin-left: 1rem; margin-right: 1rem; margin-bottom: 1rem;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sapiente ratione a illum optio
+                    aliquid natus sed, sequi molestias obcaecati non. Quis dolorum hic expedita voluptas quas! Rem, enim
+                    facilis?
+                </article>
                 <img src="./syb_back.jpg"
                     style="object-fit: cover; width: 100%; margin: auto; border-top: 1px solid gray;">
                 <div style="border-bottom: 1px solid gray;">
-                    <article class="article1"
-                        style="padding-top: 1rem; font-family: GangwonEdu_OTFBoldA; font-size: 1.5rem; padding-bottom: 1rem; margin-left: 1rem; margin-right: 1rem;">
-                    </article>
                 </div>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quis corrupti ut cum illo? Mollitia
-                    commodi laudantium maxime officia recusandae iusto dicta vitae eum, repellat explicabo inventore,
-                    aspernatur quia autem.</p>
                 <br>
                 <div style="margin: auto; display: flex; padding-left: 1rem; padding-right: 1rem;">
                     <button onclick="seleted2(this, 1)" value="1"
@@ -197,16 +194,11 @@
         </script>
 
     <script>
-        //
-        let animate = $(document).height();
-        //
-        var audio = new Audio("./110AD8314CA0363D92.mp3");
         // User device check.
         $(document).ready(function () {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                $('.main_notice_div').fadeIn(2000);
+                $('footer').fadeIn(2000);
                 setTimeout(() => {
-                    // $('html, body').animate({ scrollTop: animate }, 'slow')
                     $(document).scrollTop($(document).height(), behavior = 'smooth');
                 }, 1000);
             } else {
@@ -235,14 +227,11 @@
         // Move to second page.
         $('.main_button').on('click', function () {
             window.scrollTo(0, 0);
-            audio.loop = false;
-            audio.volume = 0.5;
-            audio.play();
             setTimeout(() => {
                 $('.slick').slick({
                     fade: false,
                     autoplay: false,
-                    swipe: true,
+                    swipe: false,
                     draggable: false,
                     infinite: false,
                     initialSlide: 0,
@@ -270,60 +259,6 @@
                 $('.next').fadeOut(500);
                 $('.slick').slick('slickGoTo', slideindex + 1);
             }, 500);
-        };
-
-
-        let array = ['아들 \'최해산\'은 태종 때 화포개발자를 중용할 때 중용되어 화기를 개발하였다. 수레에 화기를 장착한 화차를 개발하여 태종 9년(1409년) 창덕궁 후원의 해온정에서 발사 시범을 보이기도 하였고, 이는 세종 때의 신기전 개발로까지 이어진다.']
-        let typingBool = false;
-        let typingIdx = 0;
-        let liIndex = 0;
-        let object = 0;
-        let scrollvalue = 0;
-        let objectarray = {
-            0: "신윤복(申潤福, 1758년 ~ 1814년경)은 조선 후기의 관료이자 화가로서, 산수화와 풍속화를 잘 그렸다. 또한 양반 관료들의 이중성과 위선을 풍자한 그림, 여성들의 생활상을 그린 그림을 남기기도 했다.",
-            1: "콩고기"
-        }
-
-        function typing_set() {
-            setTimeout(() => {
-                var array1 = array[Object.keys(array)[liIndex]]
-                var array2 = array1.split('');
-                var liLength = array.length;
-                if (typingBool == false) {
-                    typingBool = true;
-                    var tyInt = setInterval(typing, 80);
-                } function typing() {
-                    window.scrollTo({ top: scrollvalue, left: 0, behavior: 'smooth' })
-                    scrollvalue++
-                    if (typingIdx < array2.length) {
-                        $(".article" + object).eq(liIndex).append(array2[typingIdx]);
-                        typingIdx++;
-                    } else {
-                        if (liIndex < liLength - 1) {
-                            liIndex++;
-                            typingIdx = 0;
-                            typingBool = false;
-                            array1 = array[Object.keys(array)[liIndex]]
-                            array2 = array1.split('');
-                            clearInterval(tyInt);
-                            setTimeout(function () {
-                                tyInt = setInterval(typing, 80);
-                            }, 250);
-                        } else if (liIndex == liLength - 1) {
-                            clearInterval(tyInt);
-                            array.splice(0, 1);
-                            array.splice(0, 1, objectarray[object]);
-                            typingBool = false;
-                            typingIdx = 0;
-                            liIndex = 0;
-                            scrollvalue = 0;
-                            object++
-                            $('html, body').animate({ scrollTop: animate }, 'slow')
-                        };
-                    };
-                };
-            }, 1000);
-
         };
 
         // how to change of value and the button css throught the seleted button 
@@ -379,7 +314,6 @@
             };
             $('#input' + self.value).val(count);
         };
-
     </script>
 </body>
 
