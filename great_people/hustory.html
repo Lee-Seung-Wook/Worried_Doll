@@ -150,7 +150,7 @@
                 </div>
                 <br>
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
-                    onclick="GoToNext();">next</div>
+                    onclick="GoToNext(), auto_click();">next</div>
                 <br>
                 <div class="foot" style="margin-bottom: 1.5rem;">1/2</div>
             </div>
@@ -263,7 +263,7 @@
 
         // how to change of value and the button css throught the seleted button 
         function seleted(self, count) {
-            var seleted = self.value
+            let seleted = self.value
             $(self).css('color', 'red');
             $(self).siblings().css('color', 'black');
             $('#input' + seleted).val(count);
@@ -272,15 +272,15 @@
 
         // 
         function GoToResult() {
-            var firstID = $('#input0').val();
-            var secondID = $('#input1').val();
+            let firstID = $('#input0').val();
+            let secondID = $('#input1').val();
             alert("당신의 첫 번째 선택은 " + firstID + "\n당신의 두 번째 선택은 " + secondID);
         };
 
         // how to change of value and the button css throught the seleted button 
         function seleted2(self, count) {
             $('.next').fadeIn();
-            var parents = $(self).parent();
+            let parents = $(self).parent();
             if ($(self).text() === $(parents.children('button:nth-child(1)')).text()) {
                 $(parents.children('button:nth-child(1)')).css('color', 'red');
                 $(parents.children('button:nth-child(2)')).css('color', 'black');
@@ -313,6 +313,10 @@
                 $(parents.children('button:nth-child(5)')).css('color', 'blue');
             };
             $('#input' + self.value).val(count);
+        };
+
+        function auto_click() {
+            $('#input0').click();
         };
     </script>
 </body>
