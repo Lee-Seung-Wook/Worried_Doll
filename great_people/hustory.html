@@ -31,6 +31,7 @@
 
         preload([
             './lib/한혜원/1.png',
+            './lib/한혜원/question.png',
             './lib/한혜원/background.png',
             './lib/한혜원/SJ.jpg',
             './lib/한혜원/HJ.jpg'
@@ -121,8 +122,8 @@
 
     .button {
         font-family: arial, sans-serif;
-        font-size: 13px;
-        color: #777;
+        font-size: 15px;
+        color: rgb(88, 88, 88);
         text-shadow: 1px 1px 0px white;
         background: #ffffff;
         /* Old browsers */
@@ -172,13 +173,13 @@
         -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
         -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
         box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
-        color: rgb(241, 127, 127);
+        color: rgb(173, 18, 18);
     }
 
     .button_active {
         font-family: arial, sans-serif;
-        font-size: 13px;
-        color: #777;
+        font-size: 15px;
+        color: rgb(173, 18, 18);
         text-shadow: 1px 1px 0px white;
         background: #dfdfdf;
         /* Old browsers */
@@ -203,14 +204,14 @@
         -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2) inset, 0px 1px 1px 0 rgba(255, 255, 255, 1);
         box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2) inset, 0px 1px 1px 0 rgba(255, 255, 255, 1);
         padding: 6px 12px;
-        color: rgb(241, 127, 127);
         border-radius: 100%;
         border: none;
         margin: auto;
+        font-weight: bold;
     }
 
     .button_active:hover {
-        color: rgb(241, 127, 127);
+        color: rgb(173, 18, 18);
     }
 </style>
 
@@ -255,20 +256,17 @@
                 <div>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 1)" value="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Exercitationem sunt deleniti illum omnis</button>
+                        onclick="seleted(this, 1)" value="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</button>
                     <br>
                     <br>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 2)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Temporibus qui numquam neque nobis</button>
+                        onclick="seleted(this, 2)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
                     <br>
                     <br>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 3)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Excepturi facilis</button>
+                        onclick="seleted(this, 3)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
                 </div>
                 <br>
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
@@ -286,11 +284,15 @@
                 </div>
                 <br>
                 <div style="margin: auto; display: flex; padding-left: 1rem; padding-right: 1rem;">
-                    <button onclick="seleted4(this, 1)" value="6" name="1" class="button">♥</button>
-                    <button onclick="seleted4(this, 2)" value="6" name="2" class="button">♥</button>
-                    <button onclick="seleted4(this, 3)" value="6" name="3" class="button">♥</button>
-                    <button onclick="seleted4(this, 4)" value="6" name="4" class="button">♥</button>
-                    <button onclick="seleted4(this, 5)" value="6" name="5" class="button">♥</button>
+                    <button onclick="seleted4(this, 1)" value="6" name="1" class="button">決</button>
+                    <button onclick="seleted4(this, 2)" value="6" name="2" class="button">決</button>
+                    <button onclick="seleted4(this, 3)" value="6" name="3" class="button">決</button>
+                    <button onclick="seleted4(this, 4)" value="6" name="4" class="button">決</button>
+                    <button onclick="seleted4(this, 5)" value="6" name="5" class="button">決</button>
+                </div>
+                <div>
+                    <input disabled id="answer"
+                        style="background: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold;">
                 </div>
                 <br>
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
@@ -327,22 +329,22 @@
         });
 
         // Left and right movement function.
-        let page = 0;
-        function NextPrev() {
-            if (page === 0) {
-                window.scrollTo(0, 0);
-                setTimeout(() => {
-                    $('.slick').slick('slickGoTo', 1);
-                }, 500);
-                page = 1;
-            } else if (page === 1) {
-                window.scrollTo(0, 0);
-                setTimeout(() => {
-                    $('.slick').slick('slickGoTo', 0);
-                }, 500);
-                page = 0;
-            };
-        };
+        // let page = 0;
+        // function NextPrev() {
+        //     if (page === 0) {
+        //         window.scrollTo(0, 0);
+        //         setTimeout(() => {
+        //             $('.slick').slick('slickGoTo', 1);
+        //         }, 500);
+        //         page = 1;
+        //     } else if (page === 1) {
+        //         window.scrollTo(0, 0);
+        //         setTimeout(() => {
+        //             $('.slick').slick('slickGoTo', 0);
+        //         }, 500);
+        //         page = 0;
+        //     };
+        // };
 
         // Move to second page.
         $('.main_button').on('click', function () {
@@ -400,42 +402,42 @@
         };
 
         // how to change of value and the button css throught the seleted button 
-        function seleted2(self, count) {
-            $('.next').fadeIn();
-            let parents = $(self).parent();
-            if ($(self).text() === $(parents.children('button:nth-child(1)')).text()) {
-                $(parents.children('button:nth-child(1)')).css('color', 'red');
-                $(parents.children('button:nth-child(2)')).css('color', 'black');
-                $(parents.children('button:nth-child(3)')).css('color', 'black');
-                $(parents.children('button:nth-child(4)')).css('color', 'black');
-                $(parents.children('button:nth-child(5)')).css('color', 'black');
-            } else if ($(self).text() === $(parents.children('button:nth-child(2)')).text()) {
-                $(parents.children('button:nth-child(1)')).css('color', 'red');
-                $(parents.children('button:nth-child(2)')).css('color', 'orange');
-                $(parents.children('button:nth-child(3)')).css('color', 'black');
-                $(parents.children('button:nth-child(4)')).css('color', 'black');
-                $(parents.children('button:nth-child(5)')).css('color', 'black');
-            } else if ($(self).text() === $(parents.children('button:nth-child(3)')).text()) {
-                $(parents.children('button:nth-child(1)')).css('color', 'red');
-                $(parents.children('button:nth-child(2)')).css('color', 'orange');
-                $(parents.children('button:nth-child(3)')).css('color', 'yellow');
-                $(parents.children('button:nth-child(4)')).css('color', 'black');
-                $(parents.children('button:nth-child(5)')).css('color', 'black');
-            } else if ($(self).text() === $(parents.children('button:nth-child(4)')).text()) {
-                $(parents.children('button:nth-child(1)')).css('color', 'red');
-                $(parents.children('button:nth-child(2)')).css('color', 'orange');
-                $(parents.children('button:nth-child(3)')).css('color', 'yellow');
-                $(parents.children('button:nth-child(4)')).css('color', 'green');
-                $(parents.children('button:nth-child(5)')).css('color', 'black');
-            } else if ($(self).text() === $(parents.children('button:nth-child(5)')).text()) {
-                $(parents.children('button:nth-child(1)')).css('color', 'red');
-                $(parents.children('button:nth-child(2)')).css('color', 'orange');
-                $(parents.children('button:nth-child(3)')).css('color', 'yellow');
-                $(parents.children('button:nth-child(4)')).css('color', 'green');
-                $(parents.children('button:nth-child(5)')).css('color', 'blue');
-            };
-            $('#input' + self.value).val(count);
-        };
+        // function seleted2(self, count) {
+        //     $('.next').fadeIn();
+        //     let parents = $(self).parent();
+        //     if ($(self).text() === $(parents.children('button:nth-child(1)')).text()) {
+        //         $(parents.children('button:nth-child(1)')).css('color', 'red');
+        //         $(parents.children('button:nth-child(2)')).css('color', 'black');
+        //         $(parents.children('button:nth-child(3)')).css('color', 'black');
+        //         $(parents.children('button:nth-child(4)')).css('color', 'black');
+        //         $(parents.children('button:nth-child(5)')).css('color', 'black');
+        //     } else if ($(self).text() === $(parents.children('button:nth-child(2)')).text()) {
+        //         $(parents.children('button:nth-child(1)')).css('color', 'red');
+        //         $(parents.children('button:nth-child(2)')).css('color', 'orange');
+        //         $(parents.children('button:nth-child(3)')).css('color', 'black');
+        //         $(parents.children('button:nth-child(4)')).css('color', 'black');
+        //         $(parents.children('button:nth-child(5)')).css('color', 'black');
+        //     } else if ($(self).text() === $(parents.children('button:nth-child(3)')).text()) {
+        //         $(parents.children('button:nth-child(1)')).css('color', 'red');
+        //         $(parents.children('button:nth-child(2)')).css('color', 'orange');
+        //         $(parents.children('button:nth-child(3)')).css('color', 'yellow');
+        //         $(parents.children('button:nth-child(4)')).css('color', 'black');
+        //         $(parents.children('button:nth-child(5)')).css('color', 'black');
+        //     } else if ($(self).text() === $(parents.children('button:nth-child(4)')).text()) {
+        //         $(parents.children('button:nth-child(1)')).css('color', 'red');
+        //         $(parents.children('button:nth-child(2)')).css('color', 'orange');
+        //         $(parents.children('button:nth-child(3)')).css('color', 'yellow');
+        //         $(parents.children('button:nth-child(4)')).css('color', 'green');
+        //         $(parents.children('button:nth-child(5)')).css('color', 'black');
+        //     } else if ($(self).text() === $(parents.children('button:nth-child(5)')).text()) {
+        //         $(parents.children('button:nth-child(1)')).css('color', 'red');
+        //         $(parents.children('button:nth-child(2)')).css('color', 'orange');
+        //         $(parents.children('button:nth-child(3)')).css('color', 'yellow');
+        //         $(parents.children('button:nth-child(4)')).css('color', 'green');
+        //         $(parents.children('button:nth-child(5)')).css('color', 'blue');
+        //     };
+        //     $('#input' + self.value).val(count);
+        // };
 
         // how to change of value and the button css throught the seleted button 
         function seleted4(self, count) {
@@ -453,6 +455,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
+                $('#answer').val('당치도 않소')
             } else if (neme === $(parents.children('button:nth-child(2)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button_active');
@@ -464,6 +467,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
+                $('#answer').val('동의하지 않소')
             } else if (neme === $(parents.children('button:nth-child(3)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button_active');
@@ -475,6 +479,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
+                $('#answer').val('애매한 문제로다.')
             } else if (neme === $(parents.children('button:nth-child(4)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button_active');
@@ -486,6 +491,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button_active');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
+                $('#answer').val('동의하오.')
             } else if (neme === $(parents.children('button:nth-child(5)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button_active');
@@ -497,6 +503,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button_active');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button_active');
+                $('#answer').val('당연하오.')
             };
             $('#input' + self.value).val(count);
         };
