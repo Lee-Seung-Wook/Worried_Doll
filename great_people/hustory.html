@@ -57,6 +57,14 @@
         font-style: normal;
     }
 
+    /* 을지로체 */
+    @font-face {
+        font-family: 'BMEULJIRO';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     .main_image {
         object-fit: cover;
         width: 100%;
@@ -221,11 +229,11 @@
         <img class="main_image" src="./lib/한혜원/1.png">
         <div class="main_button"></div>
         <footer style="display: none;">
-            <p style="font-family: BinggraeSamanco-Bold; font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">
+            <p style="font-family: BinggraeSamanco-Bold; font-size: 1.2rem; margin-bottom: 0.1rem;">
                 안내사항</p>
-            <article
-                style="font-family: BinggraeSamanco-Bold; font-size: 0.7rem; text-align: left; padding-left: 0.5rem; padding-right: 0.5rem; padding-bottom: 0.5rem;">
-                · 해당 심리테스트는 심리학적 전문성이 없는 단순 유희성 테스트입니다.
+            <div
+                style="font-family: BinggraeSamanco-Bold; font-size: 0.7rem; text-align: left; padding-left: 0.5rem; padding-bottom: 0.5rem;">
+                <span>· 해당 심리테스트는 심리학적 전문성이 없는 단순 유희성 테스트입니다.</span>
                 <br>
                 <span style="font-family: fontello;">&#xf1e8</span> : <a style="text-decoration: none; color: black;"
                     href="mailto:blue_notion@naver.com">Contact
@@ -234,7 +242,7 @@
                 <span style="font-family: fontello;">&#xea10</span> : 이민우, 한혜원, 고성현, 이승욱
                 <br>
                 <span style="font-family: fontello;">&#xf1f9</span> : CopyRight[TeamName] All Rights Reserved.
-            </article>
+            </div>
         </footer>
     </div>
 
@@ -256,24 +264,26 @@
                 <br>
                 <div>
                     <button
-                        style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 1)" value="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</button>
+                        style="background-image: url(./lib/한혜원/question_blank.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 35vw; padding-top: 1rem; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 90%; margin: auto;"
+                        onclick="seleted(this, 1)" value="0">나랏말쏘아미 듕귁에달아 문쪼아와로 서르 소아모앗디 아니호알쏘아이 이런젼초아로 어린 보아익셩이 니르고져 홀빠이이셔도</button>
                     <br>
                     <br>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 2)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                        onclick="seleted(this, 2)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.</button>
                     <br>
                     <br>
                     <button
                         style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 3)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                        onclick="seleted(this, 3)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.</button>
                 </div>
                 <br>
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
                     onclick="GoToNext();">next</div>
                 <br>
-                <div class="foot" style="margin-bottom: 1.5rem;">1/2</div>
+                <div class="foot" style="margin-bottom: 1.5rem;">하나/둘</div>
             </div>
             <div>
                 <div style="margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
@@ -299,7 +309,7 @@
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
                     onclick="GoToResult();">next</div>
                 <br>
-                <div class="foot" style="margin-bottom: 1.5rem;">2/2</div>
+                <div class="foot" style="margin-bottom: 1.5rem;">둘/둘</div>
             </div>
         </div>
     </div>
@@ -319,10 +329,9 @@
                 $('footer').fadeIn(2000);
                 $('html, body').css('background-image', 'url()');
                 setTimeout(() => {
-                    $(document).scrollTop($(document).height(), behavior = 'smooth');
+                    // $(document).scrollTop($(document).height(), behavior = 'smooth');
                 }, 1000);
                 setTimeout(() => {
-                    window.scrollTo(0, 0), behavior = 'smooth';
                 }, 2000);
             } else {
                 alert("모바일 환경에 최적화 되어 있습니다.");
