@@ -226,7 +226,7 @@
 
 <body>
     <div class="main_page">
-        <img class="main_image" src="./lib/한혜원/1.png">
+        <img class="main_image" src="./lib/한혜원/1.png" style="border-bottom: 1px solid gray;">
         <div class="main_button"></div>
         <footer style="display: none;">
             <p style="font-family: BinggraeSamanco-Bold; font-size: 1.2rem; margin-bottom: 0.1rem;">
@@ -253,12 +253,10 @@
         </div>
         <div class="slick">
             <div>
-                <div style="margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
-                    MBTI 테스트</div>
+                <img src="./lib/한혜원/Title_2.png" style="width: 100%;">
                 <img src="./lib/한혜원/question.png" style="margin: 1rem; width: -webkit-fill-available;">
-                <img src="./lib/한혜원/SJ.jpg"
-                    style="object-fit: cover; width: 100%; margin: auto; border-top: 1px solid gray;">
-                <div style="border-bottom: 1px solid gray;">
+                <img src="./lib/한혜원/SJ.jpg" style="object-fit: cover; width: 100%; margin: auto;">
+                <div>
 
                 </div>
                 <br>
@@ -281,18 +279,17 @@
                         홀빠이이셔도</button>
                 </div>
                 <br>
-                <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
-                    onclick="GoToNext();">next</div>
+                <div class="next"
+                    style="font-family: BMEULJIRO; border-radius: 1rem; border: 1px solid black; width: 25%; margin: auto;"
+                    onclick="GoToNext();">다음</div>
                 <br>
                 <div class="foot" style="font-family: BMEULJIRO; margin-bottom: 1.5rem; font-size: 0.8rem;">하나/둘</div>
             </div>
             <div>
-                <div style="margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
-                    title name</div>
+                <img src="./lib/한혜원/Title.png" style="width: 100%;">
                 <img src="./lib/한혜원/question.png" style="margin: 1rem; width: -webkit-fill-available;">
-                <img src="./lib/한혜원/HJ.jpg"
-                    style="object-fit: cover; width: 100%; margin: auto; border-top: 1px solid gray;">
-                <div style="border-bottom: 1px solid gray;">
+                <img src="./lib/한혜원/HJ.jpg" style="object-fit: cover; width: 100%; margin: auto;">
+                <div>
                 </div>
                 <br>
                 <div style="margin: auto; display: flex; padding-left: 1rem; padding-right: 1rem;">
@@ -307,8 +304,9 @@
                         style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: black;">
                 </div>
                 <br>
-                <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
-                    onclick="GoToResult();">next</div>
+                <div class="next"
+                    style="font-family: BMEULJIRO; border-radius: 1rem; border: 1px solid black; width: 25%; margin: auto;"
+                    onclick="GoToResult();">결과</div>
                 <br>
                 <div class="foot" style="font-family: BMEULJIRO; margin-bottom: 1.5rem; font-size: 0.8rem;">둘/둘</div>
             </div>
@@ -399,7 +397,7 @@
         // how to change of value and the button css throught the seleted button 
         function seleted(self, count) {
             let seleted = self.value
-            $(self).css('color', 'rgb(77, 85, 126)');
+            $(self).css('color', 'rgb(116, 60, 60)');
             $(self).siblings().css('color', 'black');
             $('#input' + seleted).val(count);
             $('.next').fadeIn();
