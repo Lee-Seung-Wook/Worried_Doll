@@ -264,26 +264,27 @@
                 <br>
                 <div>
                     <button
-                        style="background-image: url(./lib/한혜원/question_blank.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 35vw; padding-top: 1rem; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 90%; margin: auto;"
-                        onclick="seleted(this, 1)" value="0">나랏말쏘아미 듕귁에달아 문쪼아와로 서르 소아모앗디 아니호알쏘아이 이런젼초아로 어린 보아익셩이 니르고져 홀빠이이셔도</button>
+                        style="color: black; background-image: url(./lib/한혜원/question_blank.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 35vw; padding-top: 1rem; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 90%; margin: auto;"
+                        onclick="seleted(this, 1)" value="0">나랏말쏘아미 듕귁에달아 문쪼아와로 서르 소아모앗디 아니호알쏘아이 이런젼초아로 어린 보아익셩이 니르고져
+                        홀빠이이셔도</button>
                     <br>
                     <br>
                     <button
-                        style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 2)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</button>
+                        style="color: black; background-image: url(./lib/한혜원/question_blank_2.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 31vw; padding-top: 0.2rem; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 90%; margin: auto;"
+                        onclick="seleted(this, 2)" value="0">나랏말쏘아미 듕귁에달아 문쪼아와로 서르 소아모앗디 아니호알쏘아이 이런젼초아로 어린 보아익셩이 니르고져
+                        홀빠이이셔도</button>
                     <br>
                     <br>
                     <button
-                        style="font-family: GangwonEdu_OTFBoldA; background-color: white; width: 90%; margin: auto; border-bottom: 1px solid gray;"
-                        onclick="seleted(this, 3)" value="0">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</button>
+                        style="color: black; background-color: transparent; height: 30vw; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 90%; margin: auto; border-top: 8px solid rgb(130, 7, 16); border-bottom: 5px solid rgb(130, 7, 16);"
+                        onclick="seleted(this, 3)" value="0">나랏말쏘아미 듕귁에달아 문쪼아와로 서르 소아모앗디 아니호알쏘아이 이런젼초아로 어린 보아익셩이 니르고져
+                        홀빠이이셔도</button>
                 </div>
                 <br>
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
                     onclick="GoToNext();">next</div>
                 <br>
-                <div class="foot" style="margin-bottom: 1.5rem;">하나/둘</div>
+                <div class="foot" style="font-family: BMEULJIRO; margin-bottom: 1.5rem; font-size: 0.8rem;">하나/둘</div>
             </div>
             <div>
                 <div style="margin: auto; margin-top: 1rem; margin-bottom: 0.5rem; width: 80%;">
@@ -309,7 +310,7 @@
                 <div class="next" style="border-radius: 10px; border: 1px solid black; width: 30%; margin: auto;"
                     onclick="GoToResult();">next</div>
                 <br>
-                <div class="foot" style="margin-bottom: 1.5rem;">둘/둘</div>
+                <div class="foot" style="font-family: BMEULJIRO; margin-bottom: 1.5rem; font-size: 0.8rem;">둘/둘</div>
             </div>
         </div>
     </div>
@@ -398,7 +399,7 @@
         // how to change of value and the button css throught the seleted button 
         function seleted(self, count) {
             let seleted = self.value
-            $(self).css('color', 'red');
+            $(self).css('color', 'rgb(77, 85, 126)');
             $(self).siblings().css('color', 'black');
             $('#input' + seleted).val(count);
             $('.next').fadeIn();
