@@ -287,7 +287,9 @@
                         style="color: black; background-color: transparent; height: 30vw; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 90%; margin: auto; border-top: 8px solid rgb(130, 7, 16); border-bottom: 8px solid rgb(130, 7, 16); border-left: 2px solid black; border-right: 2px solid black;"
                         onclick="seleted(this, 3)" value="0">CSS를 통해 구현한 답변지로써 리소스 절약에 도움이 된다.</button>
 
-                    <div id="div_four" style="margin-top: 1rem; display: inline-block;">
+                    <button
+                        style="background-color: transparent; border: none; margin-top: 1rem; display: inline-block;"
+                        onclick="seleted(this, 4)" value="0">
                         <div style="display: flex; padding-left: 0.3rem;">
                             <div
                                 style="border-top: 0.07rem solid black; border-left: 0.07rem solid black; border-right: 0.07rem solid black; width: 1.2rem; height: 0.7rem; border-radius: 15% 25% 0% 0%; background-color: rgb(130, 110, 97);">
@@ -310,10 +312,9 @@
                             <div
                                 style="background-color: transparent; border: 1px solid black; width: 1.8rem; height: 7rem; border-radius: 5% 1% 1% 5%;">
                             </div>
-                            <button id="button_four"
-                                style="color: black; font-size: 0.9rem; font-family: BMEULJIRO; border-left: none; border-right: none; width: 17rem; height: 6.8rem; margin-top: 0.1rem; background-color: transparent; border-top: 0.6rem solid rgb(130, 7, 16); border-bottom: 0.6rem solid rgb(130, 7, 16);"
-                                onclick="seleted2(this, 4)" value="0">
-                                CSS를 통해 구현한 두루마리로써 리소스 절약에 도움이 되지만 품질이 떨어지며, 버튼 구현 시 별도의 함수가 필요하다.</button>
+                            <div
+                                style="padding-top: 1.3rem; font-size: 0.9rem; font-family: BMEULJIRO; border-left: none; border-right: none; width: 17rem; height: 6.8rem; margin-top: 0.1rem; background-color: transparent; border-top: 0.6rem solid rgb(130, 7, 16); border-bottom: 0.6rem solid rgb(130, 7, 16);">
+                                CSS를 통해 구현한 두루마리로써 리소스 절약에 도움이 되지만 품질이 떨어진다.</div>
                             <div
                                 style="background-color: transparent; border: 1px solid black; width: 1.8rem; height: 7rem; border-radius: 1% 5% 5% 1%;">
                             </div>
@@ -327,7 +328,7 @@
                                 style="border: 1px solid black; border-top: none; width: 1.6rem; height: 0.3rem; border-radius: 0% 0% 25% 25%; background-color: rgb(130, 7, 16);">
                             </div>
                         </div>
-                    </div>
+                    </button>
 
 
                 </div>
@@ -459,20 +460,6 @@
             let seleted = self.value
             $(self).css('color', 'rgb(116, 60, 60)');
             $(self).siblings().css('color', 'black');
-            $('#input' + seleted).val(count);
-
-            var button_four = $('#button_four').css('color')
-            if (button_four = 'rgb(166, 60, 60)') {
-                $('#button_four').css('color', 'black');
-            }
-            $('.next').fadeIn();
-        };
-
-        // how to change of value and the button css throught the seleted button 추가함수
-        function seleted2(self, count) {
-            let seleted = self.value
-            $(self).css('color', 'rgb(116, 60, 60)');
-            $('#div_four').siblings().css('color', 'black');
             $('#input' + seleted).val(count);
             $('.next').fadeIn();
         };
