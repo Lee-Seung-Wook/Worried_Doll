@@ -33,6 +33,7 @@
 </head>
 
 <body>
+
     <a id="kakao-link-btn" href="javascript:kakaoShare()" style="text-decoration: none;">
         <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
     </a>
@@ -40,14 +41,12 @@
     <img id="img" style="width: 0%;"
         src="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg">
 
-    <div id="fb-root"></div>
-
-    <div class="fb-share-button" data-href="https://angelo-s-library.netlify.app/great_people/share_link.html"
-        data-layout="button_count">
-    </div>
     <div style="margin-top: 0.3rem; width: 4rem; height: 4rem; background-size: cover; background-repeat: no-repeat; background-image: url('https://www.clipartmax.com/png/full/178-1786427_twitter-button-transparent.png');"
         onclick="shareTwitter()">
     </div>
+
+    <div style="margin-top: 0.7rem; width: 4rem; height: 4rem; background-image: url('https://kr.seaicons.com/wp-content/uploads/2016/03/facebook-icon-26.png'); background-size: cover; background-repeat: no-repeat;"
+        onclick="shareFacebook()"></div>
 
     <script>
 
@@ -89,20 +88,23 @@
             })
         }
 
-        // function of to share throught the facebook
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        // function of to share throught the facebook
+        // function of to share throught the twitter
         function shareTwitter() {
-            let url = encodeURIComponent('https://angelo-s-library.netlify.app/great_people/share_link.html');
+            let url_current = window.location.href
+            let url = encodeURIComponent(url_current);
             let title = 'share_link';
             window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '소소한 프로젝트', 'width=400, height=400');
+        }
+
+        // function of to share throught the facebook
+
+        function shareFacebook() {
+            let url = window.location.href;
+            window.open('https://www.facebook.com/sharer/sharer.php?u='
+                + encodeURIComponent(url)
+                + '&t=' + encodeURIComponent(title_current),
+                'facebooksharedialog',
+                'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
         }
 
     </script>
