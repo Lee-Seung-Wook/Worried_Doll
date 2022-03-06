@@ -22,6 +22,13 @@
     <meta property="og:description" content="Your description" />
     <meta property="og:image"
         content="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg" />
+    <!-- Meta data for a share button throught the twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://angelo-s-library.netlify.app/great_people/share_link.html" />
+    <meta name="twitter:title" content="share_link" />
+    <meta name="twitter:description" content="Your description" />
+    <meta name="twitter:image"
+        content="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg" />
     <title>share_link</title>
 </head>
 
@@ -35,7 +42,11 @@
 
     <div id="fb-root"></div>
 
-    <div class="fb-share-button" data-href="https://angelo-s-library.netlify.app/great_people/share_link.html" data-layout="button_count">
+    <div class="fb-share-button" data-href="https://angelo-s-library.netlify.app/great_people/share_link.html"
+        data-layout="button_count">
+    </div>
+    <div style="margin-top: 0.3rem; width: 4rem; height: 4rem; background-size: cover; background-repeat: no-repeat; background-image: url('https://www.clipartmax.com/png/full/178-1786427_twitter-button-transparent.png');"
+        onclick="shareTwitter()">
     </div>
 
     <script>
@@ -87,9 +98,12 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-
-
-
+        // function of to share throught the facebook
+        function shareTwitter() {
+            let url = encodeURIComponent('https://angelo-s-library.netlify.app/great_people/share_link.html');
+            let title = 'share_link';
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, 'popup제목', 'width=400, height=400');
+        }
 
     </script>
 
