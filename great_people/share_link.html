@@ -22,49 +22,55 @@
     <a id="kakao-link-btn" href="javascript:kakaoShare()">
         <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
     </a>
-</body>
 
-<script>
-
-    let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
-    let url_current = window.location.href
-    let image_share = 'https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/SJ.jpg?raw=true'
-
-</script>
+    <img id="img" style="width: 30%;" src="./lib/한혜원/HJ.jpg">
 
 
-<script>
-    function kakaoShare() {
-        Kakao.Link.sendDefault({
-            objectType: 'feed',
-            content: {
-                title: '카카오공유하기 시 타이틀',
-                description: '카카오공유하기 시 설명',
-                imageUrl: 'https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/SJ.jpg?raw=true',
-                link: {
-                    mobileWebUrl: url_current,
-                    webUrl: url_current,
-                },
-            },
-            buttons: [
-                {
-                    title: '웹으로 보기',
+    <script>
+
+        let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
+        let url_current = window.location.href
+        let image_share = $('#img').attr('src');
+
+        console.log(image_share)
+
+    </script>
+
+
+    <script>
+        function kakaoShare() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '카카오공유하기 시 타이틀',
+                    description: '카카오공유하기 시 설명',
+                    imageUrl: image_share,
                     link: {
                         mobileWebUrl: url_current,
                         webUrl: url_current,
                     },
                 },
-                {
-                    title: '앱으로 보기',
-                    link: {
-                        mobileWebUrl: url_basic,
-                        webUrl: url_basic,
+                buttons: [
+                    {
+                        title: '웹으로 보기',
+                        link: {
+                            mobileWebUrl: url_current,
+                            webUrl: url_current,
+                        },
                     },
-                },
-            ],
-            installTalk: true,
-        })
-    }
-</script>
+                    {
+                        title: '앱으로 보기',
+                        link: {
+                            mobileWebUrl: url_basic,
+                            webUrl: url_basic,
+                        },
+                    },
+                ],
+                installTalk: true,
+            })
+        }
+    </script>
+
+</body>
 
 </html>
