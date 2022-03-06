@@ -12,6 +12,9 @@
         integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
     <!-- Kakaotalk SDK Load -->
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('40962468965aec54015c38b43dd3a3dc');
+    </script>
     <title>share_link</title>
 </head>
 
@@ -21,16 +24,15 @@
     </a>
 </body>
 
-<!-- kakao sdk 호출 -->
-<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
 
-<script type="text/javascript">
-    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
-    // Kakao.init('40962468965aec54015c38b43dd3a3dc');
 
-    // SDK 초기화 여부를 판단합니다.
-    console.log(Kakao.isInitialized());
 
+
+</script>
+
+
+<script>
     function kakaoShare() {
         Kakao.Link.sendDefault({
             objectType: 'feed',
@@ -39,27 +41,26 @@
                 description: '카카오공유하기 시 설명',
                 imageUrl: 'https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png',
                 link: {
-                    mobileWebUrl: 'https://dev-jwblog.tistory.com/56',
-                    webUrl: 'https://dev-jwblog.tistory.com/56',
+                    mobileWebUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
+                    webUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
                 },
             },
             buttons: [
                 {
                     title: '웹으로 보기',
                     link: {
-                        mobileWebUrl: 'https://dev-jwblog.tistory.com/56',
-                        webUrl: 'https://dev-jwblog.tistory.com/56',
+                        mobileWebUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
+                        webUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
                     },
                 },
                 {
                     title: '앱으로 보기',
                     link: {
-                        mobileWebUrl: 'https://dev-jwblog.tistory.com/56',
-                        webUrl: 'https://dev-jwblog.tistory.com/56',
+                        mobileWebUrl: 'https://angelo-s-library.netlify.app/great_people/hustory.html',
+                        webUrl: 'https://angelo-s-library.netlify.app/great_people/hustory.html',
                     },
                 },
             ],
-            // 카카오톡 미설치 시 카카오톡 설치 경로이동
             installTalk: true,
         })
     }
