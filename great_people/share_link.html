@@ -50,12 +50,12 @@
 
     <script>
 
-        // function of to share throught the kakaotalk message
         let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
         let url_current = window.location.href
         let image_share = $('#img').attr('src');
         let title_current = document.title;
 
+        // function of to share throught the kakaotalk message
         function kakaoShare() {
             Kakao.Link.sendDefault({
                 objectType: 'feed',
@@ -91,8 +91,7 @@
         // function of to share throught the twitter
         function shareTwitter() {
             let url = encodeURIComponent(url_current);
-            let title = 'share_link';
-            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '소소한 프로젝트', 'width=400, height=400');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title_current}`, '소소한 프로젝트', 'width=400, height=400');
         };
 
         // function of to share throught the facebook
