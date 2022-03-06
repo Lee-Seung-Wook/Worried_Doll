@@ -26,7 +26,9 @@
 
 <script>
 
-
+    let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
+    let url_current = window.location.href
+    let image_share = './lib/한혜원/SJ.jpg'
 
 
 </script>
@@ -41,23 +43,23 @@
                 description: '카카오공유하기 시 설명',
                 imageUrl: 'https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png',
                 link: {
-                    mobileWebUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
-                    webUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
+                    mobileWebUrl: url_current,
+                    webUrl: url_current,
                 },
             },
             buttons: [
                 {
                     title: '웹으로 보기',
                     link: {
-                        mobileWebUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
-                        webUrl: 'https://angelo-s-library.netlify.app/great_people/hustory_result.html',
+                        mobileWebUrl: url_current,
+                        webUrl: url_current,
                     },
                 },
                 {
                     title: '앱으로 보기',
                     link: {
-                        mobileWebUrl: 'https://angelo-s-library.netlify.app/great_people/hustory.html',
-                        webUrl: 'https://angelo-s-library.netlify.app/great_people/hustory.html',
+                        mobileWebUrl: url_basic,
+                        webUrl: url_basic,
                     },
                 },
             ],
