@@ -15,6 +15,13 @@
     <script>
         Kakao.init('40962468965aec54015c38b43dd3a3dc');
     </script>
+    <!-- Meta data for a share button throught the facebook -->
+    <meta property="og:url" content="https://angelo-s-library.netlify.app/great_people/share_link.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="share_link" />
+    <meta property="og:description" content="Your description" />
+    <meta property="og:image"
+        content="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg" />
     <title>share_link</title>
 </head>
 
@@ -26,8 +33,14 @@
     <img id="img" style="width: 0%;"
         src="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg">
 
+    <div id="fb-root"></div>
+
+    <div class="fb-share-button" data-href="https://angelo-s-library.netlify.app/great_people/share_link.html" data-layout="button_count">
+    </div>
+
     <script>
 
+        // function of to share throught the kakaotalk message
         let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
         let url_current = window.location.href
         let image_share = $('#img').attr('src');
@@ -64,6 +77,20 @@
                 installTalk: true,
             })
         }
+
+        // function of to share throught the facebook
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+
     </script>
 
 </body>
