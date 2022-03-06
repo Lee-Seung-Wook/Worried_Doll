@@ -85,27 +85,24 @@
                     },
                 ],
                 installTalk: true,
-            })
-        }
+            });
+        };
 
         // function of to share throught the twitter
         function shareTwitter() {
-            // let url_current = window.location.href
             let url = encodeURIComponent(url_current);
             let title = 'share_link';
             window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '소소한 프로젝트', 'width=400, height=400');
-        }
+        };
 
         // function of to share throught the facebook
-
         function shareFacebook() {
-            // let url = window.location.href;
             window.open('https://www.facebook.com/sharer/sharer.php?u='
                 + encodeURIComponent(url_current)
                 + '&t=' + encodeURIComponent(title_current),
                 'facebooksharedialog',
                 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
-        }
+        };
 
     </script>
 
