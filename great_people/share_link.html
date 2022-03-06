@@ -19,32 +19,27 @@
 </head>
 
 <body>
-    <a id="kakao-link-btn" href="javascript:kakaoShare()">
+    <a id="kakao-link-btn" href="javascript:kakaoShare()" style="text-decoration: none;">
         <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
     </a>
 
-    <img id="img" style="width: 0%;" src="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg">
-
+    <img id="img" style="width: 0%;"
+        src="https://angelo-s-library.netlify.app/great_people/lib/%ED%95%9C%ED%98%9C%EC%9B%90/HJ.jpg">
 
     <script>
 
         let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
         let url_current = window.location.href
         let image_share = $('#img').attr('src');
+        let title_current = document.title;
 
-        console.log(image_share)
-
-    </script>
-
-
-    <script>
         function kakaoShare() {
             Kakao.Link.sendDefault({
                 objectType: 'feed',
                 content: {
-                    title: '카카오공유하기 시 타이틀',
-                    description: '카카오공유하기 시 설명',
-                    imageUrl: $('#img').attr('src'),
+                    title: '소소한 프로젝트',
+                    description: title_current,
+                    imageUrl: image_share,
                     link: {
                         mobileWebUrl: url_current,
                         webUrl: url_current,
