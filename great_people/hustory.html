@@ -386,9 +386,38 @@
                 <br>
                 <div class="next"
                     style="line-height: inherit; font-family: BMEULJIRO; border-radius: 1rem; border: 1px solid black; width: 25%; margin: auto;"
-                    onclick="GoToResult();">결과</div>
+                    onclick="GoToNext();">다음</div>
                 <br>
                 <div class="foot" style="font-family: BMEULJIRO; margin-bottom: 1.5rem; font-size: 0.8rem;">둘/둘</div>
+            </div>
+            <div>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/한혜원/누각현판.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 44vw; font-size: 3rem; font-family: BMEULJIRO; width: 100%; margin: auto;">
+                    <p style="margin: auto;">
+                        성품 유형지
+                    </p>
+                </div>
+                <div
+                    style="font-size: 1.3rem; width: 90%; margin: auto; text-align: left; padding-left: 2%; padding-right: 2%; padding-top: 1%; padding-bottom: 1%; font-family: BMEULJIRO; color: rgba(35, 39, 52, 1); margin-top: 1rem;">
+                    &nbsp아래의 동그라미 버튼을 터치해 당신의 성향과 유사한 조선시대 인물을 만나보세요.
+                </div>
+                <div onclick="GoToResult();">
+                    <p id="btn_result" style="font-family: fontello; font-size: 4rem; margin-top: 1rem;">
+                        &#xe839
+                    </p>
+                </div>
+                <br>
+                <!-- Kakao AD -->
+                <div>
+                    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-hUXRdM3DOuzupAp4"
+                        data-ad-width="320" data-ad-height="50"></ins>
+                    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+                </div>
+                <div>
+                    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-hUXRdM3DOuzupAp4"
+                        data-ad-width="320" data-ad-height="50"></ins>
+                    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+                </div>
             </div>
         </div>
     </div>
@@ -439,8 +468,9 @@
         function GoToNext() {
             window.scrollTo(0, 0);
             setTimeout(() => {
+                slideindex++
                 $('.next').fadeOut(500);
-                $('.slick').slick('slickGoTo', slideindex + 1);
+                $('.slick').slick('slickGoTo', slideindex);
             }, 500);
         };
 
@@ -455,10 +485,13 @@
 
         //
         function GoToResult() {
-            let firstID = $('#input0').val();
-            let secondID = $('#input1').val();
-            alert("당신의 첫 번째 선택은 " + firstID + "\n당신의 두 번째 선택은 " + secondID);
-            location.href = './hustory_result.html'
+            $('#btn_result').addClass('icon-spin6-alt animate-spin')
+            setTimeout(() => {
+                let firstID = $('#input0').val();
+                let secondID = $('#input1').val();
+                alert("당신의 첫 번째 선택은 " + firstID + "\n당신의 두 번째 선택은 " + secondID);
+                location.href = './hustory_result.html'
+            }, 1500);
         };
 
         // how to change of value and the button css throught the seleted button 
