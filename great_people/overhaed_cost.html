@@ -30,18 +30,18 @@
 
 <body>
     <div
-        style="margin-top: 2rem; margin-left: 2rem; width: 20rem; border: 1px solid rgb(91, 105, 12); padding: 0.5rem;">
+        style="margin-top: 2rem; margin-left: 1.5rem; width: 20rem; border: 1px solid rgb(91, 105, 12); padding: 0.5rem;">
         <div style="padding-left: 0.5rem;">
             <input id="chech-amount" type="checkbox" onclick="settingStandards('amount')"> 공급가액 기준
             <br>
             <input id="check-direct" type="checkbox" onclick="settingStandards('direct')"> 직접비 기준
             <br>
-            <input style="text-align: center; color: red; width: 5rem" id="check-tax" type="text" value="과세" disabled><button
-                onclick="settingTax()">변경</button>
+            <input style="text-align: center; color: red; width: 5rem;" id="check-tax" type="text" value="과세"
+                disabled><button onclick="settingTax()">변경</button>
             <div style="color: red; font-size: 0.8rem;">※ 기본값은 과세로 설정되어 있습니다.</div>
             <div style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-                <span style="display: inline-block; width: 5rem;">사업비 총액:</span><input style="text-align: center;"
-                    id="total-amount" type="text" onkeyup="chkNumber(this)">
+                <span style="display: inline-block; width: 5rem;">사업비 총액:</span><input
+                    style="text-align: center; width: 15rem;" id="total-amount" type="text" onkeyup="chkNumber(this)">
                 <br>
                 <span style="display: inline-block; width: 5rem;">간접비율:</span><input id="overhead-cost-rate" type="text"
                     placeholder="0~100" style="width: 4rem; text-align: center;"
@@ -51,17 +51,18 @@
             <button onclick="SettingCalculation()">간접비 계산하기</button>
             <br>
             <div style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-                <span style="display: inline-block; width: 3rem;">사업비:</span><input style="margin-left: 0.5rem;"
-                    id="amount" type="text" disabled placeholder="0">
+                <span style="display: inline-block; width: 3rem;">사업비:</span><input
+                    style="margin-left: 0.5rem; width: 15rem;" id="amount" type="text" disabled placeholder="0">
                 <br>
-                <span style="display: inline-block; width: 3rem;">부가세:</span><input style="margin-left: 0.5rem;"
-                    id="value-added-tax" type="text" disabled placeholder="0">
+                <span style="display: inline-block; width: 3rem;">부가세:</span><input
+                    style="margin-left: 0.5rem; width: 15rem;" id="value-added-tax" type="text" disabled
+                    placeholder="0">
                 <br>
-                <span style="display: inline-block; width: 3rem;">직접비:</span><input style="margin-left: 0.5rem;"
-                    id="direct-cost" type="text" disabled placeholder="0">
+                <span style="display: inline-block; width: 3rem;">직접비:</span><input
+                    style="margin-left: 0.5rem; width: 15rem;" id="direct-cost" type="text" disabled placeholder="0">
                 <br>
-                <span style="display: inline-block; width: 3rem;">간접비:</span><input style="margin-left: 0.5rem;"
-                    id="overhead-cost" type="text" disabled placeholder="0">
+                <span style="display: inline-block; width: 3rem;">간접비:</span><input
+                    style="margin-left: 0.5rem; width: 15rem;" id="overhead-cost" type="text" disabled placeholder="0">
             </div>
             <button onClick="window.location.reload()">재실행</button>
         </div>
