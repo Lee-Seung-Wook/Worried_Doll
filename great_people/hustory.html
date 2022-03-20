@@ -308,7 +308,7 @@
                     <button onclick="seleted2(this, 3)" value="0" name="5" class="button">당연</button>
                 </div>
                 <div>
-                    <input disabled id="answer" placeholder="위의 버튼을 눌러 답하시오." value=""
+                    <input disabled id="answer0" placeholder="위의 버튼을 눌러 답하시오." value=""
                         style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: rgba(61, 61, 61, 1);">
                 </div>
                 <br>
@@ -348,7 +348,7 @@
                     <button onclick="seleted2(this, 3)" value="1" name="5" class="button">당연</button>
                 </div>
                 <div>
-                    <input disabled id="answer" placeholder="위의 버튼을 눌러 답하시오." value=""
+                    <input disabled id="answer1" placeholder="위의 버튼을 눌러 답하시오." value=""
                         style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: rgba(61, 61, 61, 1);">
                 </div>
                 <br>
@@ -388,7 +388,7 @@
                     <button onclick="seleted2(this, 3)" value="2" name="5" class="button">당연</button>
                 </div>
                 <div>
-                    <input disabled id="answer" placeholder="위의 버튼을 눌러 답하시오." value=""
+                    <input disabled id="answer2" placeholder="위의 버튼을 눌러 답하시오." value=""
                         style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: rgba(61, 61, 61, 1);">
                 </div>
                 <br>
@@ -426,7 +426,7 @@
                     <button onclick="seleted2(this, 3)" value="3" name="5" class="button">당연</button>
                 </div>
                 <div>
-                    <input disabled id="answer" placeholder="위의 버튼을 눌러 답하시오." value=""
+                    <input disabled id="answer3" placeholder="위의 버튼을 눌러 답하시오." value=""
                         style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: rgba(61, 61, 61, 1);">
                 </div>
                 <br>
@@ -696,7 +696,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
-                $('#answer').attr('value', '당치도 않소')
+                $('#answer' + self.value).attr('value', '당치도 않소')
             } else if (neme === $(parents.children('button:nth-child(2)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button');
@@ -708,7 +708,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
-                $('#answer').attr('value', '동의하지 않소')
+                $('#answer' + self.value).attr('value', '동의하지 않소')
             } else if (neme === $(parents.children('button:nth-child(3)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button');
@@ -720,7 +720,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
-                $('#answer').attr('value', '애매한 문제로다')
+                $('#answer' + self.value).attr('value', '애매한 문제로다')
             } else if (neme === $(parents.children('button:nth-child(4)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button');
@@ -732,7 +732,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button_active');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button');
-                $('#answer').attr('value', '동의하오')
+                $('#answer' + self.value).attr('value', '동의하오')
             } else if (neme === $(parents.children('button:nth-child(5)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
                 $(parents.children('button:nth-child(1)')).addClass('button');
@@ -744,7 +744,7 @@
                 $(parents.children('button:nth-child(4)')).addClass('button');
                 $(parents.children('button:nth-child(5)')).removeClass();
                 $(parents.children('button:nth-child(5)')).addClass('button_active');
-                $('#answer').attr('value', '당연하오')
+                $('#answer' + self.value).attr('value', '당연하오')
             };
             if (count == 0) {
                 random = Math.random() < 0.5 ? -1 : 1;
