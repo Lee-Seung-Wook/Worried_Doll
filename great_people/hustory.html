@@ -136,9 +136,9 @@
     }
 
     .button {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
         color: rgb(88, 88, 88);
         text-shadow: 1px 1px 0px white;
         background: #ffffff;
@@ -171,33 +171,10 @@
         font-family: 'BinggraeSamanco-Bold';
     }
 
-    .button:hover {
-        background: #ffffff;
-        /* Old browsers */
-        background: -moz-linear-gradient(top, #ffffff 0%, #eee 100%);
-        /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #eee));
-        /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #ffffff 0%, #eee 100%);
-        /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #ffffff 0%, #eee 100%);
-        /* Opera11.10+ */
-        background: -ms-linear-gradient(top, #ffffff 0%, #eee 100%);
-        /* IE10+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eee', GradientType=0);
-        /* IE6-9 */
-        background: linear-gradient(top, #ffffff 0%, #eee 100%);
-        /* W3C */
-        -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
-        color: rgb(173, 18, 18);
-    }
-
     .button_active {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
         color: rgb(173, 18, 18);
         text-shadow: 1px 1px 0px white;
         background: #dfdfdf;
@@ -230,9 +207,6 @@
         font-family: 'BinggraeSamanco-Bold';
     }
 
-    .button_active:hover {
-        color: rgb(173, 18, 18);
-    }
 </style>
 
 <body>
@@ -281,7 +255,7 @@
             <!-- 0 question / multiple choice test -->
             <div>
                 <div
-                    style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/한혜원/누각현판.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 31vw; font-size: 2rem; font-family: BMEULJIRO; width: 70%; margin: auto; margin-top: 1rem;">
+                    style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/한혜원/누각현판.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 27vw; font-size: 1.5rem; font-family: BMEULJIRO; width: 60%; margin: auto; margin-top: 1rem;">
                     <p style="margin: auto;">
                         성품 유형지
                     </p>
@@ -295,8 +269,8 @@
                     &nbsp인적도 드믄 곳이라 저 사람과 자주 마주칠 것 같은데 먼저 말을 걸어볼까요?
                 </div>
                 <img src="./lib/한혜원/question/question_1_1.png"
-                    style="object-fit: cover; width: 90%; margin: auto; margin-bottom: 1rem; margin-left: 5%; margin-right: 5%; margin-top: 2%;">
-                <div style="margin: auto; display: flex; padding-left: 2rem; padding-right: 2rem; margin-top: 5%;">
+                    style="object-fit: cover; width: 80%; margin: auto; margin-bottom: 1rem; margin-left: 10%; margin-right: 10%; margin-top: 2%;">
+                <div style="margin: auto; display: flex; padding-left: 2.5rem; padding-right: 2.5rem; margin-top: 5%;">
                     <button onclick="seleted2(this, -3)" value="0" name="1" class="button">거부</button>
                     <button onclick="seleted2(this, -2)" value="0" name="2" class="button">부정</button>
                     <button onclick="seleted2(this, 0)" value="0" name="3" class="button">중립</button>
@@ -305,11 +279,11 @@
                 </div>
                 <div>
                     <input disabled id="answer0" placeholder="위의 버튼을 눌러 답하시오." value=""
-                        style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: rgba(61, 61, 61, 1);">
+                        style="background-color: transparent; font-size: 1.5rem; text-align: center; margin-top: 1.5rem; font-family: BinggraeSamanco-Bold; color: rgba(61, 61, 61, 1); width: 60%; border: none;">
                 </div>
                 <br>
                 <div class="next"
-                    style="line-height: inherit; font-family: BMEULJIRO; border-radius: 1rem; border: 1px solid black; width: 25%; margin: auto;"
+                    style="line-height: inherit; font-family: BMEULJIRO; width: 25%; margin: auto; border-top: 0.2rem solid rgb(130, 7, 16); border-left: none; border-right: none; border-bottom: 0.2rem solid rgb(130, 7, 16); height: 2.5rem; line-height: 2rem;"
                     onclick="GoToNext();">다음</div>
                 <br>
                 <div class="foot" style="font-family: BMEULJIRO; margin-bottom: 1.5rem; font-size: 0.8rem;">하나/열여섯</div>
@@ -678,6 +652,7 @@
 
         // how to change of value and the button css throught the seleted button 
         function seleted2(self, count) {
+            window.scrollTo(0, document.body.scrollHeight);
             $('.next').fadeIn();
             let parents = $(self).parent();
             let neme = $(self).attr('name')
