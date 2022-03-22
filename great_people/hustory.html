@@ -171,6 +171,29 @@
         font-family: 'BinggraeSamanco-Bold';
     }
 
+    .button:hover {
+        background: #ffffff;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #ffffff 0%, #eee 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #eee));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ffffff 0%, #eee 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%, #eee 100%);
+        /* Opera11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%, #eee 100%);
+        /* IE10+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eee', GradientType=0);
+        /* IE6-9 */
+        background: linear-gradient(top, #ffffff 0%, #eee 100%);
+        /* W3C */
+        -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.4);
+        color: rgb(173, 18, 18);
+    }
+
     .button_active {
         width: 3rem;
         height: 3rem;
@@ -207,6 +230,9 @@
         font-family: 'BinggraeSamanco-Bold';
     }
 
+    .button_active:hover {
+        color: rgb(173, 18, 18);
+    }
 </style>
 
 <body>
@@ -255,26 +281,22 @@
             <!-- 0 question / multiple choice test -->
             <div>
                 <div
-                    style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/한혜원/누각현판.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 44vw; font-size: 3rem; font-family: BMEULJIRO; width: 100%; margin: auto;">
+                    style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/한혜원/누각현판.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 31vw; font-size: 2rem; font-family: BMEULJIRO; width: 70%; margin: auto; margin-top: 1rem;">
                     <p style="margin: auto;">
                         성품 유형지
                     </p>
                 </div>
-                <img src="./lib/한혜원/question/question_1_1.png"
-                    style="object-fit: cover; width: 100%; margin: auto; margin-bottom: 1rem;">
                 <div
-                    style="width: 90%; margin: auto; text-align: left; padding-left: 2%; padding-right: 2%; padding-top: 1%; padding-bottom: 1%; font-family: BMEULJIRO; color: rgba(35, 39, 52, 1); border-top: 0.4rem solid rgba(35, 39, 52, 1); border-bottom: 0.4rem solid rgba(35, 39, 52, 1);">
+                    style="width: 90%; margin: auto; text-align: left; padding-left: 5%; padding-right: 5%; padding-top: 1%; padding-bottom: 1%; font-family: BMEULJIRO; color: rgba(35, 39, 52, 1); margin-top: 1rem;">
                     &nbsp낙안읍성(전남 순천)에서 한양까지 먼 길을 떠나게 된 당신. 칠백리가 넘는 상당히 먼 거리입니다.
                     <br>
                     &nbsp그런데 어제부터 보이던 저 사람. 봇짐을 짊어지고 나와 같은 길을 걷고 있습니다.
                     <br>
                     &nbsp인적도 드믄 곳이라 저 사람과 자주 마주칠 것 같은데 먼저 말을 걸어볼까요?
                 </div>
-                <div>
-                    <div>：</div>
-                    <div style="font-family: fontello; margin-bottom: 0.5rem;">&#xe85c</div>
-                </div>
-                <div style="margin: auto; display: flex; padding-left: 1rem; padding-right: 1rem;">
+                <img src="./lib/한혜원/question/question_1_1.png"
+                    style="object-fit: cover; width: 90%; margin: auto; margin-bottom: 1rem; margin-left: 5%; margin-right: 5%; margin-top: 2%;">
+                <div style="margin: auto; display: flex; padding-left: 2rem; padding-right: 2rem; margin-top: 5%;">
                     <button onclick="seleted2(this, -3)" value="0" name="1" class="button">거부</button>
                     <button onclick="seleted2(this, -2)" value="0" name="2" class="button">부정</button>
                     <button onclick="seleted2(this, 0)" value="0" name="3" class="button">중립</button>
