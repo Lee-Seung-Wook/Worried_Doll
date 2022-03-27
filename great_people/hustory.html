@@ -509,7 +509,42 @@
         // Go to the result page
         function GoToResult() {
             $('#btn_result').addClass('icon-spin6-alt animate-spin')
-            $('#btn_result').css('color', 'rgb(130, 10, 40);')
+            setTimeout(() => {
+                $('#btn_result').css('color', 'rgb(25, 20, 21);')
+                setTimeout(() => {
+                    $('#btn_result').css('color', 'rgb(30, 20, 20);')
+                    setTimeout(() => {
+                        $('#btn_result').css('color', 'rgb(40, 19, 22);')
+                        setTimeout(() => {
+                            $('#btn_result').css('color', 'rgb(50, 18, 24);')
+                            setTimeout(() => {
+                                $('#btn_result').css('color', 'rgb(60, 17, 26);')
+                                setTimeout(() => {
+                                    $('#btn_result').css('color', 'rgb(70, 16, 28);')
+                                    setTimeout(() => {
+                                        $('#btn_result').css('color', 'rgb(80, 15, 30);')
+                                        setTimeout(() => {
+                                            $('#btn_result').css('color', 'rgb(90, 14, 32);')
+                                            setTimeout(() => {
+                                                $('#btn_result').css('color', 'rgb(100, 13, 34);')
+                                                setTimeout(() => {
+                                                    $('#btn_result').css('color', 'rgb(110, 12, 36);')
+                                                    setTimeout(() => {
+                                                        $('#btn_result').css('color', 'rgb(120, 11, 38);')
+                                                        setTimeout(() => {
+                                                            $('#btn_result').css('color', 'rgb(130, 10, 40);')
+                                                        }, 120);
+                                                    }, 110);
+                                                }, 100);
+                                            }, 90);
+                                        }, 80);
+                                    }, 70);
+                                }, 60);
+                            }, 50);
+                        }, 40);
+                    }, 30);
+                }, 20);
+            }, 10);
             setTimeout(() => {
                 let firstID = $('#input0').val();
                 let secondID = $('#input1').val();
