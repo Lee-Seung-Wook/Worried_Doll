@@ -202,6 +202,18 @@
         font-weight: bold;
         font-family: 'BinggraeSamanco-Bold';
     }
+
+    .btn_result {
+        font-family: fontello;
+        font-size: 4rem;
+        margin-top: 1rem;
+        color: rgb(20, 21, 25);
+        transition: all ease 2s 0s;
+    }
+
+    .btn_result_change {
+        color: rgb(130, 10, 40);
+    }
 </style>
 
 <body>
@@ -356,8 +368,7 @@
                     &nbsp아래의 동그라미 버튼을 터치해 당신의 성향과 유사한 조선시대 인물을 만나보세요.
                 </div>
                 <div onclick="GoToResult();">
-                    <p id="btn_result"
-                        style="font-family: fontello; font-size: 4rem; margin-top: 1rem; color: rgb(20, 21, 25);">
+                    <p id="btn_result" class="btn_result">
                         &#xe839
                     </p>
                 </div>
@@ -509,48 +520,13 @@
         // Go to the result page
         function GoToResult() {
             $('#btn_result').addClass('icon-spin6-alt animate-spin')
-            setTimeout(() => {
-                $('#btn_result').css('color', 'rgb(25, 20, 21);')
-                setTimeout(() => {
-                    $('#btn_result').css('color', 'rgb(30, 20, 20);')
-                    setTimeout(() => {
-                        $('#btn_result').css('color', 'rgb(40, 19, 22);')
-                        setTimeout(() => {
-                            $('#btn_result').css('color', 'rgb(50, 18, 24);')
-                            setTimeout(() => {
-                                $('#btn_result').css('color', 'rgb(60, 17, 26);')
-                                setTimeout(() => {
-                                    $('#btn_result').css('color', 'rgb(70, 16, 28);')
-                                    setTimeout(() => {
-                                        $('#btn_result').css('color', 'rgb(80, 15, 30);')
-                                        setTimeout(() => {
-                                            $('#btn_result').css('color', 'rgb(90, 14, 32);')
-                                            setTimeout(() => {
-                                                $('#btn_result').css('color', 'rgb(100, 13, 34);')
-                                                setTimeout(() => {
-                                                    $('#btn_result').css('color', 'rgb(110, 12, 36);')
-                                                    setTimeout(() => {
-                                                        $('#btn_result').css('color', 'rgb(120, 11, 38);')
-                                                        setTimeout(() => {
-                                                            $('#btn_result').css('color', 'rgb(130, 10, 40);')
-                                                        }, 120);
-                                                    }, 110);
-                                                }, 100);
-                                            }, 90);
-                                        }, 80);
-                                    }, 70);
-                                }, 60);
-                            }, 50);
-                        }, 40);
-                    }, 30);
-                }, 20);
-            }, 10);
+            $('#btn_result').addClass('btn_result_change')
             setTimeout(() => {
                 let firstID = $('#input0').val();
                 let secondID = $('#input1').val();
                 alert("당신의 첫 번째 선택은 " + firstID + "\n당신의 두 번째 선택은 " + secondID);
                 location.href = './hustory_result.html'
-            }, 1500);
+            }, 3000);
         };
 
         let array = ["하나 / 열여섯"]
