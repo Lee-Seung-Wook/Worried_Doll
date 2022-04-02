@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A Script to activate Jquery and JqueryUi -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"
+        integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        background-color: black;
+        display: none;
+    }
+
+    .layerpop {
+        display: none;
+        z-index: 1000;
+        border: 2px solid #ccc;
+        background: #fff;
+    }
+</style>
+
+<body>
+    <div id="mask"></div>
+
+    <div style="display: flex; flex-direction: row;">
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
+            onclick="goDetail(0)"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
+            onclick="goDetail(1)"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
+            onclick="goDetail(2)"></div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+        <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
+    </div>
+
+    <div id="layerbox" class="layerpop"
+        style="background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/stuff/background_img.png?raw=true); border: 1px solid black; width: 20rem; height: 40rem;">
+        <button onclick="popupClose()">close</button>
+        <img src="" class="imageUrl" style="width: 50%; display: block; margin: auto;"></img>
+        <p class="title" style="text-align: center;">title</p>
+        <article class="content" style="text-align: center;">content</article>
+        <br>
+        <a class="btnUrl" href="" style="display: block; text-align: center;">btnUrl</a>
+    </div>
+
+    <script>
+
+        let array = [];
+        array[0] = {
+            "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/CMS.png?raw=true", "title": "최무선", "content": 'content(1)', "btnUrl": "btnUrl(1)"
+        },
+            array[1] = {
+                "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/EE.png?raw=true", "title": "율곡 이이", "content": 'content(2)', "btnUrl": "btnUrl(2)"
+            }, array[2] = {
+                "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/HJE.png?raw=true", "title": "황진이", "content": 'content(3)', "btnUrl": "btnUrl(3)"
+            };
+
+        function wrapWindowByMask() {
+            let maskHeight = $(document).height();
+            let maskWidth = $(window).width();
+            $('#mask').css({
+                'width': maskWidth,
+                'height': maskHeight
+            })
+            $('#mask').fadeTo('slow', 0.5);
+        };
+
+        function popupOpen() {
+            $('.layerpop').css("position", "absolute");
+            $('.layerpop').css("top", (($(window).height() - $('.layerpop').outerHeight()) / 2) + $(window).scrollTop());
+            $('.layerpop').css("left", (($(window).width() - $('.layerpop').outerWidth()) / 2) + $(window).scrollLeft());
+            $('#layerbox').show();
+        };
+
+        function goDetail(number) {
+            $('.imageUrl').attr('src', array[number]["imageUrl"])
+            $('.title').html(array[number]["title"])
+            $('.content').html(array[number]["content"])
+            $('.btnUrl').html(array[number]["btnUrl"])
+            $('.btnUrl').attr('href', array[number]["btnUrl"])
+            setTimeout(() => {
+                popupOpen();
+                wrapWindowByMask();
+            }, 500);
+        };
+
+        function popupClose() {
+            $('#layerbox').hide();
+            $('#mask').hide();
+        };
+
+    </script>
+</body>
+
+</html>
