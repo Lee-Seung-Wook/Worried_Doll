@@ -27,6 +27,14 @@
         width: 100%;
     }
 
+    /* 을지로체 */
+    @font-face {
+        font-family: 'BMEULJIRO';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     #mask {
         position: absolute;
         left: 0;
@@ -37,10 +45,45 @@
     }
 
     .layerpop {
+        position: relative;
         display: none;
         z-index: 1000;
-        border: 2px solid #ccc;
-        background: #fff;
+        width: 20rem;
+        height: 30rem;
+        background-color: transparent;
+    }
+
+    .thecard {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1.0s ease;
+    }
+
+    .thefront {
+        position: absolute;
+        border-radius: 3rem;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background-color: transparent;
+        color: #333;
+        background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/stuff/background_img.png?raw=true);
+        text-align: center;
+    }
+
+    .theback {
+        position: absolute;
+        border-radius: 3rem;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        background-color: transparent;
+        color: #333;
+        background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/stuff/background_img.png?raw=true);
+        text-align: center;
     }
 </style>
 
@@ -49,11 +92,11 @@
     <div id="mask"></div>
 
     <div style="display: flex; flex-direction: row;">
-        <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/CMS.png?raw=true); border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
+        <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/CMS-modify.png?raw=true); border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
             onclick="goDetail(0)"></div>
-        <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/EE.png?raw=true); border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
+        <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/EE-modify.png?raw=true); border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
             onclick="goDetail(1)"></div>
-        <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/HJE.png?raw=true); border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
+        <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/HJE-modify.png?raw=true); border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"
             onclick="goDetail(2)"></div>
     </div>
     <div style="display: flex; flex-direction: row;">
@@ -77,26 +120,50 @@
         <div style="border: 1px solid black; width: 6.5rem; height: 6.5rem; margin: auto; margin-top: 0.5rem;"></div>
     </div>
 
-    <div id="layerbox" class="layerpop"
-        style="background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/stuff/background_img.png?raw=true); border: 1px solid black; width: 20rem; height: 30rem;">
-        <button onclick="popupClose()">close</button>
-        <img src="" class="imageUrl" style="width: 50%; display: block; margin: auto;"></img>
-        <p class="title" style="text-align: center;">title</p>
-        <article class="content" style="text-align: center;">content</article>
-        <br>
-        <a class="btnUrl" href="" style="display: block; text-align: center;">btnUrl</a>
+    <div id="layerbox" class="layerpop">
+        <div class="thecard">
+            <div class="thefront">
+                <div onclick="popupClose()"
+                    style="width: 2rem; height: 2rem; background-repeat: no-repeat; background-size: cover; background-image: url(https://loading.io/s/icon/bte2fq.svg); margin-left: 18.25rem; margin-top: -0.25rem;">
+                </div>
+                <div
+                    style="color: rgb(20, 21, 25); background-color: transparent; height: 4.5rem; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 80%; margin: auto; border-top: 4px solid rgb(130, 7, 16); border-bottom: 4px solid rgb(130, 7, 16); border-left: 1px solid black; border-right: 1px solid black;">
+                    <p class="title" style="text-align: center; font-size: 1.5rem; margin-bottom: 0;"></p>
+                    <p class="subtitle" style="text-align: center;"></p>
+                </div>
+                <img src="" class="imageUrl" style="width: 70%; display: block; margin: auto; margin-top: 1.0rem;">
+                <img onclick="flipFront()" src="./lib/stuff/i-con_restart.png" style="width: 10%; margin-top: 1.5rem;">
+            </div>
+            <div class="theback">
+                <div onclick="popupClose()"
+                    style="width: 2rem; height: 2rem; background-repeat: no-repeat; background-size: cover; background-image: url(https://loading.io/s/icon/bte2fq.svg); margin-left: 18.25rem; margin-top: -0.25rem;">
+                </div>
+                <div
+                    style="color: rgb(20, 21, 25); background-color: transparent; height: 4.5rem; padding-left: 2rem; padding-right: 2rem; font-size: 0.9rem; font-family: BMEULJIRO; width: 80%; margin: auto; border-top: 4px solid rgb(40, 60, 130); border-bottom: 4px solid rgb(40, 60, 130); border-left: 1px solid black; border-right: 1px solid black;">
+                    <p class="content" style="font-size: 1.0rem; margin-top: 0.5rem;"></p>
+                </div>
+                <img class="octagon" style="width: 85%; margin-top: 0.5rem; margin-bottom: 0.5rem;"
+                    src="./lib/stuff/INFP.png">
+                <br>
+                <div
+                    style="margin: auto; width: 3rem; height: 3rem; background-size: cover; background-repeat: no-repeat; background-image: url(./lib/stuff/i-con_library.png);">
+                    <a class="btnUrl" href="" style="text-decoration: none;"></a>
+                </div>
+                <img onclick="flipBack()" src="./lib/stuff/i-con_restart.png" style="width: 10%; margin-top: 1.5rem;">
+            </div>
+        </div>
     </div>
 
     <script>
 
         let array = [];
         array[0] = {
-            "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/CMS.png?raw=true", "title": "최무선", "content": 'content(1)', "btnUrl": "btnUrl(1)"
+            "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/CMS-modify.png?raw=true", "title": "최무선", "subtitle": "sub title(최무선)", "content": 'content(1)', "btnUrl": "btnUrl(1)", "octagon": "./lib/stuff/ISTP.png"
         },
             array[1] = {
-                "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/EE.png?raw=true", "title": "율곡 이이", "content": 'content(2)', "btnUrl": "btnUrl(2)"
+                "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/EE-modify.png?raw=true", "title": "율곡 이이", "subtitle": "sub title(율곡 이이)", "content": 'content(2)', "btnUrl": "btnUrl(2)", "octagon": "./lib/stuff/ISTJ.png"
             }, array[2] = {
-                "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/HJE.png?raw=true", "title": "황진이", "content": 'content(3)', "btnUrl": "btnUrl(3)"
+                "imageUrl": "https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/HJE-modify.png?raw=true", "title": "황진이", "subtitle": "sub title(황진이)", "content": 'content(3)', "btnUrl": "btnUrl(3)", "octagon": "./lib/stuff/INFP.png"
             };
 
         function wrapWindowByMask() {
@@ -119,9 +186,10 @@
         function goDetail(number) {
             $('.imageUrl').attr('src', array[number]["imageUrl"])
             $('.title').html(array[number]["title"])
+            $('.subtitle').html(array[number]["subtitle"])
             $('.content').html(array[number]["content"])
-            $('.btnUrl').html(array[number]["btnUrl"])
             $('.btnUrl').attr('href', array[number]["btnUrl"])
+            $('.octagon').attr('src', array[number]["octagon"])
             setTimeout(() => {
                 popupOpen();
                 wrapWindowByMask();
@@ -131,6 +199,15 @@
         function popupClose() {
             $('#layerbox').hide();
             $('#mask').hide();
+            flipBack();
+        };
+
+        function flipFront() {
+            $('.thecard').css('transform', 'rotateY(180deg)')
+        };
+
+        function flipBack() {
+            $('.thecard').css('transform', '')
         };
 
     </script>
