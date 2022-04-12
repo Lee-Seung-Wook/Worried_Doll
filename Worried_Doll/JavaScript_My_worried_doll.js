@@ -337,6 +337,8 @@ $(document).ready(function () {
                     $('.Second_Page').fadeIn(500);
                 } else {
                     alert("모바일 환경에 최적화 되어 있습니다. 좌측상단의 QR코드를 통해 모바일로 접속해주세요.")
+                    $('.Main_Page').fadeOut(500);
+                    $('.Second_Page').fadeIn(500);
                 }
             }, 2500);
             StartNumber++;
