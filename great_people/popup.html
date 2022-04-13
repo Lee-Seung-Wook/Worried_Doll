@@ -15,6 +15,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="./lib/fontello-6dfa5ae1/css/fontello.css">
+    <link rel="stylesheet" href="./lib/fontello-6dfa5ae1/css/animation.css">
     <title>Document</title>
 </head>
 
@@ -85,6 +88,17 @@
         background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/stuff/background_img.png?raw=true);
         text-align: center;
     }
+
+    #ToTheTop {
+        transform: rotate(270deg);
+        color: rgb(20, 21, 25);
+        font-size: 2.0rem;
+        font-family: 'fontello';
+        position: fixed;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        display: none;
+    }
 </style>
 
 <body
@@ -93,7 +107,7 @@
     <div id="mask"></div>
 
     <div
-        style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/stuff/main_banner.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 21vw; font-size: 1.5rem; font-family: BMEULJIRO; width: 45%; margin: auto; margin-top: 0.5rem; margin-bottom: 1rem;">
+        style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/stuff/main_banner.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 21vw; font-size: 1.5rem; font-family: BMEULJIRO; width: 45%; margin: auto; margin-top: 0.5rem;">
         <div style="position: absolute; left: 0.5rem; top: 0.5rem; width: 2rem; height: 2rem; background-repeat: no-repeat; background-size: cover; background-image: url(./lib/stuff/i-con_restart.png);"
             onclick="alert('Go to the previous page.')">
         </div>
@@ -102,140 +116,176 @@
         </p>
     </div>
 
-    <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 세종대왕</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 열경 김시습</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+        </div>
+
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/enfj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(0)"></div>
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/enfp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(1)"></div>
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 태종 이방원</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 영조</div>
         </div>
 
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/enfj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(0)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/enfp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(1)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/entj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/entj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(2)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/entp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem;"
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/entp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(3)"></div>
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 1.0rem;">
-        <div
-            style="border: 1px solid black; width: 320px; height: 50px; display: inline-block; background-color: #333;">
-        </div>
+    <div>
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
     </div>
 
-    <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div
-                style="font-size: 1.5rem; text-align: center; width: 8.5rem; margin: auto; margin-top: 0.5rem; margin-right: 1.5rem;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 어사 박문수</div>
-            <div style="font-size: 1.5rem; text-align: center; width: 8.5rem; margin: auto; margin-top: 0.5rem;">
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 자명 맹사성</div>
-            <!-- <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
-                영보 송시열</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
-                소현세자</div> -->
         </div>
 
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/esfj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem; margin-right: 1.5rem;"
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/esfj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(4)"></div>
+            <div style="width: 1.5rem;"></div>
             <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/esfp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(5)"></div>
-            <!-- <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/estj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(6)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/estp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem;"
-                onclick="goDetail(7)"></div> -->
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 1.0rem;">
-        <div
-            style="border: 1px solid black; width: 320px; height: 50px; display: inline-block; background-color: #333;">
-        </div>
-    </div>
-
-    <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
+                영보 송시열</div>
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
+                소현세자</div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/estj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(6)"></div>
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/estp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(7)"></div>
+        </div>
+    </div>
+
+    <div>
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 사명대사</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 명월 황진이</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+        </div>
+
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/infj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(8)"></div>
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/infp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(9)"></div>
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 태조 이성계</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 김삿갓</div>
         </div>
 
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/infj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(8)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/infp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(9)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/intj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/intj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(10)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/intp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem;"
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/intp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(11)"></div>
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 1.0rem;">
-        <div
-            style="border: 1px solid black; width: 320px; height: 50px; display: inline-block; background-color: #333;">
+    <div>
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
+                포은 정몽주</div>
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
+                신윤복</div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; margin: auto;">
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/isfj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(12)"></div>
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/isfp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
+                onclick="goDetail(13)"></div>
         </div>
     </div>
 
-    <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
-                포은 정몽주</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
-                신윤복</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 율곡 이이</div>
-            <div
-                style="font-size: 0.8rem; text-align: center; width: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem; padding-left: 0.3rem;">
+            <div style="width: 1.5rem;"></div>
+            <div style="font-size: 1.5rem; text-align: center; width: 9.1rem; margin: auto; margin-top: 0.5rem;">
                 최무선</div>
         </div>
 
         <div style="display: flex; flex-direction: row; margin: auto;">
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/isfj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(12)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/isfp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
-                onclick="goDetail(13)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/istj.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem; margin-right: 0.5rem;"
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/istj.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(14)"></div>
-            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/istp.jpg?raw=true); border: 1px solid black; width: 4.5rem; height: 4.5rem; margin: auto; margin-top: 0.5rem;"
+            <div style="width: 1.5rem;"></div>
+            <div style="background-size: cover; background-image: url(https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/character-img/icon/istp.jpg?raw=true); border: 1px solid black; width: 9.1rem; height: 9.1rem; margin: auto; margin-top: 0.5rem;"
                 onclick="goDetail(15)"></div>
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 1.0rem;">
-        <div
-            style="border: 1px solid black; width: 320px; height: 50px; display: inline-block; background-color: #333;">
-        </div>
+    <div>
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
     </div>
+
+    <div id="ToTheTop">&#xf138</div>
+    <br>
 
     <div id="layerbox" class="layerpop">
         <div class="thecard">
@@ -340,6 +390,20 @@
             $('#flipFront').css('top', '27rem')
             $('.thecard').css('transform', '')
         };
+
+        window.onscroll = function () { ScrollBtShow_Hide() };
+
+        function ScrollBtShow_Hide() {
+            if (document.body.scroll < 100 || document.documentElement.scroll < 100) {
+                $('#ToTheTop').css('display', 'none');
+            } else {
+                $('#ToTheTop').css('display', 'block');
+            }
+        };
+
+        $('#ToTheTop').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        })
 
     </script>
 </body>
