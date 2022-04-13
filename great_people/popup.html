@@ -324,8 +324,10 @@
                     style="margin: auto; width: 3rem; height: 3rem; background-size: cover; background-repeat: no-repeat; background-image: url(./lib/stuff/i-con_library.png);">
                     <a class="btnUrl" href="" style="text-decoration: none;"></a>
                 </div>
-                <img onclick="flipBack()" src="./lib/stuff/i-con_restart.png"
-                    style="width: 10%; position: absolute; left: 1rem; bottom: 1rem;">
+                <!-- <img onclick="flipBack()" src="./lib/stuff/i-con_restart.png"
+                    style="width: 10%; position: absolute; left: 1rem; bottom: 1rem;"> -->
+                    <img id="flipFront" onclick="flipBack()" src="./lib/stuff/i-con_restart.png"
+                    style="width: 10%; position: absolute; top: 27rem; left: 17rem;">
             </div>
         </div>
     </div>
@@ -381,13 +383,13 @@
 
         function flipFront() {
             $('.thecard').css('transform', 'rotateY(180deg)')
-            setTimeout(() => {
-                $('#flipFront').css('top', '25rem')
-            }, 1000);
+            // setTimeout(() => {
+            //     $('#flipFront').css('top', '25rem')
+            // }, 1000);
         };
 
         function flipBack() {
-            $('#flipFront').css('top', '27rem')
+            // $('#flipFront').css('top', '27rem')
             $('.thecard').css('transform', '')
         };
 
