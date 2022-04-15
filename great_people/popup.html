@@ -131,7 +131,7 @@
     <div
         style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/stuff/main_banner.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 21vw; font-size: 1.5rem; font-family: BMEULJIRO; width: 45%; margin: auto; margin-top: 0.5rem;">
         <div style="position: absolute; left: 0.5rem; top: 0rem; font-family: fontello; font-size: 2rem; color: rgba(20, 21, 25, 85%);"
-            onclick="alert('Go to the previous page.')">&#xf137
+            onclick=Backpage()>&#xf137
         </div>
         <p style="margin: auto;">
             성품 유형지
@@ -175,9 +175,9 @@
     </div>
 
     <div style="margin-top: 1.5rem;">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
             data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
     </div>
 
     <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
@@ -217,9 +217,9 @@
     </div>
 
     <div style="margin-top: 1.5rem;">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
             data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
     </div>
 
     <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
@@ -259,9 +259,9 @@
     </div>
 
     <div style="margin-top: 1.5rem;">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
             data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
     </div>
 
     <div style="display: flex; flex-direction: column; margin-top: 1.0rem;">
@@ -301,9 +301,9 @@
     </div>
 
     <div style="margin-top: 1.5rem;">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
             data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
     </div>
 
     <br>
@@ -525,6 +525,17 @@
         $('#ToTheTop').click(function () {
             $('html, body').animate({ scrollTop: 0 }, 'slow');
         })
+
+        function Backpage() {
+            let url = document.location.href;
+            let qs = url.substring(url.indexOf('?') + 1).split('&');
+            for (i = 0, result = {}; i < qs.length; i++) {
+                qs[i] = qs[i].split('='); result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+            } return result;
+            let resultData = get_query();
+            let str = './hustory_' + resultData['data'] + '.html'
+            location.replace(str);
+        };
 
     </script>
 </body>
