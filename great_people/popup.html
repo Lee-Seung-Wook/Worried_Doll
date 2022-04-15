@@ -527,11 +527,13 @@
         })
 
         function Backpage() {
-            let url = document.location.href;
-            let qs = url.substring(url.indexOf('?') + 1).split('&');
-            for (i = 0, result = {}; i < qs.length; i++) {
-                qs[i] = qs[i].split('='); result[qs[i][0]] = decodeURIComponent(qs[i][1]);
-            } return result;
+            function get_query() {
+                let url = document.location.href;
+                let qs = url.substring(url.indexOf('?') + 1).split('&');
+                for (i = 0, result = {}; i < qs.length; i++) {
+                    qs[i] = qs[i].split('='); result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+                } return result;
+            };
             let resultData = get_query();
             let str = './hustory_' + resultData['data'] + '.html'
             location.replace(str);
