@@ -24,21 +24,7 @@
     <!-- Google AD -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137718561795055"
         crossorigin="anonymous"></script> -->
-    <!-- Preload Images -->
-    <script>
-        function preload(imageArray) {
-            let n = imageArray.length;
-            for (let i = 0; i < n; i++) {
-                let img = new Image();
-                img.src = imageArray[i];
-            };
-        };
 
-        preload([
-            './lib/stuff/main_img.png',
-            './lib/stuff/background_img.png'
-        ])
-    </script>
     <title>성품유형지</title>
 </head>
 <style>
@@ -355,7 +341,6 @@
                 <br>
             </div>
 
-
             <div>
                 <div
                     style="display: flex; justify-content: center; align-items: center; color: rgb(215 214 210); background-image: url(./lib/stuff/main_banner.png); background-color: transparent; background-size: cover; background-repeat: no-repeat; border: none; height: 21vw; font-size: 1.5rem; font-family: BMEULJIRO; width: 45%; margin: auto; margin-top: 1rem;">
@@ -392,6 +377,8 @@
                 $('footer').fadeIn(1000);
                 $('html, body').css('background-image', 'url()');
             } else {
+                $('footer').fadeIn(1000);
+                $('html, body').css('background-image', 'url()');
                 alert("모바일 환경에 최적화 되어 있습니다.");
             };
         });
@@ -432,14 +419,13 @@
                 typing_set();
             }, 500);
             if (slideindex == 2) {
-                let AD = $('#KakaoAD')
-                let KakaoAD1 = '<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-dk7u0oeA6UnqjuXL" data-ad-width="300" data-ad-height="250"></ins>'
+                let AD = $('#KakaoAD');
+                let KakaoAD1 = '<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-dk7u0oeA6UnqjuXL" data-ad-width="300" data-ad-height="250"></ins>';
                 let KakaoAD2 = document.createElement('script');
                 KakaoAD2.type = "text/javascript";
                 KakaoAD2.src = "//t1.daumcdn.net/kas/static/ba.min.js";
                 KakaoAD2.async;
                 AD.append(KakaoAD2);
-                console.log(AD);
                 $('#KakaoAD').html(KakaoAD1 + AD);
             };
         };
@@ -566,7 +552,7 @@
 
         function typing_set() {
             setTimeout(() => {
-                let arrayData = array[Object.keys(array)[liIndex]]
+                let arrayData = array[Object.keys(array)[liIndex]];
                 let arraySplitData = arrayData.split('');
                 let liLength = array.length;
                 if (typingBool == false) {
@@ -581,7 +567,7 @@
                             liIndex++;
                             typingIdx = 0;
                             typingBool = false;
-                            arrayData = array[Object.keys(array)[liIndex]]
+                            arrayData = array[Object.keys(array)[liIndex]];
                             arraySplitData = arrayData.split('');
                             clearInterval(tyInt);
                             setTimeout(function () {
