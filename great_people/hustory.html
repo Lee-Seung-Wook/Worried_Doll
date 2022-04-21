@@ -496,6 +496,7 @@
         // Move to second page.
         $('.main_button').on('click', function () {
             window.scrollTo(0, 0);
+            preloading();
             setTimeout(() => {
                 $('.slick').slick({
                     swipe: false,
@@ -633,7 +634,7 @@
             let neme = $(self).attr('name');
             if (neme === $(parents.children('button:nth-child(1)')).attr('name')) {
                 $(parents.children('button:nth-child(1)')).removeClass();
-                $(parents.children('button:nth-child(1)')).addClass('button1-1');
+                $(parents.children('button:nth-child(1)')).switchClass('button1-1');
                 $(parents.children('button:nth-child(2)')).removeClass();
                 $(parents.children('button:nth-child(2)')).addClass('button2');
                 $(parents.children('button:nth-child(3)')).removeClass();
@@ -771,6 +772,27 @@
                 };
             }, 250);
         };
+
+        function preloading(imageArray) {
+            let n = imageArray.length;
+            for (let i = 0; i < n; i++) {
+                let img = new Image();
+                img.src = imageArray[i];
+            };
+        };
+
+        preloading([
+            "./lib/stuff/button/1-1.png",
+            "./lib/stuff/button/2-1.png",
+            "./lib/stuff/button/3-1.png",
+            "./lib/stuff/button/4-1.png",
+            "./lib/stuff/button/5-1.png",
+            "./lib/stuff/button/1.png",
+            "./lib/stuff/button/2.png",
+            "./lib/stuff/button/3.png",
+            "./lib/stuff/button/4.png",
+            "./lib/stuff/button/5.png"
+        ]);
     </script>
 </body>
 
