@@ -66,6 +66,14 @@
         font-style: normal;
     }
 
+    /* 레페리포인트 White Oblique */
+    @font-face {
+        font-family: 'LeferiPoint-WhiteObliqueA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     #mask {
         position: absolute;
         left: 0;
@@ -331,12 +339,9 @@
             onclick="url_copy()">
         </div>
     </div>
-
     <br>
-
     <img id="img" style="width: 0%;"
         src="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/great_people/lib/stuff/icon/i-con_library.png?raw=true">
-
     <div id="ToTheTop">&#xf138</div>
 
     <div id="layerbox" class="layerpop">
@@ -364,16 +369,20 @@
                 <img class="octagon" style="width: 85%; margin-top: 2.0rem; margin-bottom: 0.5rem;" src="">
                 <br>
                 <div
-                    style="text-align: left; color: rgb(20, 21, 25); height: 7.5rem; font-family: BinggraeSamanco-Bold; width: 90%; margin: auto; margin-top: 1.5rem;">
-                    <p class="content" style="font-size: 1.2rem; margin-top: 0.5rem;"></p>
+                    style="text-align: left; color: rgb(20, 21, 25); height: 3.5rem; font-family: BinggraeSamanco-Bold; width: 90%; margin: auto; margin-top: 1.5rem;">
+                    <p class="content" style="font-size: 1.2rem; margin-top: 0.5rem; margin-bottom: 0px;"></p>
+                </div>
+                <div
+                    style="text-align: left; color: rgb(20, 21, 25); height: 4.5rem; font-family: LeferiPoint-WhiteObliqueA; width: 90%; margin: auto; margin-top: 0.5rem;">
+                    <p class="content2"
+                        style="font-size: 0.8rem; margin-top: 0.5rem; color: #84abe3; -webkit-text-stroke: 0.2px black">
+                    </p>
                 </div>
                 <a class="btnUrl" href="" style="text-decoration: none;">
                     <div
                         style="margin: auto; width: 2.5rem; height: 2.5rem; background-size: cover; background-repeat: no-repeat; background-image: url(./lib/stuff/icon/i-con_library.png);">
                     </div>
                 </a>
-                <!-- <img onclick="flipBack()" src="./lib/stuff/i-con_restart.png"
-                    style="width: 10%; position: absolute; left: 1rem; bottom: 1rem;"> -->
                 <img id="flipFront" onclick="flipBack()" src="./lib/stuff/icon/i-con_restart.png"
                     style="width: 10%; position: absolute; top: 26.7rem; left: 17rem;">
             </div>
@@ -381,7 +390,6 @@
     </div>
 
     <script>
-
         // User device check and to apply the Slick.
         $(document).ready(function () {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -390,8 +398,9 @@
             };
         });
 
-        let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
-        let url_current = window.location.href
+        // Shared Features Basic Data
+        let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html';
+        let url_current = window.location.href;
         let image_share = $('#img').attr('src');
         let title_current = document.title;
 
@@ -462,38 +471,38 @@
 
         let array = [];
         array[0] = {
-            "imageUrl": "./lib/character-img/modify/SJ.png", "title": "세종대왕", "subtitle": "꺼지지 않는 열정의 불꽃!", "content": "&nbsp본명은 이도, 호는 장헌인 세종대왕은 1418년 즉위한 조선의 4대 국왕이자, 수많은 치적을 남겨 조선은 물론 한국사를 대표하는 성군으로 칭송받고 있습니다.", "btnUrl": "https://angelo-s-library.netlify.app/great_people/hustory_result.html", "octagon": "./lib/character-img/octagon/ENFJ.png"
+            "title": "세종대왕", "subtitle": "꺼지지 않는 열정의 불꽃!", "imageUrl": "./lib/character-img/modify/SJ.png", "octagon": "./lib/character-img/octagon/ENFJ.png", "content": "&nbsp본명은 이도, 호는 장헌인 세종대왕은 1418년 즉위한 조선의 4대 국왕이다.", "content2": "# 훈민정음 반포   # 농사직설 편찬   # 대마도 정벌   # 양구일구   # 자격루   # 신기전   # 집현전   # 4군 6진 설치   # 고려사 편찬   # 정간보 개발   # 속육전 편찬   # 칠정산 편찬", "btnUrl": "https://angelo-s-library.netlify.app/great_people/hustory_result.html"
         },
             array[1] = {
-                "imageUrl": "./lib/character-img/modify/KSS.png", "title": "열경 김시습", "subtitle": "sub title(열경 김시습)", "content": "content(2)", "btnUrl": "btnUrl(2)", "octagon": "./lib/character-img/octagon/ENFP.png"
+                "title": "열경 김시습", "subtitle": "sub title(열경 김시습)", "imageUrl": "./lib/character-img/modify/KSS.png", "octagon": "./lib/character-img/octagon/ENFP.png", "content": "content(2)", "content2": "", "btnUrl": "btnUrl(2)"
             }, array[2] = {
-                "imageUrl": "./lib/character-img/modify/TJ_1.png", "title": "태종 이방원", "subtitle": "sub title(태종 이방원)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ENTJ.png"
+                "title": "태종 이방원", "subtitle": "sub title(태종 이방원)", "imageUrl": "./lib/character-img/modify/TJ_1.png", "octagon": "./lib/character-img/octagon/ENTJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[3] = {
-                "imageUrl": "./lib/character-img/modify/YJ.png", "title": "영조", "subtitle": "sub title(영조)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ENTP.png"
+                "title": "영조", "subtitle": "sub title(영조)", "imageUrl": "./lib/character-img/modify/YJ.png", "octagon": "./lib/character-img/octagon/ENTP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[4] = {
-                "imageUrl": "./lib/character-img/modify/PMS.png", "title": "어사 박문수", "subtitle": "sub title(어사 박문수)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ESFJ.png"
+                "title": "어사 박문수", "subtitle": "sub title(어사 박문수)", "imageUrl": "./lib/character-img/modify/PMS.png", "octagon": "./lib/character-img/octagon/ESFJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[5] = {
-                "imageUrl": "./lib/character-img/modify/MSS.png", "title": "자명 맹사성", "subtitle": "sub title(자명 맹사성)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ESFP.png"
+                "title": "자명 맹사성", "subtitle": "sub title(자명 맹사성)", "imageUrl": "./lib/character-img/modify/MSS.png", "octagon": "./lib/character-img/octagon/ESFP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[6] = {
-                "imageUrl": "./lib/character-img/modify/SSY.png", "title": "영보 송시열", "subtitle": "sub title(영보 송시열)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ESTJ.png"
+                "title": "영보 송시열", "subtitle": "sub title(영보 송시열)", "imageUrl": "./lib/character-img/modify/SSY.png", "octagon": "./lib/character-img/octagon/ESTJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[7] = {
-                "imageUrl": "./lib/character-img/modify/SH.png", "title": "소현세자", "subtitle": "sub title(소현세자)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ESTP.png"
+                "title": "소현세자", "subtitle": "sub title(소현세자)", "imageUrl": "./lib/character-img/modify/SH.png", "octagon": "./lib/character-img/octagon/ESTP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[8] = {
-                "imageUrl": "./lib/character-img/modify/SM.png", "title": "사명대사", "subtitle": "sub title(사명대사)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/INFJ.png"
+                "title": "사명대사", "subtitle": "sub title(사명대사)", "imageUrl": "./lib/character-img/modify/SM.png", "octagon": "./lib/character-img/octagon/INFJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[9] = {
-                "imageUrl": "./lib/character-img/modify/HJE.png", "title": "명월 황진이", "subtitle": "sub title(명월 황진이)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/INFP.png"
+                "title": "명월 황진이", "subtitle": "sub title(명월 황진이)", "imageUrl": "./lib/character-img/modify/HJE.png", "octagon": "./lib/character-img/octagon/INFP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[10] = {
-                "imageUrl": "./lib/character-img/modify/TJ_0.png", "title": "태조 이성계", "subtitle": "sub title(태조 이성계)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/INTJ.png"
+                "title": "태조 이성계", "subtitle": "sub title(태조 이성계)", "imageUrl": "./lib/character-img/modify/TJ_0.png", "octagon": "./lib/character-img/octagon/INTJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[11] = {
-                "imageUrl": "./lib/character-img/modify/KSG.png", "title": "김삿갓", "subtitle": "sub title(김삿갓)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/INTP.png"
+                "title": "김삿갓", "subtitle": "sub title(김삿갓)", "imageUrl": "./lib/character-img/modify/KSG.png", "octagon": "./lib/character-img/octagon/INTP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[12] = {
-                "imageUrl": "./lib/character-img/modify/JMJ.png", "title": "포은 정몽주", "subtitle": "sub title(포은 정몽주)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ISFJ.png"
+                "title": "포은 정몽주", "subtitle": "sub title(포은 정몽주)", "imageUrl": "./lib/character-img/modify/JMJ.png", "octagon": "./lib/character-img/octagon/ISFJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[13] = {
-                "imageUrl": "./lib/character-img/modify/SYB.png", "title": "혜원 신윤복", "subtitle": "sub title(혜원 신윤복)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ISFP.png"
+                "title": "혜원 신윤복", "subtitle": "sub title(혜원 신윤복)", "imageUrl": "./lib/character-img/modify/SYB.png", "octagon": "./lib/character-img/octagon/ISFP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[14] = {
-                "imageUrl": "./lib/character-img/modify/EE.png", "title": "율곡 이이", "subtitle": "sub title(율곡 이이)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ISTJ.png"
+                "title": "율곡 이이", "subtitle": "sub title(율곡 이이)", "imageUrl": "./lib/character-img/modify/EE.png", "octagon": "./lib/character-img/octagon/ISTJ.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }, array[15] = {
-                "imageUrl": "./lib/character-img/modify/CMS.png", "title": "최무선", "subtitle": "sub title(최무선)", "content": "content(3)", "btnUrl": "btnUrl(3)", "octagon": "./lib/character-img/octagon/ISTP.png"
+                "title": "최무선", "subtitle": "sub title(최무선)", "imageUrl": "./lib/character-img/modify/CMS.png", "octagon": "./lib/character-img/octagon/ISTP.png", "content": "content(3)", "content2": "", "btnUrl": "btnUrl(3)"
             }
 
         function wrapWindowByMask() {
@@ -502,7 +511,7 @@
             $('#mask').css({
                 'width': maskWidth,
                 'height': maskHeight
-            })
+            });
             $('#mask').fadeTo('slow', 0.5);
         };
 
@@ -514,12 +523,13 @@
         };
 
         function goDetail(number) {
-            $('.imageUrl').attr('src', array[number]["imageUrl"])
-            $('.title').html(array[number]["title"])
-            $('.subtitle').html(array[number]["subtitle"])
-            $('.content').html(array[number]["content"])
-            $('.btnUrl').attr('href', array[number]["btnUrl"])
-            $('.octagon').attr('src', array[number]["octagon"])
+            $('.imageUrl').attr('src', array[number]["imageUrl"]);
+            $('.title').html(array[number]["title"]);
+            $('.subtitle').html(array[number]["subtitle"]);
+            $('.content').html(array[number]["content"]);
+            $('.content2').html(array[number]["content2"]);
+            $('.btnUrl').attr('href', array[number]["btnUrl"]);
+            $('.octagon').attr('src', array[number]["octagon"]);
             setTimeout(() => {
                 popupOpen();
                 wrapWindowByMask();
@@ -534,13 +544,9 @@
 
         function flipFront() {
             $('.thecard').css('transform', 'rotateY(180deg)')
-            // setTimeout(() => {
-            //     $('#flipFront').css('top', '25rem')
-            // }, 1000);
         };
 
         function flipBack() {
-            // $('#flipFront').css('top', '27rem')
             $('.thecard').css('transform', '')
         };
 
@@ -551,12 +557,12 @@
                 $('#ToTheTop').css('display', 'none');
             } else {
                 $('#ToTheTop').css('display', 'block');
-            }
+            };
         };
 
         $('#ToTheTop').click(function () {
             $('html, body').animate({ scrollTop: 0 }, 'slow');
-        })
+        });
 
         function Backpage() {
             function get_query() {
@@ -567,7 +573,7 @@
                 } return result;
             };
             let resultData = get_query();
-            let str = './hustory_' + resultData['data'] + '.html'
+            let str = './hustory_' + resultData['data'] + '.html';
             location.replace(str);
         };
 
