@@ -132,17 +132,13 @@
                 세종대왕과 비슷하다고 할 수 있습니다.
             </div>
             <div>
-                <!-- <div style="font-family: fontello; text-align: center; margin-bottom: 1rem; margin-top: 1rem; font-size: 2rem;"
-                    onclick="NextPrev()">
-                    &#xf138
-                </div> -->
                 <div style="text-align: center; font-family: BMEULJIRO; width: 25%; margin: auto; border-top: 0.2rem solid rgb(130, 7, 16); border-left: none; border-right: none; border-bottom: 0.2rem solid rgb(130, 7, 16); border-left: 1px solid black; border-right: 1px solid black; line-height: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem; line-height: inherit;"
                     onclick="NextPrev();">다음</div>
             </div>
+            <!-- AD_of_bottom -->
             <script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137718561795055"
                 crossorigin="anonymous"></script>
-            <!-- AD_of_bottom -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2137718561795055"
                 data-ad-slot="7960741720" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>
@@ -218,16 +214,14 @@
                 style="width: 90%; margin: auto; text-align: left; padding-left: 2%; padding-right: 2%; padding-top: 1%; padding-bottom: 1%; font-family: BMEULJIRO; color: rgba(35, 39, 52, 1); border-bottom: 0.4rem solid rgba(106, 26, 65, 1); margin-top: 2.0rem;">
                 <div style="display: grid; grid-template-columns: 50% 50%;">
                     <div>
-                        <div style="background-image: url(./lib/character-img/modify/EE.png); background-size: cover; background-repeat: no-repeat; width: 10rem; height: 13rem; margin: auto;"
-                            onclick="alert('율곡 이이 결과 페이지로 이동')">
-                        </div>
+                        <img src="./lib/character-img/modify/EE.png" name="istj"
+                            style="width: 10rem; height: 12.5rem; margin: auto;" onclick="GoToThatPage(this)">
                         <div style="text-align: center; font-family: BMEULJIRO; font-size: 2rem;">천생연분</div>
                         <div style="text-align: center; font-family: BMEULJIRO;">율곡 이이</div>
                     </div>
                     <div>
-                        <div style="background-image: url(./lib/character-img/modify/CMS.png); background-size: cover; background-repeat: no-repeat; width: 10rem; height: 13rem; margin: auto;"
-                            onclick="alert('최무선 결과 페이지로 이동')">
-                        </div>
+                        <img src="./lib/character-img/modify/CMS.png" name="istp"
+                            style="width: 10rem; height: 12.5rem; margin: auto;" onclick="GoToThatPage(this)">
                         <div style="text-align: center; font-family: BMEULJIRO; font-size: 2rem;">견원지간</div>
                         <div style="text-align: center; font-family: BMEULJIRO;">최무선</div>
                     </div>
@@ -268,10 +262,6 @@
                 </form>
             </div>
             <div>
-                <!-- <div style="font-family: fontello; text-align: center; margin-bottom: 1rem; margin-top: 1rem; font-size: 2rem;"
-                    onclick="NextPrev()">
-                    &#xf137
-                </div> -->
                 <div style="text-align: center; font-family: BMEULJIRO; width: 25%; margin: auto; border-top: 0.2rem solid rgb(130, 7, 16); border-left: none; border-right: none; border-bottom: 0.2rem solid rgb(130, 7, 16); border-left: 1px solid black; border-right: 1px solid black; line-height: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem; line-height: inherit;"
                     onclick="NextPrev();">이전</div>
             </div>
@@ -355,8 +345,8 @@
             };
         };
 
-        let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html'
-        let url_current = window.location.href
+        let url_basic = 'https://angelo-s-library.netlify.app/great_people/hustory.html';
+        let url_current = window.location.href;
         let image_share = $('#img').attr('src');
         let title_current = document.title;
 
@@ -411,7 +401,7 @@
         function restart() {
             setTimeout(() => {
                 window.location.replace("./hustory.html");
-            }, 1000);
+            }, 500);
         };
 
         function url_copy() {
@@ -423,6 +413,11 @@
             document.execCommand("copy");
             document.body.removeChild(Dummy_Tag);
             alert("웹사이트 주소가 복사되었습니다.\nThe website address has been copied.");
+        };
+
+        function GoToThatPage(self) {
+            let url = self.name;
+            alert(url + " 결과 페이지로 이동");
         };
 
     </script>
