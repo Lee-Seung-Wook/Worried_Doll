@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="나와 닮은 조선시대 위인은 누구일까?">
+    <meta name="keywords" content="MBTI, mbti, 조선시대, 위인, 테스트">
+    <meta name="author" content="소소한 프로젝트">
+    <meta name="og:site_name" content="성품유형지">
+    <meta name="og:title:" content="성품유형지">
+    <meta name="og:description" content="나와 닮은 조선시대 위인은 누구일까?">
+    <meta name="og:type" content="website">
     <!-- A Script to activate Jquery and JqueryUi -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -21,9 +28,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137718561795055"
         crossorigin="anonymous"></script>
-    <!-- Google AD -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137718561795055"
-        crossorigin="anonymous"></script> -->
+    <!-- Preloading button image file -->
     <script>
         function preloading(imageArray) {
             let n = imageArray.length;
@@ -46,7 +51,6 @@
             "./lib/stuff/button/5.png"
         ]);
     </script>
-
     <title>성품유형지</title>
 </head>
 <style>
@@ -54,7 +58,7 @@
     body {
         height: 100%;
         width: 100%;
-        background-color: rgb(170, 170, 160);
+        background-color: rgb(217, 213, 201);
         background-image: url(./lib/stuff/background_img.png);
         text-align: center;
         color: rgb(20. 21. 25);
@@ -120,6 +124,54 @@
             width: 45%;
             height: 40%;
             opacity: 0;
+        }
+    }
+
+    @media (width: 375px) {
+        footer {
+            bottom: -10%;
+        }
+    }
+
+    @media (width: 414px) {
+        footer {
+            bottom: 11%;
+        }
+    }
+
+    @media (width: 390px) {
+        footer {
+            bottom: 10%;
+        }
+    }
+
+    @media (width: 393px) {
+        footer {
+            bottom: 11%;
+        }
+    }
+
+    @media (width: 360px) {
+        footer {
+            bottom: 4%;
+        }
+    }
+
+    @media (width: 412px) {
+        footer {
+            bottom: 13%;
+        }
+    }
+
+    @media (width: 820px) {
+        footer {
+            bottom: -21%;
+        }
+    }
+
+    @media (width: 768px) {
+        footer {
+            bottom: -31%;
         }
     }
 
@@ -276,11 +328,13 @@
     <div class="main_page">
         <img class="main_image" src="./lib/stuff/main_img.png">
         <div class="main_button"></div>
-        <footer style="display: none; border-top: 1px solid gray; font-family: BMEULJIRO; ">
-            <p style="font-size: 1rem; margin-bottom: 0.1rem;">
-                안내사항</p>
-            <div style="font-size: 0.5rem; text-align: left; padding-left: 0.5rem; padding-bottom: 0.5rem;">
+        <footer style="display: none; font-family: BinggraeSamanco-Bold; position: absolute;">
+            <div style="font-size: 0.9rem; text-align: left; padding-left: 0.5rem; padding-bottom: 0.5rem;">
                 <span>· 해당 심리테스트는 심리학적 전문성이 없는 단순 유희성 테스트입니다.</span>
+                <br>
+                <span>· 본 웹페이지는 직접적으로 어떠한 개인정보도 요구하지 않습니다.</span>
+                <br>
+                <span>· Google Adsense, Kakao AdFit, Coupang Partners를 포함하고 있습니다.</span>
                 <br>
                 <span style="font-family: fontello;">&#xf0e6</span> : <a
                     style="text-decoration: underline; color: rgb(20, 21, 25);"
@@ -440,7 +494,6 @@
         </script>
 
     <script>
-
         // User device check.
         $(document).ready(function () {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
