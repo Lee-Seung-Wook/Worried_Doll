@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A Script to activate Jquery and JqueryUi -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="./lib/fontello-6dfa5ae1/css/fontello.css">
+    <link rel="stylesheet" href="./lib/fontello-6dfa5ae1/css/animation.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137718561795055"
+        crossorigin="anonymous"></script>
+    <!-- Kakaotalk SDK Load -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('40962468965aec54015c38b43dd3a3dc');
+    </script>
+    <!-- Meta data for a share button throught the facebook -->
+    <meta property="og:url" content="https://angelo-s-library.netlify.app/hustory/library.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="성품유형지 도감" />
+    <meta property="og:description" content="성품유형지 도감" />
+    <meta property="og:image"
+        content="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/hustory/lib/stuff/icon/i-con_library.png?raw=true" />
+    <!-- Meta data for a share button throught the twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://angelo-s-library.netlify.app/hustory/library.html" />
+    <meta name="twitter:title" content="성품유형지 도감" />
+    <meta name="twitter:description" content="성품유형지 도감" />
+    <meta name="twitter:image"
+        content="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/hustory/lib/stuff/icon/i-con_library.png?raw=true" />
+
+    <title>성품유형지 도감</title>
+</head>
+
+<style>
+    @import url(./library.css);
+</style>
+
+<body>
+    <div id="mask"></div>
+
+    <div class="main_title_div">
+        <div class="back_btn" onclick=Backpage()>&#xf137</div>
+        <p class="main_title_p">성품 유형지</p>
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">세종대왕</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">열경 김시습</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/enfj.jpg);"
+                onclick="goDetail(0)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/enfp.jpg);"
+                onclick="goDetail(1)"></div>
+        </div>
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">태종 이방원</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">영조</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/entj.jpg);"
+                onclick="goDetail(2)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/entp.jpg);"
+                onclick="goDetail(3)"></div>
+        </div>
+    </div>
+
+    <div class="ad_margin">
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">어사 박문수</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">자명 맹사성</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/esfj.jpg);"
+                onclick="goDetail(4)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/esfp.jpg);"
+                onclick="goDetail(5)"></div>
+        </div>
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">영보 송시열</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">소현세자</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/estj.jpg);"
+                onclick="goDetail(6)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/estp.jpg);"
+                onclick="goDetail(7)"></div>
+        </div>
+    </div>
+
+    <div class="ad_margin">
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">사명대사</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">명월 황진이</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/infj.jpg);"
+                onclick="goDetail(8)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/infp.jpg);"
+                onclick="goDetail(9)"></div>
+        </div>
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">태조 이성계</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">김삿갓</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/intj.jpg);"
+                onclick="goDetail(10)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/intp.jpg);"
+                onclick="goDetail(11)"></div>
+        </div>
+    </div>
+
+    <div class="ad_margin">
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">포은 정몽주</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">혜원 신윤복</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/isfj.jpg);"
+                onclick="goDetail(12)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/isfp.jpg);"
+                onclick="goDetail(13)"></div>
+        </div>
+    </div>
+
+    <div class="cha_name">
+        <div class="cha_name_outline">
+            <div class="cha_name_p">율곡 이이</div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_name_p">최무선</div>
+        </div>
+
+        <div class="cha_img">
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/istj.jpg);"
+                onclick="goDetail(14)"></div>
+            <div class="cha_name_margin"></div>
+            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/istp.jpg);"
+                onclick="goDetail(15)"></div>
+        </div>
+    </div>
+
+    <div class="ad_margin">
+        <!-- <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Zg8BYHYcc6gFXbA0" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
+    </div>
+    <br>
+
+    <div class="share_btn_outline">
+        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_restart.png');" onclick="restart()">
+        </div>
+        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_kakao.png');"
+            onclick="kakaoShare()"></div>
+        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_twitter.png');"
+            onclick="shareTwitter()"></div>
+        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_facebook.png');"
+            onclick="shareFacebook()"></div>
+        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_linkcopy.png');"
+            onclick="url_copy()"></div>
+    </div>
+    <br>
+
+    <img id="img" style="width: 0%;"
+        src="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/hustory/lib/stuff/icon/i-con_library.png?raw=true">
+
+    <div id="ToTheTop">&#xf138</div>
+
+    <div id="layerbox" class="layerpop">
+        <div class="thecard">
+            <div class="thefront">
+                <div class="popupClose" onclick="popupClose()"></div>
+                <div class="popup_title_outline">
+                    <div>
+                        <p class="title"></p>
+                        <p class="subtitle"></p>
+                    </div>
+                </div>
+                <img src="" class="imageUrl">
+                <img id="flipFront" onclick="flipFront()" src="./lib/stuff/icon/i-con_restart.png">
+            </div>
+            <div class="theback">
+                <div class="popupClose" onclick="popupClose()"></div>
+                <img class="octagon" src="">
+                <br>
+                <div class="popup_content_outline">
+                    <p class="content"></p>
+                </div>
+                <div class="popup_content2_outline">
+                    <p class="content2"></p>
+                </div>
+                <a class="btnUrl" href="">
+                    <div class="popup_btn_library"></div>
+                </a>
+                <img id="flipFront" onclick="flipBack()" src="./lib/stuff/icon/i-con_restart.png">
+            </div>
+        </div>
+    </div>
+
+    <script src="./library.js"></script>
+</body>
+
+</html>
