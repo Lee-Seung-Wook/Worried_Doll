@@ -151,10 +151,6 @@ function GoToResult() {
         let sn = ($('#input4').val() * 1) + ($('#input5').val() * 1) + ($('#input6').val() * 1) + ($('#input7').val() * 1)
         let tf = ($('#input8').val() * 1) + ($('#input9').val() * 1) + ($('#input10').val() * 1) + ($('#input11').val() * 1)
         let pj = ($('#input12').val() * 1) + ($('#input13').val() * 1) + ($('#input14').val() * 1) + ($('#input15').val() * 1)
-        console.log(ei);
-        console.log(sn);
-        console.log(tf);
-        console.log(pj);
         let array = [ei, sn, tf, pj]
         for (i = 0; i < array.length; i++) {
             if (array[i] == 0) {
