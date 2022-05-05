@@ -45,9 +45,9 @@ function GoToNext() {
         $('.slick').slick('slickGoTo', slideindex);
         typing_set();
     }, 500);
-    if (slideindex == 15) {
+    if (slideindex == 16) {
         let AD = $('#KakaoAD');
-        let KakaoAD1 = '<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-dk7u0oeA6UnqjuXL" data-ad-width="300" data-ad-height="250"></ins>';
+        let KakaoAD1 = '<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-zaYyX69RujGcsgbL" data-ad-width="300" data-ad-height="250"></ins>';
         let KakaoAD2 = document.createElement('script');
         KakaoAD2.type = "text/javascript";
         KakaoAD2.src = "//t1.daumcdn.net/kas/static/ba.min.js";
