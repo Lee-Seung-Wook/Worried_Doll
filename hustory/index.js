@@ -181,7 +181,7 @@ function GoToResult() {
         } else if (array[0] > 0 && array[1] > 0 && array[2] < 0 && array[3] < 0) {
             alert('+, +, -, - / 어사 박문수(ESFJ)')
         } else if (array[0] > 0 && array[1] < 0 && array[2] < 0 && array[3] < 0) {
-            alert('+, -, -, - / 세종대왕(ENFJ)')
+            window.location.replace("./result_enfj.html");
         } else if (array[0] > 0 && array[1] > 0 && array[2] < 0 && array[3] > 0) {
             alert('+, +, -, + / 자명 맹사성(ESFP)')
         } else if (array[0] > 0 && array[1] < 0 && array[2] < 0 && array[3] > 0) {
