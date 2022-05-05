@@ -47,7 +47,7 @@ function GoToNext() {
     }, 500);
     if (slideindex == 15) {
         let AD = $('#KakaoAD');
-        let KakaoAD1 = '<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-zaYyX69RujGcsgbL" data-ad-width="300" data-ad-height="250"></ins>';
+        let KakaoAD1 = '<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-49FS30iHGOn0dnLe" data-ad-width = "300" data-ad-height = "250"></ins>';
         let KakaoAD2 = document.createElement('script');
         KakaoAD2.type = "text/javascript";
         KakaoAD2.src = "//t1.daumcdn.net/kas/static/ba.min.js";
@@ -191,7 +191,6 @@ function GoToResult() {
         } else if (array[0] > 0 && array[1] < 0 && array[2] > 0 && array[3] < 0) {
             alert('+, -, +, - / 태종 이방원(ENTJ)')
         };
-
     }, 3000);
 };
 
