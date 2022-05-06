@@ -161,7 +161,7 @@ function GoToResult() {
         if (array[0] < 0 && array[1] < 0 && array[2] < 0 && array[3] < 0) {
             alert('-, -, -, - / 사명대사(INFJ)')
         } else if (array[0] < 0 && array[1] < 0 && array[2] < 0 && array[3] > 0) {
-            alert('-, -, -, + / 명월 황진이(INFP)')
+            window.location.replace("./result_infp.html");
         } else if (array[0] < 0 && array[1] < 0 && array[2] > 0 && array[3] > 0) {
             alert('-, -, +, + / 김삿갓(INTP)')
         } else if (array[0] < 0 && array[1] > 0 && array[2] > 0 && array[3] > 0) {
@@ -171,7 +171,7 @@ function GoToResult() {
         } else if (array[0] < 0 && array[1] > 0 && array[2] < 0 && array[3] < 0) {
             alert('-, +, -, - / 포은 정몽주(ISFJ)')
         } else if (array[0] < 0 && array[1] < 0 && array[2] > 0 && array[3] < 0) {
-            alert('-, -, +, - / 태조 이성계(INTJ)')
+            window.location.replace("./result_intj.html");
         } else if (array[0] < 0 && array[1] > 0 && array[2] < 0 && array[3] > 0) {
             alert('-, +, -, + / 혜원 신윤복(ISFP)')
         } else if (array[0] > 0 && array[1] > 0 && array[2] > 0 && array[3] > 0) {
