@@ -159,41 +159,58 @@ function GoToResult() {
             };
         };
         if (array[0] < 0 && array[1] < 0 && array[2] < 0 && array[3] < 0) {
-            alert('-, -, -, - / 사명대사(INFJ)')
+            alert('-, -, -, - / 혜원 신윤복(ISFP)');
+            window.location.replace("./result_isfp.html");
         } else if (array[0] < 0 && array[1] < 0 && array[2] < 0 && array[3] > 0) {
-            window.location.replace("./result_infp.html");
+            alert('-, -, -, + / 포은 정몽주(ISFJ)');
+            window.location.replace("./result_isfj.html");
         } else if (array[0] < 0 && array[1] < 0 && array[2] > 0 && array[3] > 0) {
-            alert('-, -, +, + / 김삿갓(INTP)')
+            alert('-, -, +, + / 율곡 이이(ISTJ)');
+            window.location.replace("./result_istj.html");
         } else if (array[0] < 0 && array[1] > 0 && array[2] > 0 && array[3] > 0) {
-            alert('-, +, +, + / 최무선(ISTP)')
-        } else if (array[0] < 0 && array[1] > 0 && array[2] > 0 && array[3] < 0) {
-            alert('-, +, +, - / 율곡 이이(ISTJ)')
-        } else if (array[0] < 0 && array[1] > 0 && array[2] < 0 && array[3] < 0) {
-            alert('-, +, -, - / 포은 정몽주(ISFJ)')
-        } else if (array[0] < 0 && array[1] < 0 && array[2] > 0 && array[3] < 0) {
+            alert('-, +, +, + / 태조 이성계(INTJ)');
             window.location.replace("./result_intj.html");
+        } else if (array[0] < 0 && array[1] > 0 && array[2] > 0 && array[3] < 0) {
+            alert('-, +, +, - / 김삿갓(INTP)');
+            window.location.replace("./result_intp.html");
+        } else if (array[0] < 0 && array[1] > 0 && array[2] < 0 && array[3] < 0) {
+            alert('-, +, -, - / 명월 황진이(INFP)');
+            window.location.replace("./result_infp.html");
+        } else if (array[0] < 0 && array[1] < 0 && array[2] > 0 && array[3] < 0) {
+            alert('-, -, +, - / 최무선(ISTP)');
+            window.location.replace("./result_istp.html");
         } else if (array[0] < 0 && array[1] > 0 && array[2] < 0 && array[3] > 0) {
-            alert('-, +, -, + / 혜원 신윤복(ISFP)')
+            alert('-, +, -, + / 사명대사(INFJ)');
+            window.location.replace("./result_infj.html");
         } else if (array[0] > 0 && array[1] > 0 && array[2] > 0 && array[3] > 0) {
-            alert('+, +, +, + / 소현세자(ESTP)')
+            alert('+, +, +, + / 태종 이방원(ENTJ)');
+            window.location.replace("./result_entj.html");
         } else if (array[0] > 0 && array[1] > 0 && array[2] > 0 && array[3] < 0) {
-            alert('+, +, +, - / 영보 송시열(ESTJ)')
+            alert('+, +, +, - / 영조(ENTP)');
+            window.location.replace("./result_entp.html");
         } else if (array[0] > 0 && array[1] > 0 && array[2] < 0 && array[3] < 0) {
-            alert('+, +, -, - / 어사 박문수(ESFJ)')
+            alert('+, +, -, - / 열경 김시습(ENFP)');
+            window.location.replace("./result_enfp.html");
         } else if (array[0] > 0 && array[1] < 0 && array[2] < 0 && array[3] < 0) {
-            window.location.replace("./result_enfj.html");
+            alert('+, -, -, - / 자명 맹사성(ESFP)');
+            window.location.replace("./result_esfp.html");
         } else if (array[0] > 0 && array[1] > 0 && array[2] < 0 && array[3] > 0) {
-            alert('+, +, -, + / 자명 맹사성(ESFP)')
+            alert('+, +, -, + / 세종대왕(ENFJ)');
+            window.location.replace("./result_enfj.html");
         } else if (array[0] > 0 && array[1] < 0 && array[2] < 0 && array[3] > 0) {
-            alert('+, -, -, + / 열경 김시습(ENFP)')
+            alert('+, -, -, + / 어사 박문수(ESFJ)');
+            window.location.replace("./result_esfj.html");
         } else if (array[0] > 0 && array[1] < 0 && array[2] > 0 && array[3] > 0) {
-            alert('+, -, +, + / 영조(ENTP)')
+            alert('+, -, +, + / 영보 송시열(ESTJ)');
+            window.location.replace("./result_estj.html");
         } else if (array[0] > 0 && array[1] < 0 && array[2] > 0 && array[3] < 0) {
-            alert('+, -, +, - / 태종 이방원(ENTJ)')
+            alert('+, -, +, - / 소현세자(ESTP)');
+            window.location.replace("./result_estp.html");
         };
     }, 3000);
 };
 
+// Typing function
 let array = ["하나 / 열여섯"]
 let typingBool = false;
 let typingIdx = 0;
