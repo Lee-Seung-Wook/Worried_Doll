@@ -325,3 +325,7 @@ footer {
 .btn_result_change {
     color: rgb(130, 10, 40);
 }
+
+.div_height {
+    height: 0.3rem;
+}
