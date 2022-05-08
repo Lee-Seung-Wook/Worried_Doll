@@ -344,3 +344,7 @@ body {
 .slick-dots li.slick-active button {
     background-color: rgb(130, 10, 40);
 }
+
+.div_height {
+    height: 0.3rem;
+}
