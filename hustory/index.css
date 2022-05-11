@@ -1,0 +1,331 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(217, 213, 201);
+    background-image: url(./lib/stuff/background_img.png);
+    text-align: center;
+    color: rgb(20. 21. 25);
+}
+
+/* 빙그레 싸만코체 Bold */
+@font-face {
+    font-family: 'BinggraeSamanco-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 을지로체 */
+@font-face {
+    font-family: 'BMEULJIRO';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main_page {
+    position: relative;
+}
+
+.main_image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.main_button {
+    position: absolute;
+    top: 22%;
+    left: 25%;
+    width: 48%;
+    height: 22%;
+    opacity: 0;
+}
+
+footer {
+    display: none;
+    font-family: BinggraeSamanco-Bold;
+    position: absolute;
+    top: 77%;
+}
+
+.footer_div {
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 1.0rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer_span {
+    font-family: fontello;
+}
+
+.footer_a {
+    text-decoration: underline;
+    color: rgb(20, 21, 25);
+}
+
+.first_page {
+    display: none;
+}
+
+.slick_count {
+    height: 2rem;
+    padding-top: 1rem;
+    font-family: BMEULJIRO;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    color: rgb(20, 21, 25);
+}
+
+.slick_que {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    font-family: BMEULJIRO;
+    color: rgb(20, 21, 25);
+    margin-top: 1rem;
+}
+
+.slick_img {
+    object-fit: cover;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+.slick_btn_5 {
+    margin: auto;
+    display: flex;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-top: 5%;
+}
+
+.slick_ans {
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: BinggraeSamanco-Bold;
+    color: rgb(20, 21, 25);
+    border: none;
+}
+
+.slick_btn_2 {
+    text-align: center;
+}
+
+.slick_btn {
+    color: rgb(20, 21, 25);
+    background-color: transparent;
+    height: 6.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9rem;
+    font-family: BMEULJIRO;
+    width: 90%;
+    margin: auto;
+    border-top: 4px solid rgb(130, 7, 16);
+    border-bottom: 4px solid rgb(130, 7, 16);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.slick_last_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(215 214 210);
+    background-image: url(./lib/stuff/main_banner.png);
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 21vw;
+    font-size: 1.5rem;
+    font-family: BMEULJIRO;
+    width: 45%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.slick_last_div_2 {
+    font-size: 1rem;
+    width: 85%;
+    margin: auto;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: BMEULJIRO;
+    color: rgb(20, 21, 25);
+    margin-top: 1rem;
+}
+
+.btn_next {
+    display: none;
+    line-height: inherit;
+    font-family: BMEULJIRO;
+    width: 25%;
+    margin: auto;
+    border-top: 0.2rem solid rgb(130, 7, 16);
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.2rem solid rgb(130, 7, 16);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    line-height: 1.5rem;
+}
+
+.slick-slide {
+    height: 0px !important;
+}
+
+.slick-slide.slick-active {
+    height: 100% !important;
+}
+
+.button1 {
+    background-image: url(./lib/stuff/button/1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button1-1 {
+    background-image: url(./lib/stuff/button/1-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button2 {
+    background-image: url(./lib/stuff/button/2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button2-1 {
+    background-image: url(./lib/stuff/button/2-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button3 {
+    background-image: url(./lib/stuff/button/3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button3-1 {
+    background-image: url(./lib/stuff/button/3-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button4 {
+    background-image: url(./lib/stuff/button/4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button4-1 {
+    background-image: url(./lib/stuff/button/4-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button5 {
+    background-image: url(./lib/stuff/button/5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.button5-1 {
+    background-image: url(./lib/stuff/button/5-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    transition: all ease 0.5s 0s;
+}
+
+.btn_result {
+    font-family: fontello;
+    font-size: 4rem;
+    margin-top: 1rem;
+    color: rgb(20, 21, 25);
+    transition: all ease 2s 0s;
+}
+
+.btn_result_change {
+    color: rgb(130, 10, 40);
+}
+
+.div_height {
+    height: 0.3rem;
+}

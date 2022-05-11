@@ -1,0 +1,293 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(217, 213, 201);
+    background-image: url(./lib/stuff/background_img.png);
+    font-family: BMEULJIRO;
+}
+
+/* 을지로체 */
+@font-face {
+    font-family: 'BMEULJIRO';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 빙그레 싸만코체 Bold */
+@font-face {
+    font-family: 'BinggraeSamanco-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 레페리포인트 White Oblique */
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: black;
+    display: none;
+}
+
+.layerpop {
+    position: relative;
+    display: none;
+    z-index: 1000;
+    width: 20rem;
+    height: 30rem;
+    background-color: transparent;
+}
+
+.thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1.0s ease;
+}
+
+.thefront {
+    position: absolute;
+    border-radius: 3rem;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: transparent;
+    color: #333;
+    background-image: url(./lib/stuff/background_img.png);
+    text-align: center;
+    border: 0.3rem solid black;
+}
+
+.theback {
+    position: absolute;
+    border-radius: 3rem;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: transparent;
+    color: #333;
+    background-image: url(./lib/stuff/background_img.png);
+    text-align: center;
+    border: 0.3rem solid black;
+}
+
+#ToTheTop {
+    transform: rotate(270deg);
+    color: rgb(20, 21, 25);
+    font-size: 2.0rem;
+    font-family: 'fontello';
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    display: none;
+}
+
+.main_title_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(215 214 210);
+    background-image: url(./lib/stuff/main_banner.png);
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 21vw;
+    font-size: 1.5rem;
+    width: 45%;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.main_title_p {
+    margin: auto;
+}
+
+.back_btn {
+    position: absolute;
+    left: 0.5rem;
+    top: 0rem;
+    font-family: fontello;
+    font-size: 2rem;
+    color: rgba(20, 21, 25, 85%);
+}
+
+.cha_name {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.0rem;
+}
+
+.cha_name_outline {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.cha_name_p {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 9.1rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.cha_name_margin {
+    width: 1.5rem;
+}
+
+.cha_img {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.cha_img_div {
+    border-radius: 1rem;
+    background-size: cover;
+    border: 0.3rem solid black;
+    width: 9.1rem;
+    height: 9.1rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.ad_margin {
+    margin-top: 1.5rem;
+}
+
+.share_btn_outline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.share_btn {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.popupClose {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./lib/stuff/icon/icon_close.png);
+    margin-left: 18rem;
+    margin-top: -0.25rem;
+}
+
+.popup_title_outline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./lib/stuff/blank_banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 18%;
+    margin: auto;
+    margin-top: 0.5rem;
+    color: rgb(20, 21, 25);
+    font-size: 0.9rem;
+    font-family: BMEULJIRO;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-top: 0.3rem;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.0rem;
+}
+
+.imageUrl {
+    width: 85%;
+    display: block;
+    margin: auto;
+    margin-top: 1.0rem;
+}
+
+#flipFront {
+    width: 10%;
+    position: absolute;
+    top: 26.7rem;
+    left: 17rem;
+}
+
+.octagon {
+    width: 85%;
+    margin-top: 2.0rem;
+    margin-bottom: 0.5rem;
+}
+
+.popup_content_outline {
+    text-align: left;
+    color: rgb(20, 21, 25);
+    height: 3.5rem;
+    font-family: BinggraeSamanco-Bold;
+    width: 90%;
+    margin: auto;
+    margin-top: 1.0rem;
+}
+
+.content {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+}
+
+.popup_content2_outline {
+    text-align: left;
+    color: rgb(20, 21, 25);
+    height: 4.0rem;
+    font-family: LeferiPoint-WhiteObliqueA;
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.content2 {
+    font-size: 0.8rem;
+    margin-top: 1.0rem;
+    color: #84abe3;
+    -webkit-text-stroke: 0.2px black
+}
+
+.btnUrl {
+    text-decoration: none;
+}
+
+.popup_btn_library {
+    margin: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./lib/stuff/icon/i-con_library.png);
+}
