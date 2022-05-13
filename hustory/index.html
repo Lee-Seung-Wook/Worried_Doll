@@ -14,6 +14,8 @@
     <meta name="og:type" content="website">
     <!-- preload js -->
     <script defer src="./index.js"></script>
+    <!-- preload image -->
+    <script defer src="./first_preload.js"></script>
     <!-- A Script to activate Jquery and JqueryUi -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -39,29 +41,6 @@
 
         gtag('config', 'G-G6NMLJED21');
     </script>
-    <!-- Preloading button image file -->
-    <script>
-        function preloading(imageArray) {
-            let n = imageArray.length;
-            for (let i = 0; i < n; i++) {
-                let img = new Image();
-                img.src = imageArray[i];
-            };
-        };
-
-        preloading([
-            "./lib/stuff/button/1.png",
-            "./lib/stuff/button/2.png",
-            "./lib/stuff/button/3.png",
-            "./lib/stuff/button/4.png",
-            "./lib/stuff/button/5.png",
-            "./lib/stuff/button/1-1.png",
-            "./lib/stuff/button/2-1.png",
-            "./lib/stuff/button/3-1.png",
-            "./lib/stuff/button/4-1.png",
-            "./lib/stuff/button/5-1.png"
-        ]);
-    </script>
     <title>성품유형지</title>
 </head>
 <style>
@@ -71,7 +50,7 @@
 <body>
     <!-- main_page -->
     <div class="main_page">
-        <img class="main_image" src="./lib/stuff/main_img.png">
+        <img class="main_image" src="./lib/stuff/main_img.jpg">
         <div class="main_button"></div>
         <footer>
             <div class="footer_div">
