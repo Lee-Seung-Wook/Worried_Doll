@@ -66,6 +66,16 @@ function NextPrev() {
     };
 };
 
+// function to fade-in next button
+function fade_in() {
+    $('.next_btn').attr('class', 'next.btn_before');
+    setTimeout(() => {
+        $('.next_btn').attr('class', 'next.btn');
+    }, 3000);
+}
+
+fade_in();
+
 let url_basic = 'https://angelo-s-library.netlify.app/hustory/index.html';
 let url_current = window.location.href;
 let image_share = $('#img').attr('src');
