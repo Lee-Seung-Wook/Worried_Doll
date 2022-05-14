@@ -70,7 +70,7 @@ function NextPrev() {
 function fade_in() {
     $('.next_btn').attr('class', 'next.btn_before');
     setTimeout(() => {
-        $('.next_btn').attr('class', 'next.btn');
+        $('.next_btn_before').attr('class', 'next.btn');
     }, 3000);
 }
 
