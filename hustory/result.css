@@ -116,6 +116,7 @@ body {
     margin-bottom: 1.5rem;
     line-height: inherit;
     color: transparent;
+    transition: all ease 0.5s 0s;
 }
 
 .next_btn {
@@ -133,6 +134,7 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     line-height: inherit;
+    transition: all ease 0.5s 0s;
 }
 
 .sub_content {
