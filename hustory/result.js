@@ -68,9 +68,9 @@ function NextPrev() {
 
 // function to fade-in next button
 function fade_in() {
-    $('.next_btn').attr('class', 'next.btn_before');
+    $('.next_btn').attr('class', 'next_btn_before');
     setTimeout(() => {
-        $('.next_btn_before').attr('class', 'next.btn');
+        $('.next_btn_before').attr('class', 'next_btn');
     }, 3000);
 }
 
