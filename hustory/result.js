@@ -71,7 +71,7 @@ function fade_in() {
     $('.next_btn').attr('class', 'next_btn_before');
     setTimeout(() => {
         $('.next_btn_before').attr('class', 'next_btn');
-    }, 3000);
+    }, 2000);
 }
 
 fade_in();
