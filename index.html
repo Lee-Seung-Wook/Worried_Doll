@@ -21,6 +21,14 @@
 </style>
 
 <body>
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/angelo-s-library.netlify.app/visits?callback=cb"></script>
+    <div id="visits">...</div>
+
     <!-- Head Section -->
     <section class="head_section">
         <div class="head_div">
@@ -55,7 +63,7 @@
     <section class="container_section">
         <div class="container">
             <div class="filterDiv project"><a href="./hustory/index.html"><img class="filterDiv_img"
-                src="./hustory/lib/stuff/main_img.jpg"></img></a></div>
+                        src="./hustory/lib/stuff/main_img.jpg"></img></a></div>
             <div class="filterDiv project"><a href="./Worried_Doll/My_worried_doll.html"><img class="filterDiv_img"
                         src="./Image/9.png"></img></a></div>
             <div class="filterDiv project"><a href="./The_Edit/The_Edit.html"><img class="filterDiv_img"
