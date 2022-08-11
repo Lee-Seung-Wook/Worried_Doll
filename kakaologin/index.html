@@ -15,7 +15,6 @@
 
     <a href="javascript:kakaoLogin()">Login</a>
 
-
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
         window.Kakao.init("581b57e830046c87a2536bb5b3d6570c")
@@ -23,14 +22,14 @@
         function kakaoLogin() {
             window.Kakao.Auth.login({
                 scope: 'account_email, gender, birthday',
-                success: function (authObj) {
-                    console.log(authObj);
+                success: function () {
                     window.Kakao.API.request({
                         url: '/v2/user/me',
                         success: res => {
-                            const kakao_account = res.kakao_account;
-                            console.log(kakao_account)
-                            alert(kakao_account.email, authObj);
+                            const kakao_account = res.kakao_account
+                            alert(kakao_account.email)
+                            alert(kakao_account.gender)
+                            alert(kakao_account.birthday)
                             console.log("Boom")
                         }
                     })
