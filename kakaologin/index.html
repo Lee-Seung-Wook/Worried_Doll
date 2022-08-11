@@ -29,7 +29,7 @@
                         url: '/v2/user/me',
                         success: res => {
                             const kakao_account = res.kakao_account;
-                            console.log(kakao_account);
+                            alert(kakao_account.email, kakao_account.gender);
                             console.log("Boom")
                         }
                     })
