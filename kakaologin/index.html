@@ -30,7 +30,7 @@
                         success: res => {
                             const kakao_account = res.kakao_account;
                             console.log(kakao_account)
-                            alert(kakao_account.email);
+                            alert(kakao_account.email, authObj);
                             console.log("Boom")
                         }
                     })
