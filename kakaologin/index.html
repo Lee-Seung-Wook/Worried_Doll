@@ -22,14 +22,14 @@
 
         function kakaoLogin() {
             window.Kakao.Auth.login({
-                scope: 'account_email, gender',
+                scope: 'account_email',
                 success: function (authObj) {
                     console.log(authObj);
                     window.Kakao.API.request({
                         url: '/v2/user/me',
                         success: res => {
                             const kakao_account = res.kakao_account;
-                            alert(kakao_account.email, kakao_account.gender);
+                            alert(kakao_account.email);
                             console.log("Boom")
                         }
                     })
