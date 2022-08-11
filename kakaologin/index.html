@@ -14,6 +14,11 @@
 <body>
 
     <a href="javascript:kakaoLogin()">Login</a>
+    <div>
+        <h5 id="email"></h5>
+        <h5 id="gender"></h5>
+        <h5 id="birthday"></h5>
+    </div>
 
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
@@ -26,17 +31,17 @@
                     window.Kakao.API.request({
                         url: '/v2/user/me',
                         success: res => {
-                            const kakao_account = res.kakao_account
-                            alert(kakao_account.email)
-                            alert(kakao_account.gender)
-                            alert(kakao_account.birthday)
+                            const kakao_account = res.kakao_account;
+                            alert('사용자 정보 획득 완료');
+                            $('#email').html(kakao_account.email);
+                            $('gender').html(kakao_account.gender);
+                            $('#birthday').html(kakao_account.birthday);
                             console.log("Boom")
                         }
                     })
                 }
             })
         }
-
     </script>
 
 </body>
