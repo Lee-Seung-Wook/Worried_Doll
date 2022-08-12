@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.4d519fac.css","mappings":"AAAA,KACI,SACJ,CACA,iCACI,aACJ","sources":["App.css"],"sourcesContent":[".img {\r\n    width: 20%;\r\n}\r\n#account_email, #gender, #birthday {\r\n    color: blueviolet;\r\n}"],"names":[],"sourceRoot":""}
