@@ -1,7 +1,0 @@
-[
-    {"id": 1, "author": "승욱" ,"title": "승욱이의 편지", "desc": "네 선생님 그리 말씀하셔도", "open": "notOpen"},
-    {"id": 2, "author": "혜원" ,"title": "혜원이의 편지", "desc": "남의 밥그릇 뺏으면 안 되냐 셔도", "open": "notOpen"},
-    {"id": 3, "author": "민우" ,"title": "민우의 편지", "desc": "화를 내셔도 저는 그게 싫어요", "open": "notOpen"},
-    {"id": 4, "author": "민수" ,"title": "민수의 편지", "desc": "여러분의 말씀은 그저 그런 참고사항일 뿐입니다", "open": "notOpen"},
-    {"id": 5, "author": "민정" ,"title": "민정이의 편지", "desc": "저는 그게 싫어요", "open": "notOpen"}
-]
