@@ -37,11 +37,11 @@
             })
                 .then(res => {
                     if (res.ok) {
-                        $('article').html('😍')
+                        $('article').html('전송에 성공했습니다.')
                         console.log('😍')
                     } else {
                         console.log('😢')
-                        $('article').html('😢')
+                        $('article').html('전송에 실패했습니다.')
                     }
                 })
         }
