@@ -13,6 +13,7 @@
 <body>
 
     <button onclick="pushData()">Login</button>
+    <article></article>
     <div>
         <button onclick="getData()">response</button>
         <p></p>
@@ -36,8 +37,12 @@
             })
                 .then(res => {
                     if (res.ok) {
+                        $('article').html('😍')
                         console.log('😍')
-                    } else { console.log('😢') }
+                    } else {
+                        console.log('😢')
+                        $('article').html('😢')
+                    }
                 })
         }
 
