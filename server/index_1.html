@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="pushData()">Login</button>
+    <div>
+        <button onclick="getData()">response</button>
+        <p></p>
+    </div>
+
+    <script>
+        const user_data = {
+            "name": "abc",
+            "email": "abc@abc.com",
+            "birthday": "0101",
+            "sex": "male"
+        }
+
+        function pushData() {
+            fetch('http://127.0.0.1/server/index_2.html', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user_data)
+            })
+                .then(res => {
+                    if (res.ok) {
+                        console.log('😍')
+                    } else { console.log('😢') }
+                })
+        }
+
+        function getData() {
+            fetch('./user_data.json')
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    let dataArray = Object.values(data.user_data)
+                    console.log(dataArray)
+                    for (i = 0; i < dataArray.length; i++) {
+                        $('p').append(dataArray[i] + " | ")
+                    }
+                })
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+    "user_data": {
+        "name": "abc",
+        "email": "abc@abc.com",
+        "birthday": "0101",
+        "gender": "male",
+        "loginOkay": false
+    }
+}
