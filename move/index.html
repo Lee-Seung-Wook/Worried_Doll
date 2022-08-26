@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <title>Drag/Drop/Bounce</title>
+    <style>
+        #container {
+            width: 100%;
+            height: 400px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 7px;
+            touch-action: none;
+        }
+
+        #item {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(245, 230, 99);
+            border: 10px solid rgba(136, 136, 136, .5);
+            border-radius: 50%;
+            touch-action: none;
+            user-select: none;
+        }
+
+        #item:active {
+            background-color: rgba(168, 218, 220, 1.00);
+        }
+
+        #item:hover {
+            cursor: pointer;
+            border-width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="outerContainer">
+        <div id="container">
+            <div id="item">
+
+            </div>
+        </div>
+    </div>
+    <p id="x"></p>
+    <p id="y"></p>
+
+    <script>
+        let dragItem = document.querySelector("#item");
+        let container = document.querySelector("#container");
+
+        let active = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+        let xOffset = 0;
+        let yOffset = 0;
+
+        container.addEventListener("touchstart", dragStart, false);
+        container.addEventListener("touchend", dragEnd, false);
+        container.addEventListener("touchmove", drag, false);
+        container.addEventListener("mousedown", dragStart, false);
+        container.addEventListener("mouseup", dragEnd, false);
+        container.addEventListener("mousemove", drag, false);
+
+        function dragStart(e) {
+            if (e.type === "touchstart") {
+                initialX = e.touches[0].clientX - xOffset;
+                initialY = e.touches[0].clientY - yOffset;
+            } else {
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
+            }
+            if (e.target === dragItem) {
+                active = true;
+            }
+        }
+
+        function dragEnd(e) {
+            initialX = currentX;
+            initialY = currentY;
+            console.log(initialX, initialY)
+            $('#x').html("initialX : " + initialX)
+            $('#y').html("initialY : " + initialY)
+            active = false;
+        }
+
+        function drag(e) {
+            if (active) {
+                e.preventDefault();
+                if (e.type === "touchmove") {
+                    currentX = e.touches[0].clientX - initialX;
+                    currentY = e.touches[0].clientY - initialY;
+                } else {
+                    currentX = e.clientX - initialX;
+                    currentY = e.clientY - initialY;
+                }
+                xOffset = currentX;
+                yOffset = currentY;
+                setTranslate(currentX, currentY, dragItem);
+            }
+        }
+        function setTranslate(xPos, yPos, el) {
+            el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+        }
+    </script>
+</body>
+
+</html>
