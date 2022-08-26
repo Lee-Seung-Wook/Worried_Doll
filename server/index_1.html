@@ -18,6 +18,8 @@
     <article></article>
     <button onclick="formPost()">Send(form)</button>
     <h4></h4>
+    <button onclick="pushData()">Send(fetch)</button>
+    <h5></h5>
     <div>
         <button onclick="getData()">Response</button>
         <p></p>
@@ -35,7 +37,7 @@
             let form = document.createElement("form");
             form.setAttribute("id", "form");
             form.setAttribute("method", "Post");
-            form.setAttribute("action", "./index_2.html");
+            form.setAttribute("action", "http://127.0.0.1/server/index_1.html");
             form.setAttribute("encType", "application/json");
             form.setAttribute("target", "_blank");
 
@@ -56,30 +58,30 @@
             $.ajax({
                 type: "POST",
                 data: JSON.stringify(user_data),
-                url: "./index_2.html",
+                url: "http://127.0.0.1/server/index_1.html",
                 contentType: "application/json"
             })
             $('article').html(JSON.stringify(user_data));
         };
 
-        // function pushData() {
-        //     fetch('http://127.0.0.1/server/index_2.html', {
-        //         method: "POST",
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(user_data)
-        //     })
-        //         .then(res => {
-        //             if (res.ok) {
-        //                 $('article').html('전송에 성공했습니다.')
-        //                 console.log('😍')
-        //             } else {
-        //                 console.log('😢')
-        //                 $('article').html('전송에 실패했습니다.')
-        //             }
-        //         })
-        // }
+        function pushData() {
+            fetch('http://127.0.0.1/server/index_1.html', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user_data)
+            })
+                .then(res => {
+                    if (res.ok) {
+                        $('h5').html('전송에 성공했습니다.')
+                        console.log('😍')
+                    } else {
+                        console.log('😢')
+                        $('h5').html('전송에 실패했습니다.')
+                    }
+                })
+        }
 
         function getData() {
             fetch('./user_data.json')
