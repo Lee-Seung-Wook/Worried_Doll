@@ -37,7 +37,7 @@
             let form = document.createElement("form");
             form.setAttribute("id", "form");
             form.setAttribute("method", "Post");
-            form.setAttribute("action", "http://127.0.0.1/server/index_1.html");
+            form.setAttribute("action", "http://127.0.0.1/server/index_2.html");
             form.setAttribute("encType", "application/json");
             form.setAttribute("target", "_blank");
 
@@ -58,14 +58,14 @@
             $.ajax({
                 type: "POST",
                 data: JSON.stringify(user_data),
-                url: "http://127.0.0.1/server/index_1.html",
+                url: "http://127.0.0.1/server/index_2.html",
                 contentType: "application/json"
             })
             $('article').html(JSON.stringify(user_data));
         };
 
         function pushData() {
-            fetch('http://127.0.0.1/server/index_1.html', {
+            fetch('http://127.0.0.1/server/index_2.html', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
