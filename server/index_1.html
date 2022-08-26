@@ -35,7 +35,7 @@
             let form = document.createElement("form");
             form.setAttribute("id", "form");
             form.setAttribute("method", "Post");
-            form.setAttribute("action", "https://angelo-s-library.netlify.app/server/index_2.html");
+            form.setAttribute("action", "./index_2.html");
             form.setAttribute("encType", "application/json");
             form.setAttribute("target", "_blank");
 
@@ -56,7 +56,7 @@
             $.ajax({
                 type: "POST",
                 data: JSON.stringify(user_data),
-                url: "https://angelo-s-library.netlify.app/server/index_2.html",
+                url: "./index_2.html",
                 contentType: "application/json"
             })
             $('article').html(JSON.stringify(user_data));
