@@ -14,10 +14,12 @@
 
 <body>
 
-    <button onclick="pushData()">Login</button>
+    <button onclick="ajaxPost()">Send(ajax)</button>
     <article></article>
+    <button onclick="formPost()">Send(form)</button>
+    <h4></h4>
     <div>
-        <button onclick="getData()">response</button>
+        <button onclick="getData()">Response</button>
         <p></p>
     </div>
 
@@ -26,27 +28,58 @@
             "name": "abc",
             "email": "abc@abc.com",
             "birthday": "0101",
-            "sex": "male"
+            "gender": "male"
         }
 
-        function pushData() {
-            fetch('http://127.0.0.1/server/index_2.html', {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user_data)
-            })
-                .then(res => {
-                    if (res.ok) {
-                        $('article').html('전송에 성공했습니다.')
-                        console.log('😍')
-                    } else {
-                        console.log('😢')
-                        $('article').html('전송에 실패했습니다.')
-                    }
-                })
+        function formPost() {
+            let form = document.createElement("form");
+            form.setAttribute("id", "form");
+            form.setAttribute("method", "Post");
+            form.setAttribute("action", "http://127.0.0.1/server/index_2.html");
+            form.setAttribute("encType", "application/json");
+            form.setAttribute("target", "_blank");
+
+            let hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "userData");
+            hiddenField.setAttribute("value", JSON.stringify(user_data));
+            form.appendChild(hiddenField);
+
+            document.body.appendChild(form);
+            document.charset = "euc-kr";
+            form.submit();
+            $('h4').html(hiddenField.value);
+            document.getElementById("form").remove();
         }
+
+        function ajaxPost() {
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(user_data),
+                url: "http://127.0.0.1/server/index_2.html",
+                contentType: "application/json"
+            })
+            $('article').html(JSON.stringify(user_data));
+        };
+
+        // function pushData() {
+        //     fetch('http://127.0.0.1/server/index_2.html', {
+        //         method: "POST",
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(user_data)
+        //     })
+        //         .then(res => {
+        //             if (res.ok) {
+        //                 $('article').html('전송에 성공했습니다.')
+        //                 console.log('😍')
+        //             } else {
+        //                 console.log('😢')
+        //                 $('article').html('전송에 실패했습니다.')
+        //             }
+        //         })
+        // }
 
         function getData() {
             fetch('./user_data.json')
