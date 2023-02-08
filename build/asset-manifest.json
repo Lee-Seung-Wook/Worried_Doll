@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b595115.css",
+    "main.js": "/static/js/main.51c52e22.js",
+    "static/js/787.deeec6c3.chunk.js": "/static/js/787.deeec6c3.chunk.js",
+    "static/media/paper_curce.gif": "/static/media/paper_curce.b9573e1e794ef74592d0.gif",
+    "static/media/background.png": "/static/media/background.52d4332c672bf32495d9.png",
+    "static/media/background_2.png": "/static/media/background_2.1dc9fcca2abcfd2bcbf5.png",
+    "index.html": "/index.html",
+    "main.4b595115.css.map": "/static/css/main.4b595115.css.map",
+    "main.51c52e22.js.map": "/static/js/main.51c52e22.js.map",
+    "787.deeec6c3.chunk.js.map": "/static/js/787.deeec6c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b595115.css",
+    "static/js/main.51c52e22.js"
+  ]
+}
