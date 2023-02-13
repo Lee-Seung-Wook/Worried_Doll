@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <title>KAKAO REST API</title>
+</head>
+
+<body>
+    <a
+        href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=a42a6c91f7b1bb0d3f8e3daef2b6f24b&redirect_uri=http://127.0.0.1:5500/WebContent/web/kakaologin/index.html">
+        <button>Kakao Login</button></a>
+    <a
+        href="https://kauth.kakao.com/oauth/logout?client_id=a42a6c91f7b1bb0d3f8e3daef2b6f24b&logout_redirect_uri=http://127.0.0.1:5500/WebContent/web/kakaologin/index.html">
+        <button>Kakao Logout</button></a>
+    <!-- <button onclick="sendCode()">Send Code</button> -->
+    <button onclick="requestToken()">Request Token</button>
+    <button onclick="dataPrint()">Data Print</button>
+    <button onclick="singOut()">Withdrawal</button>
+    <button onclick="sendMessage()">Send kakao message</button>
+
+    <script>
+        const urlParams = new URL(location.href).searchParams;
+        const name = urlParams.get('code');
+        let usertoken = '';
+
+        let newCode = new URL(window.location.href).searchParams.get('code');
+
+        // function sendCode() {
+        //     const code = { code: name };
+        //     console.log(code)
+        //     const queryStringBody = Object.keys(code)
+        //         .map(k => encodeURIComponent(k) + "=" + encodeURI(code[k]))
+        //         .join("&");
+        //     fetch("", {
+        //         method: "POST",
+        //         headers: {
+        //             'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+        //         },
+        //         body: queryStringBody
+        //     })
+        //         .then(res => res.json())
+        //         .then((data) => {
+        //             console.log(data);
+        //         });
+        // };
+
+        function requestToken() {
+            const body = {
+                grant_type: "authorization_code",
+                client_id: "a42a6c91f7b1bb0d3f8e3daef2b6f24b",
+                redirect_uri: "http://127.0.0.1:5500/WebContent/web/kakaologin/index.html",
+                code: name
+            };
+            const queryStringBody = Object.keys(body)
+                .map(k => encodeURIComponent(k) + "=" + encodeURI(body[k]))
+                .join("&");
+            console.log(queryStringBody);
+            fetch("https://kauth.kakao.com/oauth/token", {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+                },
+                body: queryStringBody
+            })
+                .then(res => res.json())
+                .then((data) => {
+                    console.log(data)
+                    console.log(data.access_token)
+                    usertoken = data.access_token
+                });
+        };
+
+        function singOut() {
+            fetch("https://kapi.kakao.com/v1/user/unlink", {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${usertoken}`
+                }
+            })
+                .then(res => res.json())
+                .then((data) => {
+                    console.log(data)
+                });
+        };
+
+        let title = "PL@TER"
+        function sendMessage() {
+            fetch("https://kapi.kakao.com/v2/api/talk/memo/default/send", {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    Authorization: `Bearer ${usertoken}`,
+                },
+                body: new URLSearchParams({
+                    "template_object": JSON.stringify({
+                        "object_type": "text",
+                        "text": `${title}: 행성이 만료되었습니다.`,
+                        "link": {
+                            "web_url": "https://angelo-s-library-2.netlify.app",
+                            "mobile_web_url": "https://angelo-s-library-2.netlify.app"
+                        },
+                        "button_title": "편지 읽으러 가기"
+                    })
+                })
+            })
+                .then(res => res.json())
+                .then((data) => {
+                    console.log(data)
+                });
+        };
+
+        function dataPrint() {
+            console.log(usertoken)
+            fetch("https://kapi.kakao.com/v2/user/me", {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${usertoken}`
+                }
+            })
+                .then(res => res.json())
+                .then((data) => {
+                    console.log(data)
+                });
+        };
+    </script>
+</body>
+
+</html>
