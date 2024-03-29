@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="나와 닮은 조선시대 위인은 누구일까?">
+    <meta name="keywords" content="MBTI, mbti, 조선시대, 위인, 테스트">
+    <meta name="author" content="소소한 프로젝트">
+    <meta name="og:site_name" content="성품유형지">
+    <meta name="og:title:" content="성품유형지">
+    <meta name="og:description" content="나와 닮은 조선시대 위인은 누구일까?">
+    <meta name="og:type" content="website">
     <!-- preload js -->
-    <script defer src="./library.js"></script>
+    <script defer src="./index.js"></script>
     <!-- preload image -->
-    <script defer src="./second_prelaod.js"></script>
+    <script defer src="./first_preload.js"></script>
     <!-- A Script to activate Jquery and JqueryUi -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
         integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <!-- A Script to activate Jquery Slick   -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Fontello 적용 CSS -->
     <link rel="stylesheet" href="./lib/fontello-6dfa5ae1/css/fontello.css">
     <link rel="stylesheet" href="./lib/fontello-6dfa5ae1/css/animation.css">
@@ -22,241 +32,457 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137718561795055"
         crossorigin="anonymous"></script>
-    <!-- Kakaotalk SDK Load -->
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6NMLJED21"></script>
     <script>
-        Kakao.init('96eae19ea9bbbcd225098b99ca9ac9b8');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-G6NMLJED21');
     </script>
-    <!-- Meta data for a share button throught the facebook -->
-    <meta property="og:url" content="https://angelo-s-library.netlify.app/hustory/library.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="성품유형지 도감" />
-    <meta property="og:description" content="성품유형지 도감" />
-    <meta property="og:image"
-        content="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/hustory/lib/stuff/icon/i-con_library.png?raw=true" />
-    <!-- Meta data for a share button throught the twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="https://angelo-s-library.netlify.app/hustory/library.html" />
-    <meta name="twitter:title" content="성품유형지 도감" />
-    <meta name="twitter:description" content="성품유형지 도감" />
-    <meta name="twitter:image"
-        content="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/hustory/lib/stuff/icon/i-con_library.png?raw=true" />
-    <title>성품유형지 도감</title>
+    <title>성품유형지</title>
 </head>
-
 <style>
-    @import url(./library.css);
+    @import url(./index.css);
 </style>
 
 <body>
-    <!-- Back mask of popup div -->
-    <div id="mask"></div>
-
-    <div class="main_title_div">
-        <div class="back_btn" onclick=Backpage()>&#xf137</div>
-        <p class="main_title_p">성품 유형지</p>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">세종대왕</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">매월당 김시습</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/enfj.jpg);"
-                onclick="goDetail(0)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/enfp.jpg);"
-                onclick="goDetail(1)"></div>
-        </div>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">태종 이방원</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">영조</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/entj.jpg);"
-                onclick="goDetail(2)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/entp.jpg);"
-                onclick="goDetail(3)"></div>
-        </div>
-    </div>
-
-    <div class="ad_margin">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-C8WGFc7Nw88wpR1S" data-ad-width="320"
-            data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">어사 박문수</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">고불 맹사성</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/esfj.jpg);"
-                onclick="goDetail(4)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/esfp.jpg);"
-                onclick="goDetail(5)"></div>
-        </div>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">우암 송시열</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">소현세자</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/estj.jpg);"
-                onclick="goDetail(6)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/estp.jpg);"
-                onclick="goDetail(7)"></div>
-        </div>
-    </div>
-
-    <div class="ad_margin">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Q7ahwXSi1A5TGeQX" data-ad-width="320"
-            data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">사명대사</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">명월 황진이</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/infj.jpg);"
-                onclick="goDetail(8)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/infp.jpg);"
-                onclick="goDetail(9)"></div>
-        </div>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">태조 이성계</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">김삿갓</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/intj.jpg);"
-                onclick="goDetail(10)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/intp.jpg);"
-                onclick="goDetail(11)"></div>
-        </div>
-    </div>
-
-    <div class="ad_margin">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-HXtTAich938pyAp0" data-ad-width="320"
-            data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">포은 정몽주</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">혜원 신윤복</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/isfj.jpg);"
-                onclick="goDetail(12)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/isfp.jpg);"
-                onclick="goDetail(13)"></div>
-        </div>
-    </div>
-
-    <div class="cha_name">
-        <div class="cha_name_outline">
-            <div class="cha_name_p">율곡 이이</div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_name_p">최무선</div>
-        </div>
-        <div class="cha_img">
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/istj.jpg);"
-                onclick="goDetail(14)"></div>
-            <div class="cha_name_margin"></div>
-            <div class="cha_img_div" style="background-image: url(./lib/character-img/icon/istp.jpg);"
-                onclick="goDetail(15)"></div>
-        </div>
-    </div>
-
-    <div class="ad_margin">
-        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-X9XF52xYdcMrCCVA" data-ad-width="320"
-            data-ad-height="100"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </div>
-    <br>
-    <!-- Share and utility btn -->
-    <div class="share_btn_outline">
-        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_restart.png');" onclick="restart()">
-        </div>
-        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_kakao.png');"
-            onclick="kakaoShare()"></div>
-        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_twitter.png');"
-            onclick="shareTwitter()"></div>
-        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_facebook.png');"
-            onclick="shareFacebook()"></div>
-        <div class="share_btn" style="background-image: url('./lib/stuff/icon/i-con_linkcopy.png');"
-            onclick="url_copy()"></div>
-    </div>
-    <br>
-    <!-- Image data for sharing -->
-    <img id="img" style="width: 0%;"
-        src="https://github.com/Lee-Seung-Wook/Angelo-s_Library/blob/main/hustory/lib/stuff/icon/i-con_library.png?raw=true">
-    <!-- Image for ToTheTop -->
-    <div id="ToTheTop">&#xf138</div>
-    <!-- Popup layer -->
-    <div id="layerbox" class="layerpop">
-        <div class="thecard">
-            <div class="thefront">
-                <div class="popupClose" onclick="popupClose()"></div>
-                <div class="popup_title_outline">
-                    <div>
-                        <p class="title"></p>
-                        <p class="subtitle"></p>
-                    </div>
-                </div>
-                <img src="" class="imageUrl">
-                <img id="flipFront" onclick="flipFront()" src="./lib/stuff/icon/i-con_restart.png">
-            </div>
-            <div class="theback">
-                <div class="popupClose" onclick="popupClose()"></div>
-                <div class="popup_title_outline">
-                    <div>
-                        <p class="title"></p>
-                        <!-- <p class="subtitle"></p> -->
-                    </div>
-                </div>
-                <img class="octagon" src="">
+    <!-- main_page -->
+    <div class="main_page">
+        <img class="main_image" src="./lib/stuff/main_img.jpg">
+        <div class="main_button"></div>
+        <footer>
+            <div class="footer_div">
+                <span>· 해당 심리테스트는 심리학적 전문성이 없는 단순 유희성 테스트입니다.</span>
                 <br>
-                <div class="popup_content_outline">
-                    <p class="content"></p>
+                <span>· 본 웹페이지는 직접적으로 어떠한 개인정보도 요구하지 않습니다.</span>
+                <br>
+                <span>· Google Adsense, Kakao AdFit을(를) 포함하고 있습니다.</span>
+                <br>
+                <span class="footer_span">&#xf0e6</span> : <a class="footer_a" href="mailto:blue_notion@naver.com">
+                    Contact us</a>
+                <br>
+                <span class="footer_span">&#xe80c</span> : 이민우, 한혜원, 고성현, 임유리, 전민수, 이승욱
+                <br>
+                <span class="footer_span">&#xf1f9</span> : CopyRight[TeamName] All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+    <div class="first_page">
+        <!-- value of answer -->
+        <div>
+            <!-- 0~3 minus: i, plus: e -->
+            <input id="input0" type="hidden">
+            <input id="input1" type="hidden">
+            <input id="input2" type="hidden">
+            <input id="input3" type="hidden">
+            <!-- 4~7 minus: s, plus: n -->
+            <input id="input4" type="hidden">
+            <input id="input5" type="hidden">
+            <input id="input6" type="hidden">
+            <input id="input7" type="hidden">
+            <!-- 8~11 minus: f, plus: t -->
+            <input id="input8" type="hidden">
+            <input id="input9" type="hidden">
+            <input id="input10" type="hidden">
+            <input id="input11" type="hidden">
+            <!-- 12~15 minus: p, plus: j -->
+            <input id="input12" type="hidden">
+            <input id="input13" type="hidden">
+            <input id="input14" type="hidden">
+            <input id="input15" type="hidden">
+        </div>
+        <div class="slick" style="margin-top: 1.5rem;">
+            <!-- 0 question / multiple choice test -->
+            <div>
+                <p id="p0" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6>&nbsp먼 길을 떠나게 된 당신.</h6>
+                    <h6>그런데 어제부터 보이던 저 사람, 봇짐을 짊어지고 당신과 같은 길을 걷고 있습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp먼저 말을 걸어 담소를 즐겨볼까요?</h6>
                 </div>
-                <div class="popup_content2_outline">
-                    <p class="content2"></p>
+                <img class="slick_img" src="./lib/question-img/question_1_1.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="0" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="0" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="0" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="0" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="0" name="5" class="button5"></button>
                 </div>
-                <a class="btnUrl" href="">
-                    <div class="popup_btn_library"></div>
-                </a>
-                <img id="flipFront" onclick="flipBack()" src="./lib/stuff/icon/i-con_restart.png">
+                <div>
+                    <input class="slick_ans" disabled id="answer0" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 1 question / multiple choice test -->
+            <div>
+                <p id="p1" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: 1px;">&nbsp최근 발생한 수해로 인해 피해복구를 위한 회의가 한창입니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp서로의 의견이 분분하던 중, 당신에게 번뜩이는 해결책이 떠올랐습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp자신 있게 당신을 의견을 피력해 볼까요?</h6>
+
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_1_2.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="1" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="1" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="1" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="1" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="1" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer1" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 2 question / multiple choice test -->
+            <div>
+                <p id="p2" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6>&nbsp최근 인근지역에 풍년이 들어 큰 축제가 열린다는 소식을 들었습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: -0.2px;">&nbsp격무로 인해 피곤하긴 하지만 한번 참여해볼까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_1_3.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="2" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="2" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="2" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="2" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="2" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer2" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 3 question / multiple choice test -->
+            <div>
+                <p id="p3" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: 0.5px;">&nbsp순 휴일의 마지막인 오늘. 벌써 저녁이 되었습니다. 그때 오랜 벗이 함께 주막에 놀러가자고 제안합니다.
+                    </h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp흔쾌히 벗과 함께 저잣거리로 향할까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_1_4.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="3" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="3" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="3" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="3" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="3" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer3" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 4 question / multiple choice test -->
+            <div>
+                <p id="p4" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6>&nbsp서한을 작성하던 당신에게 동료가 찾아와 문서 첫 장은 반드시 조정에서 지급한 문방사우(종이, 붓, 먹, 벼루)를 사용해야 한다고 합니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: 0.5px;">&nbsp차이와 이유는 모르겠지만 우선 친구의 말을 따를까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_2_1.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="4" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="4" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="4" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="4" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="4" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer4" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 5 question / multiple choice test -->
+            <div>
+                <p id="p5" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6>&nbsp당신의 벗이 당신에게 묻습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp“자네는 잠시 동안 아무런 생각도 하지 않을 수 있는가?”</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_2_2.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="5" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="5" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="5" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="5" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="5" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer5" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 6 question / multiple choice test -->
+            <div>
+                <p id="p6" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6>&nbsp당신의 벗이 당신에게 다시 묻습니다. “만약 자네가 날씨를 다스릴 수 있다면 무엇을 할 것 같나?”</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp그의 물음에 당신은 다양한 답을 할 수 있을까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_2_3.png">
+                <div class="slick_btn_2">
+                    <div class="slick_btn_5">
+                        <button onclick="seleted2(this, -3)" value="6" name="1" class="button1"></button>
+                        <button onclick="seleted2(this, -2)" value="6" name="2" class="button2"></button>
+                        <button onclick="seleted2(this, 0)" value="6" name="3" class="button3"></button>
+                        <button onclick="seleted2(this, 2)" value="6" name="4" class="button4"></button>
+                        <button onclick="seleted2(this, 3)" value="6" name="5" class="button5"></button>
+                    </div>
+                    <div>
+                        <input class="slick_ans" disabled id="answer6" placeholder="위의 버튼을 눌러 답하시오." value="">
+                    </div>
+                    <div class="btn_next" onclick="GoToNext();">다음</div>
+                    <br>
+                </div>
+            </div>
+            <!-- 7 question / multiple choice test -->
+            <div>
+                <p id="p7" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: 0.2px;">&nbsp어전 회의에서 결정된 과업을 전달 받은 당신은 하위 관리들에게 이를 지시하고자 합니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: -0.6px;">&nbsp전체적인 방향과 필수적인 요소 정도만 안내할까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_2_4.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="7" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="7" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="7" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="7" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="7" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer7" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 8 question / multiple choice test -->
+            <div>
+                <p id="p8" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: -0.3px;">&nbsp절친한 벗이 당신의 험담을 했음을 알게 되었습니다. 당신은 벗에게 따져 물었고,</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp사정이 있는지 속 시원한 답변은 듣지 못했지만 진심어린 사과와 함께 용서를 구했습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp벗의 사정을 이해하고 용서해 줄까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_3_1.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="8" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="8" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="8" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="8" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="8" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer8" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 9 question / multiple choice test -->
+            <div>
+                <p id="p9" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: -0.2px;">&nbsp무과시험 종목 발표를 듣고는 벗의 얼굴이 사색이 되었습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp이번에 선정된 격구는 벗이 가장 어려워하던 종목이었기 때문입니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: 0.5px;">&nbsp불안에 떨고 있는 벗에게 다가가 특별훈련을 제안해 볼까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_3_2.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="9" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="9" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="9" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="9" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="9" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer9" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 10 question / multiple choice test -->
+            <div>
+                <p id="p10" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: 0.1px;">&nbsp당신과 벗은 판적사에서 요청한 자료를 만들기 위해 역할을 나누었습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: -0.2px;">&nbsp당신은 야근도 불사했지만, 벗은 풍류를 즐기며 불안한 모습을 보였습니다. 하지만 우려와는 다르게 결과물은
+                        만족스러웠습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp이번에는 호조에 올릴 서한을 준비하라는 명을 받았습니다. 이번에도 그 벗과 함께 할까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_3_3.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="10" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="10" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="10" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="10" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="10" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer10" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 11 question / multiple choice test -->
+            <div>
+                <p id="p11" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: 0.3px;">&nbsp당신의 벗이 화가 난듯하여 그 연유를 물으니, 주막에서 가게 주인과 작은 실랑이가 있었다며 억울함을
+                        호소했습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: -0.3px;">&nbsp벗의 이야기를 들어보니 잘못은 도리어 벗이 한 것 같지만 그래도 맞장구치며 함께 가게를 흉볼까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_3_4.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="11" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="11" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="11" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="11" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="11" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer11" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 12 question / multiple choice test -->
+            <div>
+                <p id="p12" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: -0.5px;">&nbsp군침을 돌게 하는 곶감이 합리적인 가격으로 좌판에 놓여 있습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: -0.2px;">&nbsp하지만 녹봉(월급) 지급일이 얼마 남지 않아 여윳돈이 풍족하진 않습니다. 그래도 실한 놈으로 하나 잡아
+                        볼까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_4_1.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="12" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="12" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="12" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="12" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="12" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer12" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 13 question / multiple choice test -->
+            <div>
+                <p id="p13" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: 0.3px;">&nbsp간밤에 꾼 꿈에 어렴풋이 마을 어르신을 뵌 거 같습니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp꿈이 기억나진 않지만 이참에 문안 인사를 드리러 가볼까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_4_2.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="13" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="13" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="13" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="13" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="13" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer13" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 14 question / multiple choice test -->
+            <div>
+                <p id="p14" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6 style="letter-spacing: -0.5px;">&nbsp점포에 들어선 당신은 두 저고리 앞에서 고민합니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: 0.4px;">&nbsp하나는 익숙한 형태이고, 다른 하나는 호감은 가지만 낯선 모양입니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6 style="letter-spacing: -0.2px;">&nbsp이번엔 과감히 낯선 모양의 저고리를 구매할까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_4_3.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, 3)" value="14" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, 2)" value="14" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="14" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, -2)" value="14" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, -3)" value="14" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer14" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <!-- 15 question / multiple choice test -->
+            <div>
+                <p id="p15" class="slick_count"></p>
+                <div class="slick_que">
+                    <h6>&nbsp중요한 시험을 앞둔 벗을 위해 다음 주에 탕약을 달이고자 합니다.</h6>
+                    <!-- <div class="div_height"></div> -->
+                    <h6>&nbsp곳간에 필요한 한약제와 도구들이 모두 있는지 지금 확인해 볼까요?</h6>
+                </div>
+                <img class="slick_img" src="./lib/question-img/question_4_4.png">
+                <div class="slick_btn_5">
+                    <button onclick="seleted2(this, -3)" value="15" name="1" class="button1"></button>
+                    <button onclick="seleted2(this, -2)" value="15" name="2" class="button2"></button>
+                    <button onclick="seleted2(this, 0)" value="15" name="3" class="button3"></button>
+                    <button onclick="seleted2(this, 2)" value="15" name="4" class="button4"></button>
+                    <button onclick="seleted2(this, 3)" value="15" name="5" class="button5"></button>
+                </div>
+                <div>
+                    <input class="slick_ans" disabled id="answer15" placeholder="위의 버튼을 눌러 답하시오." value="">
+                </div>
+                <div class="btn_next" onclick="GoToNext();">다음</div>
+                <br>
+            </div>
+            <div>
+                <div class="slick_last_div">
+                    <p style="margin: auto;">성품 유형지</p>
+                </div>
+                <div class="slick_last_div_2">
+                    &nbsp아래의 동그라미 버튼을 터치해 당신의 성향과 유사한 조선시대 인물을 만나보세요.
+                </div>
+                <div onclick="GoToResult();">
+                    <p id="btn_result" class="btn_result">&#xe839</p>
+                </div>
+                <br>
+                <!-- Kakao AD -->
+                <div id="KakaoAD" style="font-size: 0%;"></div>
             </div>
         </div>
     </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
