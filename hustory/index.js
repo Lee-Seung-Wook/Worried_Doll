@@ -1,5 +1,17 @@
 // User device check.
 $(document).ready(function () {
+    fetch('https://ziggle.kr/log/log?platform=hustory&note=page1', {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(() => { })
+        .catch((error) => {
+        });
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         $('footer').fadeIn(1000);
         $('html, body').css('background-image', 'url()');
@@ -135,8 +147,9 @@ function seleted2(self, count) {
         $('#answer' + self.value).attr('value', '당연하오');
     };
     if (count == 0) {
-        random = Math.random() < 0.5 ? -1 : 1;
-        $('#input' + self.value).val(count + random);
+        // random = Math.random() < 0.5 ? -1 : 1;
+        // $('#input' + self.value).val(count + random);
+        $('#input' + self.value).val(count);
     } else {
         $('#input' + self.value).val(count);
     };
